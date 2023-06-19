@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ParallaxController : MonoBehaviour
 {
-    Transform cam; // Main Camera
+    Transform cam; // Main Camera Yang digunakan dalam Game
     Vector3 camStartPos;
     float distance; // Distance between the camera start position and its current position
 
@@ -20,7 +20,7 @@ public class ParallaxController : MonoBehaviour
         cam = Camera.main.transform;
         camStartPos = cam.position;
 
-        int backCount = transform.childCount;
+        int backCount = transform.childCount; // Menghitung Jumlah Child yang dimiliki oleh si GameObject Background
         mat = new Material[backCount];
         backSpeed = new float[backCount];
         backgrounds = new GameObject[backCount];
@@ -53,7 +53,7 @@ public class ParallaxController : MonoBehaviour
     private void LateUpdate()
     {
         distance = cam.position.x - camStartPos.x;
-        transform.position = new Vector3(cam.position.x, transform.position.y, 0);
+        transform.position = new Vector3(distance, transform.position.y, 0);
 
         for (int i = 0; i < backgrounds.Length; i++)
         {
