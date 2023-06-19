@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2410990459065405016}
   - component: {fileID: 1433451961359129918}
   m_Layer: 0
-  m_Name: Palette1
+  m_Name: FantacyCavePalette
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
