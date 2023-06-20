@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private BoxCollider2D coll;
+    [SerializeField] private Animator animator;
     [SerializeField] private SpriteRenderer sprite;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
@@ -20,11 +21,13 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
+        animator.SetFloat("p_speed", Mathf.Abs(horizontal));
         Flip();
 
         if (Input.GetButtonDown("Jump") && isGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            animator.SetBool("p_isJumping", true);
         }
 
         // if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
