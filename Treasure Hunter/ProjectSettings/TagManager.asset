@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Trap
+  - Diamond
   layers:
   - Default
   - TransparentFX
@@ -44,6 +45,9 @@ TagManager:
     locked: 0
   - name: Tilemap Fill
     uniqueID: 3837065773
+    locked: 0
+  - name: Terrain
+    uniqueID: 2692467683
     locked: 0
   - name: Default
     uniqueID: 0
