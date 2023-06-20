@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4bc816529c2c7fe45b7c0ff7a8aab2de
+guid: 3c34e4da764eaef4a9472f0bca96d7bd
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Suriken_0
+      name: Bomb_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,14 +131,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 444614191b4c2994abfcbc762d55e322
-      internalID: -1372867155
+      spriteID: c231160814d931a4f899eecca6989f2e
+      internalID: -1726756300
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Suriken_1
+      name: Bomb_1
       rect:
         serializedVersion: 2
         x: 32
@@ -152,14 +152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a81e2c92f9d0c4648ab44f6a2e656631
-      internalID: 1814210815
+      spriteID: b08bb76d0d44e2f4f9afb883dddcc72e
+      internalID: 215851009
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Suriken_2
+      name: Bomb_2
       rect:
         serializedVersion: 2
         x: 64
@@ -173,14 +173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e65fecb2d1d14504780d5153f805fa6b
-      internalID: -439669273
+      spriteID: 627a21453b6f228488edfce6d676e1f5
+      internalID: 20496400
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Suriken_3
+      name: Bomb_3
       rect:
         serializedVersion: 2
         x: 96
@@ -194,14 +194,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b51ef62fc6960934aa2c101719b25ba3
-      internalID: -408560440
+      spriteID: 8cfd78f172d09034b928281965a162b7
+      internalID: -2061624914
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Suriken_4
+      name: Bomb_4
       rect:
         serializedVersion: 2
         x: 128
@@ -215,71 +215,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5324846b77dab354db5b2ddf4f222508
-      internalID: -410777117
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Suriken_5
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f2a866c1d7978634f91f796d10a2603f
-      internalID: 548301892
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Suriken_6
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e6c51b0c9b17b344989c1af5967252b1
-      internalID: 383451403
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Suriken_7
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a27732e322aec234ab7b19f8a1dd59d0
-      internalID: -1585514392
+      spriteID: 41fd71cce4d88404daeba8c284885a6b
+      internalID: 1369883499
       vertices: []
       indices: 
       edges: []
@@ -295,14 +232,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Suriken_1: 1814210815
-      Suriken_3: -408560440
-      Suriken_2: -439669273
-      Suriken_6: 383451403
-      Suriken_4: -410777117
-      Suriken_7: -1585514392
-      Suriken_5: 548301892
-      Suriken_0: -1372867155
+      Bomb_4: 1369883499
+      Bomb_0: -1726756300
+      Bomb_1: 215851009
+      Bomb_2: 20496400
+      Bomb_3: -2061624914
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
