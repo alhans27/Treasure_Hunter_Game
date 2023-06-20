@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Trap
   layers:
   - Default
   - TransparentFX
@@ -40,6 +41,9 @@ TagManager:
   m_SortingLayers:
   - name: Background
     uniqueID: 392725097
+    locked: 0
+  - name: Tilemap Fill
+    uniqueID: 3837065773
     locked: 0
   - name: Default
     uniqueID: 0
