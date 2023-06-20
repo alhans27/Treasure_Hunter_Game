@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4bc816529c2c7fe45b7c0ff7a8aab2de
+guid: 118b1de5ce9f20f44b5e85e698dc594d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,11 +117,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Suriken_0
+      name: Trap_Spike_Run_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -131,18 +131,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 444614191b4c2994abfcbc762d55e322
-      internalID: -1372867155
+      spriteID: a2c0e30aee4e9134e95e0ed1ac7e76db
+      internalID: 1157580560
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Suriken_1
+      name: Trap_Spike_Run_1
       rect:
         serializedVersion: 2
         x: 32
-        y: 0
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -152,18 +152,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a81e2c92f9d0c4648ab44f6a2e656631
-      internalID: 1814210815
+      spriteID: 7dd2dac99a71d6b4b94f507373c0e735
+      internalID: -918306310
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Suriken_2
+      name: Trap_Spike_Run_2
       rect:
         serializedVersion: 2
         x: 64
-        y: 0
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -173,18 +173,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e65fecb2d1d14504780d5153f805fa6b
-      internalID: -439669273
+      spriteID: 2379361f4d8600f43b9e1ecd0ed3fee5
+      internalID: -982409071
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Suriken_3
+      name: Trap_Spike_Run_3
       rect:
         serializedVersion: 2
         x: 96
-        y: 0
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -194,18 +194,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b51ef62fc6960934aa2c101719b25ba3
-      internalID: -408560440
+      spriteID: 947821f7cddc1774e8c643099f93fbe4
+      internalID: -1524687770
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Suriken_4
+      name: Trap_Spike_Run_4
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
+        x: 0
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -215,18 +215,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5324846b77dab354db5b2ddf4f222508
-      internalID: -410777117
+      spriteID: 2a07e745a720b7a469394ab1ec9685d8
+      internalID: -984689904
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Suriken_5
+      name: Trap_Spike_Run_5
       rect:
         serializedVersion: 2
-        x: 160
-        y: 0
+        x: 32
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -236,18 +236,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2a866c1d7978634f91f796d10a2603f
-      internalID: 548301892
+      spriteID: 65c0fe640bb19ec44ac75a97e3dfd670
+      internalID: 674093620
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Suriken_6
+      name: Trap_Spike_Run_6
       rect:
         serializedVersion: 2
-        x: 192
-        y: 0
+        x: 64
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -257,18 +257,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6c51b0c9b17b344989c1af5967252b1
-      internalID: 383451403
+      spriteID: ef76987114c42964c8c02fe01eabb34c
+      internalID: -678536086
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Suriken_7
+      name: Trap_Spike_Run_7
       rect:
         serializedVersion: 2
-        x: 224
-        y: 0
+        x: 96
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -278,8 +278,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a27732e322aec234ab7b19f8a1dd59d0
-      internalID: -1585514392
+      spriteID: 6839057fc4ee10846aed140d589b5988
+      internalID: -2059921015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trap_Spike_Run_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6c244f865b5c2d45adf61b36a60dd06
+      internalID: 79422461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trap_Spike_Run_9
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef724cda74105ef41aae44f118c083f0
+      internalID: 1459564061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trap_Spike_Run_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99739bbdb0a49e74588694f48e0e1666
+      internalID: -1773521729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trap_Spike_Run_11
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c952443f999dd52418f782a62b22915a
+      internalID: 1403965826
       vertices: []
       indices: 
       edges: []
@@ -295,14 +379,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Suriken_1: 1814210815
-      Suriken_3: -408560440
-      Suriken_2: -439669273
-      Suriken_6: 383451403
-      Suriken_4: -410777117
-      Suriken_7: -1585514392
-      Suriken_5: 548301892
-      Suriken_0: -1372867155
+      Trap_Spike_Run_9: 1459564061
+      Trap_Spike_Run_10: -1773521729
+      Trap_Spike_Run_6: -678536086
+      Trap_Spike_Run_5: 674093620
+      Trap_Spike_Run_8: 79422461
+      Trap_Spike_Run_2: -982409071
+      Trap_Spike_Run_7: -2059921015
+      Trap_Spike_Run_0: 1157580560
+      Trap_Spike_Run_11: 1403965826
+      Trap_Spike_Run_4: -984689904
+      Trap_Spike_Run_1: -918306310
+      Trap_Spike_Run_3: -1524687770
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
