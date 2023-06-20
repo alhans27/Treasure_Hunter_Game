@@ -27,8 +27,11 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            Debug.Log(rb.velocity);
             animator.SetBool("p_isJumping", true);
         }
+
+        Falling();
 
         // if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
         // {
@@ -48,6 +51,22 @@ public class PlayerMovement : MonoBehaviour
         return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, groundLayer);
     }
 
+    private void Falling()
+    {
+        if (rb.velocity.y < -0.1f)
+        {
+            animator.SetBool("p_isFalling", true);
+            animator.SetBool("p_isJumping", false);
+        }
+        else if (rb.velocity.y > 1f)
+        {
+            animator.SetBool("p_isFalling", false);
+        }
+        else
+        {
+            animator.SetBool("p_isFalling", false);
+        }
+    }
     private void Flip()
     {
         if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
