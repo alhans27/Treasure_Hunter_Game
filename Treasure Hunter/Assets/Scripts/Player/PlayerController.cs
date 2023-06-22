@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     private float horizontal;
     private bool isFacingRight = true;
@@ -21,14 +21,13 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
-        animator.SetFloat("p_speed", Mathf.Abs(horizontal));
+        animator.SetFloat("Speed", Mathf.Abs(horizontal));
         Flip();
 
         if (Input.GetButtonDown("Jump") && isGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            Debug.Log(rb.velocity);
-            animator.SetBool("p_isJumping", true);
+            animator.SetBool("Jump", true);
         }
 
         Falling();
@@ -55,16 +54,16 @@ public class PlayerMovement : MonoBehaviour
     {
         if (rb.velocity.y < -0.1f)
         {
-            animator.SetBool("p_isFalling", true);
-            animator.SetBool("p_isJumping", false);
+            animator.SetBool("Fall", true);
+            animator.SetBool("Jump", false);
         }
         else if (rb.velocity.y > 1f)
         {
-            animator.SetBool("p_isFalling", false);
+            animator.SetBool("Fall", false);
         }
         else
         {
-            animator.SetBool("p_isFalling", false);
+            animator.SetBool("Fall", false);
         }
     }
     private void Flip()

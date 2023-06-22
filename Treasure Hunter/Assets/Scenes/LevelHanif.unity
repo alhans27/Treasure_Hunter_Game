@@ -126106,6 +126106,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2858021424527343299, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
+      propertyPath: m_Size.y
+      value: 1.0430168
+      objectReference: {fileID: 0}
+    - target: {fileID: 2858021424527343299, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.000030517578
+      objectReference: {fileID: 0}
+    - target: {fileID: 2858021424527343299, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.009992778
+      objectReference: {fileID: 0}
+    - target: {fileID: 2858021424527343299, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.8125
+      objectReference: {fileID: 0}
+    - target: {fileID: 2858021424527343299, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.875
+      objectReference: {fileID: 0}
     - target: {fileID: 2858021424527343302, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
       propertyPath: m_RootOrder
       value: 3
