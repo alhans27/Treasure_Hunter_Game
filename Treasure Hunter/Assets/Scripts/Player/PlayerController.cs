@@ -32,6 +32,11 @@ public class PlayerController : MonoBehaviour
 
         Falling();
 
+        if (Input.GetButtonDown("Fire1"))
+        {
+            animator.SetTrigger("Fire");
+        }
+
         // if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
         // {
         //     rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);

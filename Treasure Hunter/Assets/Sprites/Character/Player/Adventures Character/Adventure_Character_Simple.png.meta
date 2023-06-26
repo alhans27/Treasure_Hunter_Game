@@ -1218,7 +1218,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fire_0
+      name: PlayerFire_0
       rect:
         serializedVersion: 2
         x: 10
@@ -1239,7 +1239,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fire_1
+      name: PlayerFire_1
       rect:
         serializedVersion: 2
         x: 59
@@ -1260,7 +1260,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fire_2
+      name: PlayerFire_2
       rect:
         serializedVersion: 2
         x: 110
@@ -1281,7 +1281,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fire_3
+      name: PlayerFire_3
       rect:
         serializedVersion: 2
         x: 160
@@ -1302,7 +1302,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fire_4
+      name: PlayerFire_4
       rect:
         serializedVersion: 2
         x: 209
@@ -1323,7 +1323,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fire_5
+      name: PlayerFire_5
       rect:
         serializedVersion: 2
         x: 257
@@ -1344,7 +1344,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fire_6
+      name: PlayerFire_6
       rect:
         serializedVersion: 2
         x: 305
@@ -1365,7 +1365,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Adventure_Character_Simple_61
+      name: PlayerFire_7
       rect:
         serializedVersion: 2
         x: 353
@@ -2389,6 +2389,7 @@ TextureImporter:
       Walk_5: -1984833059
       Slide_1: 760088158
       Swim_1: -1183198900
+      PlayerFire_6: 785086878
       Dead_6: 1506192097
       Run_1: -1941677694
       FastRun_3: 312610622
@@ -2400,10 +2401,8 @@ TextureImporter:
       Attack1_3: 1002323388
       Jump_0: -1734818223
       Slide_0: 882499158
-      Fire_5: 1961297866
       Crouch_1: 1667113592
       Walk_2: 2012516641
-      Adventure_Character_Simple_61: -1890838516
       Attack4_2: 1987762916
       Attack5_4: -39388709
       Run_3: 1007582236
@@ -2414,16 +2413,16 @@ TextureImporter:
       Dead_2: -1877273075
       Dance_4: 1706483633
       Run_5: 1067740374
+      PlayerFire_7: -1890838516
+      PlayerFire_5: 1961297866
       Fall_1: 678453893
       Dance_5: -1380389018
       WallSlide_1: 639352402
       Crouch_5: -1015835533
       Hurt_2: -886989385
-      Fire_1: -593180465
       Shot_2: -1983811437
       Dead_1: -459392037
       Attack4_0: 1977656119
-      Fire_6: 785086878
       Dead_3: -853360253
       Idle_0: 1879636666
       Attack2_4: -1473304088
@@ -2434,9 +2433,8 @@ TextureImporter:
       FastRun_2: 1242080068
       Attack1_2: -1536434252
       Fall_0: 1447335965
-      Fire_4: -545606552
-      Attack5_6: -338908472
       Dance_0: 69664474
+      Attack5_6: -338908472
       Run_4: -2061936622
       Attack2_1: -597393379
       Attack2_3: 1557337258
@@ -2444,6 +2442,7 @@ TextureImporter:
       Defense_3: 1774984791
       Idle_4: -97313557
       Jump_1: 1224751108
+      PlayerFire_4: -545606552
       Hurt_1: -1491510427
       Attack5_1: 479215924
       Attack5_2: 474045094
@@ -2456,15 +2455,15 @@ TextureImporter:
       FastRun_0: -155687686
       Crouch_0: 1323082815
       Dance_2: 1303634533
+      PlayerFire_1: -593180465
       Throw_2: -315668797
       Attack1_4: 1593424001
-      Fire_0: 1875111029
+      Hurt_3: -2000791360
       Throw_7: -127608575
       Dance_3: 1689821443
       Walk_3: -97712930
       Attack5_3: 984524358
       Crouch_3: 2084212659
-      Hurt_3: -2000791360
       Attack4_4: -605025987
       Attack4_1: 1385153413
       Attack3_4: 1867253183
@@ -2472,19 +2471,19 @@ TextureImporter:
       Attack4_3: -1435219564
       Throw_1: -441103109
       Swim_0: 1645415822
+      PlayerFire_2: -1415456106
       Idle_1: -1589687770
       Defense_1: 653897911
       Shot_1: -1401277413
       Walk_0: 1149071884
-      Fire_2: -1415456106
       Idle_5: 1153105972
       Crouch_2: -981427879
       Attack3_0: -612826522
-      Fire_3: -52742826
+      Crouch_4: -1755672384
       Attack3_3: 458662090
       Attack5_5: -227786799
-      Crouch_4: -1755672384
       Dead_4: 2131906366
+      PlayerFire_0: 1875111029
       Defense_0: 1069060264
       Attack2_2: -654150775
       Throw_4: 1104141407
@@ -2492,6 +2491,7 @@ TextureImporter:
       Throw_0: -215305159
       Idle_2: 2086988882
       Run_0: -137073164
+      PlayerFire_3: -52742826
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
