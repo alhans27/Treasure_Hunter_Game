@@ -9,10 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2858021424527343302}
+  - component: {fileID: 2858021424527343303}
+  - component: {fileID: 5724886037242452581}
   - component: {fileID: 2858021424527343297}
   - component: {fileID: 2858021424527343296}
   - component: {fileID: 2858021424527343299}
-  - component: {fileID: 2858021424527343303}
   - component: {fileID: 5497926399200294377}
   m_Layer: 0
   m_Name: Player
@@ -37,6 +38,41 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2858021424527343303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2858021424527343298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74ba21561a0e34b4f852880a8d76f68a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 8
+  jumpForce: 20
+  rb: {fileID: 2858021424527343296}
+  coll: {fileID: 2858021424527343299}
+  animator: {fileID: 5497926399200294377}
+  sprite: {fileID: 2858021424527343297}
+  groundCheck: {fileID: 2858021424772688085}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+--- !u!114 &5724886037242452581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2858021424527343298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7e6bc333f6ec2547a0b79ed41955fe6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 4
 --- !u!212 &2858021424527343297
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -136,28 +172,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.60443115, y: 1}
   m_EdgeRadius: 0
---- !u!114 &2858021424527343303
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2858021424527343298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74ba21561a0e34b4f852880a8d76f68a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 8
-  jumpForce: 20
-  rb: {fileID: 2858021424527343296}
-  coll: {fileID: 2858021424527343299}
-  animator: {fileID: 5497926399200294377}
-  sprite: {fileID: 2858021424527343297}
-  groundCheck: {fileID: 2858021424772688085}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!95 &5497926399200294377
 Animator:
   serializedVersion: 5
