@@ -57,10 +57,6 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("Fall", true);
             animator.SetBool("Jump", false);
         }
-        else if (rb.velocity.y > 1f)
-        {
-            animator.SetBool("Fall", false);
-        }
         else
         {
             animator.SetBool("Fall", false);
