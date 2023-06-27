@@ -5,16 +5,13 @@ using UnityEngine.UI;
 
 public class ItemCollection : MonoBehaviour
 {
-    int diamonds;
-
-    [SerializeField] private Text diamondsText;
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    public GameManager GM;
+    private void OnTriggerEnter2D(Collider2D TheThingThatWalkedIntoMe)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if(TheThingThatWalkedIntoMe.name == "Player")
         {
-            diamonds++;
-            diamondsText.text = "Diamonds: " + diamonds;
+            Debug.Log ("You got the diamond");
+            GM.ItemCollection();
             Destroy(gameObject);
         }
     }
