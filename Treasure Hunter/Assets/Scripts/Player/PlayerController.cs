@@ -6,9 +6,9 @@ public class PlayerController : MonoBehaviour
 {
     private float horizontal;
     private bool isFacingRight = true;
-    [SerializeField] private float moveSpeed = 8f;
-    [SerializeField] private float jumpForce = 21f;
+    private float cooldownTimer = Mathf.Infinity;
 
+    [Header("Required Player Components")]
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private BoxCollider2D coll;
     [SerializeField] private Animator animator;
@@ -16,31 +16,46 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
 
+    [Header("Player Move and Jump")]
+    [SerializeField] private float moveSpeed = 8f;
+    [SerializeField] private float jumpForce = 21f;
+
+    [Header("Player Attack")]
+    [SerializeField] private float attackCooldown;
+    [SerializeField] private Transform firePoint;
+    [SerializeField] private GameObject[] fireBullets;
+
 
     // Update is called once per frame
     void Update()
     {
+        // Player Walk Right and Left
         horizontal = Input.GetAxisRaw("Horizontal");
         animator.SetFloat("Speed", Mathf.Abs(horizontal));
         Flip();
 
+        // Player Jumping
         if (Input.GetButtonDown("Jump") && isGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             animator.SetBool("Jump", true);
         }
 
-        Falling();
-
-        if (Input.GetButtonDown("Fire1"))
-        {
-            animator.SetTrigger("Fire");
-        }
-
         // if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
         // {
         //     rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         // }
+
+        // Player Falling
+        Falling();
+
+        // Player Attack
+        if (Input.GetButtonDown("Fire1") && cooldownTimer > attackCooldown)
+        {
+            animator.SetTrigger("Fire");
+        }
+
+        cooldownTimer += Time.deltaTime;
 
     }
 
@@ -77,5 +92,26 @@ public class PlayerController : MonoBehaviour
             // localScale.x *= -1f;
             // transform.localScale = localScale;
         }
+    }
+
+    private void Attack()
+    {
+        cooldownTimer = 0;
+
+        // Pooling Firebullet
+        fireBullets[FindFireball()].transform.position = firePoint.position;
+        fireBullets[FindFireball()].GetComponent<FireBullet>().SetDirection(isFacingRight, Mathf.Sign(transform.localScale.x));
+    }
+
+    private int FindFireball()
+    {
+        for (int i = 0; i < fireBullets.Length; i++)
+        {
+            if (!fireBullets[i].activeInHierarchy)
+            {
+                return i;
+            }
+        }
+        return 0;
     }
 }
