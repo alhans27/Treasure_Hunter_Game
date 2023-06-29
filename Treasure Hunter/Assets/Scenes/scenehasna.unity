@@ -1176,6 +1176,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2858021424527343299, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.8125
+      objectReference: {fileID: 0}
+    - target: {fileID: 2858021424527343299, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.125
+      objectReference: {fileID: 0}
     - target: {fileID: 2858021424527343302, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1194,11 +1202,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2858021424527343302, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 43.8
+      value: -14.1
       objectReference: {fileID: 0}
     - target: {fileID: 2858021424527343302, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.32
+      value: -1.95
       objectReference: {fileID: 0}
     - target: {fileID: 2858021424527343302, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1395,7 +1403,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 58.7, y: -0.1, z: -13.4828}
+  m_LocalPosition: {x: -0.4, y: -0.1, z: -13.4828}
   m_LocalScale: {x: 1.6547614, y: 1.6547614, z: 1.6547614}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4381,7 +4389,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -4391,7 +4399,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 2
-      m_TileSpriteIndex: 2
+      m_TileSpriteIndex: 3
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -4414,14 +4422,14 @@ Tilemap:
   m_TileSpriteArray:
   - m_RefCount: 3
     m_Data: {fileID: 1364910054, guid: 8a3f8deca141ff44f944169c4f9bc06a, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 763676995, guid: 8a3f8deca141ff44f944169c4f9bc06a, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: -686005972, guid: 8a3f8deca141ff44f944169c4f9bc06a, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 763676995, guid: 8a3f8deca141ff44f944169c4f9bc06a, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -94227438, guid: 8a3f8deca141ff44f944169c4f9bc06a, type: 3}
   m_TileMatrixArray:
