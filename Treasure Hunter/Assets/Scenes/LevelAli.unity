@@ -215,7 +215,7 @@ PrefabInstance:
     - target: {fileID: 6842665910782353560, guid: 76ad8c8443902f04a96169ea1821ac5d, type: 3}
       propertyPath: GM
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1974303061}
     - target: {fileID: 6842665910782353560, guid: 76ad8c8443902f04a96169ea1821ac5d, type: 3}
       propertyPath: diamondsText
       value: 
@@ -597,11 +597,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4189725862451352503, guid: c19175860f688c74a97e8a13f0defb0d, type: 3}
   m_PrefabInstance: {fileID: 126729074}
   m_PrefabAsset: {fileID: 0}
---- !u!224 &147936335 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5043331269574087893, guid: 4920b8d3055f45b46b665ef19f103962, type: 3}
-  m_PrefabInstance: {fileID: 1911248970}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &174969981
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -932,7 +927,7 @@ PrefabInstance:
     - target: {fileID: 6842665910782353560, guid: 76ad8c8443902f04a96169ea1821ac5d, type: 3}
       propertyPath: GM
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1974303061}
     - target: {fileID: 6842665910782353560, guid: 76ad8c8443902f04a96169ea1821ac5d, type: 3}
       propertyPath: diamondsText
       value: 
@@ -1009,7 +1004,7 @@ PrefabInstance:
     - target: {fileID: 6842665910782353560, guid: 76ad8c8443902f04a96169ea1821ac5d, type: 3}
       propertyPath: GM
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1974303061}
     - target: {fileID: 6842665910782353560, guid: 76ad8c8443902f04a96169ea1821ac5d, type: 3}
       propertyPath: diamondsText
       value: 
@@ -1411,7 +1406,7 @@ PrefabInstance:
     - target: {fileID: 6842665910782353560, guid: 76ad8c8443902f04a96169ea1821ac5d, type: 3}
       propertyPath: GM
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1974303061}
     - target: {fileID: 6842665910782353560, guid: 76ad8c8443902f04a96169ea1821ac5d, type: 3}
       propertyPath: diamondsText
       value: 
@@ -2011,7 +2006,7 @@ PrefabInstance:
     - target: {fileID: 6842665910782353560, guid: 76ad8c8443902f04a96169ea1821ac5d, type: 3}
       propertyPath: GM
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1974303061}
     - target: {fileID: 6842665910782353560, guid: 76ad8c8443902f04a96169ea1821ac5d, type: 3}
       propertyPath: diamondsText
       value: 
@@ -2310,7 +2305,7 @@ PrefabInstance:
     - target: {fileID: 6842665910782353560, guid: 76ad8c8443902f04a96169ea1821ac5d, type: 3}
       propertyPath: GM
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1974303061}
     - target: {fileID: 6842665910782353560, guid: 76ad8c8443902f04a96169ea1821ac5d, type: 3}
       propertyPath: diamondsText
       value: 
@@ -2678,7 +2673,7 @@ PrefabInstance:
     - target: {fileID: 6842665910782353560, guid: 76ad8c8443902f04a96169ea1821ac5d, type: 3}
       propertyPath: GM
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1974303061}
     - target: {fileID: 6842665910782353560, guid: 76ad8c8443902f04a96169ea1821ac5d, type: 3}
       propertyPath: diamondsText
       value: 
@@ -2879,7 +2874,7 @@ PrefabInstance:
     - target: {fileID: 6842665910782353560, guid: 76ad8c8443902f04a96169ea1821ac5d, type: 3}
       propertyPath: GM
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1974303061}
     - target: {fileID: 6842665910782353560, guid: 76ad8c8443902f04a96169ea1821ac5d, type: 3}
       propertyPath: diamondsText
       value: 
@@ -3419,7 +3414,7 @@ PrefabInstance:
     - target: {fileID: 6842665910782353560, guid: 76ad8c8443902f04a96169ea1821ac5d, type: 3}
       propertyPath: GM
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1974303061}
     - target: {fileID: 6842665910782353560, guid: 76ad8c8443902f04a96169ea1821ac5d, type: 3}
       propertyPath: diamondsText
       value: 
@@ -3651,7 +3646,7 @@ PrefabInstance:
     - target: {fileID: 6842665910782353560, guid: 76ad8c8443902f04a96169ea1821ac5d, type: 3}
       propertyPath: GM
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1974303061}
     - target: {fileID: 6842665910782353560, guid: 76ad8c8443902f04a96169ea1821ac5d, type: 3}
       propertyPath: diamondsText
       value: 
@@ -40224,7 +40219,7 @@ PrefabInstance:
     - target: {fileID: 6842665910782353560, guid: 76ad8c8443902f04a96169ea1821ac5d, type: 3}
       propertyPath: GM
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1974303061}
     - target: {fileID: 6842665910782353560, guid: 76ad8c8443902f04a96169ea1821ac5d, type: 3}
       propertyPath: diamondsText
       value: 
@@ -40525,6 +40520,22 @@ MonoBehaviour:
   - {fileID: 762067204}
   moveSpeed: 3
   patrolDestination: 0
+--- !u!224 &1899520522 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3188562891897583103, guid: 4920b8d3055f45b46b665ef19f103962, type: 3}
+  m_PrefabInstance: {fileID: 1911248970}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1899520523 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3188562891897583102, guid: 4920b8d3055f45b46b665ef19f103962, type: 3}
+  m_PrefabInstance: {fileID: 1911248970}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1911248970
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40756,7 +40767,7 @@ PrefabInstance:
     - target: {fileID: 6842665910782353560, guid: 76ad8c8443902f04a96169ea1821ac5d, type: 3}
       propertyPath: GM
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1974303061}
     - target: {fileID: 6842665910782353560, guid: 76ad8c8443902f04a96169ea1821ac5d, type: 3}
       propertyPath: diamondsText
       value: 
@@ -41028,7 +41039,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DiamondCollected: 0
-  DiamondOutput: {fileID: 0}
+  DiamondOutput: {fileID: 1899520523}
 --- !u!4 &1974303062
 Transform:
   m_ObjectHideFlags: 0
@@ -41136,7 +41147,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 147936335}
+  - {fileID: 1899520522}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -41155,7 +41166,7 @@ PrefabInstance:
     - target: {fileID: 6842665910782353560, guid: 76ad8c8443902f04a96169ea1821ac5d, type: 3}
       propertyPath: GM
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1974303061}
     - target: {fileID: 6842665910782353560, guid: 76ad8c8443902f04a96169ea1821ac5d, type: 3}
       propertyPath: diamondsText
       value: 
