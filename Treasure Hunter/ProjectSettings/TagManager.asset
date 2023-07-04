@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Trap
   - Diamond
+  - Coin
   layers:
   - Default
   - TransparentFX

@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public int DiamondCollected = 0;
-
     public Text DiamondOutput;
     void Update()
     {

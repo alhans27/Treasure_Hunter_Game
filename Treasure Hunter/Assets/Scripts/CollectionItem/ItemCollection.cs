@@ -15,4 +15,6 @@ public class ItemCollection : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    
+
 }
