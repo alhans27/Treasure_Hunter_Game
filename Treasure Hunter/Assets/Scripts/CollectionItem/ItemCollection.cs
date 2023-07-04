@@ -8,10 +8,17 @@ public class ItemCollection : MonoBehaviour
     public GameManager GM;
     private void OnTriggerEnter2D(Collider2D TheThingThatWalkedIntoMe)
     {
-        if(TheThingThatWalkedIntoMe.name == "Player")
+        
+        if( TheThingThatWalkedIntoMe.CompareTag("Player") && gameObject.CompareTag("Coin"))
         {
-            Debug.Log ("You got the diamond");
-            GM.ItemCollection();
+           
+            GM.CoinCollection();
+            Destroy(gameObject);
+
+        }
+        else if ( TheThingThatWalkedIntoMe.CompareTag("Player") && gameObject.CompareTag("Diamond"))
+        {
+            GM.DiamondCollection();
             Destroy(gameObject);
         }
     }
