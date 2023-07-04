@@ -15,7 +15,6 @@ public class EnemyHit : MonoBehaviour
 
     private void Update() {
         _hitTimer += Time.deltaTime;
-        Debug.Log(_hitTimer);
 
         if (_hitTimer > hitTime)
         {
