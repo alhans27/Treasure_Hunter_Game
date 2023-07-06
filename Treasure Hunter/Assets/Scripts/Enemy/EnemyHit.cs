@@ -8,6 +8,8 @@ public class EnemyHit : MonoBehaviour
 {
     [SerializeField] private float damagePoint;
     [SerializeField] private float hitTime;
+    [SerializeField] private Animator anim;
+    [SerializeField] private EnemyPatrol patrol;
     private float _hitTimer = 0;
     private bool _canHit = true;
     public Health player;
@@ -31,6 +33,10 @@ public class EnemyHit : MonoBehaviour
         {
             if (_canHit == true)
             {
+                if (anim)
+                {
+                    patrol.Behaviour("Attack");
+                }
                 Debug.Log ("You got Hit");
                 player.TakeDamage(damagePoint);
                 _hitTimer = 0;
