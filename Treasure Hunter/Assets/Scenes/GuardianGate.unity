@@ -38138,6 +38138,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9058332750274858898, guid: 1d3df520be3dadc47ae0ce01d922044a, type: 3}
+      propertyPath: image2
+      value: 
+      objectReference: {fileID: 21300000, guid: 36aec4dba553d6947a966e462faea040, type: 3}
+    - target: {fileID: 9058332750274858898, guid: 1d3df520be3dadc47ae0ce01d922044a, type: 3}
       propertyPath: mouseFollower
       value: 
       objectReference: {fileID: 1993331069}

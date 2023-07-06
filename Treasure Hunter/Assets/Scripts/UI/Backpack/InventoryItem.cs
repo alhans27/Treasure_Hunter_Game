@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System;
 using UnityEngine.EventSystems;
 
-public class InventoryItem : MonoBehaviour
+public class InventoryItem : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IEndDragHandler, IDropHandler, IDragHandler
 {
     [SerializeField]
     private Image itemImage;
@@ -22,7 +22,7 @@ public class InventoryItem : MonoBehaviour
     public void Awake()
     {
         ResetData();
-        DeselectData();
+        Deselect();
     }
 
     public void ResetData()
@@ -31,7 +31,7 @@ public class InventoryItem : MonoBehaviour
         empty = true;
 
     }
-    private void DeselectData()
+    public void Deselect()
     {
         borderImage.enabled = false;
     }
@@ -48,25 +48,9 @@ public class InventoryItem : MonoBehaviour
     {
         borderImage.enabled = true;
     }
-    public void onBeginDrag()
+
+    public void OnPointerClick(PointerEventData pointerData)
     {
-        if (empty)
-            return;
-        onItemBeginDrag?.Invoke(this);
-    }
-    public void onDrop()
-    {
-        onItemDroppedOn?.Invoke(this);
-    }
-    public void onEndDrag()
-    {
-        onItemEndDrag?.Invoke(this);
-    }
-    public void onPointerClick(BaseEventData data)
-    {
-        if (empty)
-            return;
-        PointerEventData pointerData = (PointerEventData)data;
         if (pointerData.button == PointerEventData.InputButton.Right)
         {
             onItemRightMouseClicked?.Invoke(this);
@@ -75,5 +59,27 @@ public class InventoryItem : MonoBehaviour
         {
             onItemClicked?.Invoke(this);
         }
+    }
+
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        if (empty)
+            return;
+        onItemBeginDrag?.Invoke(this);
+    }
+
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        onItemEndDrag?.Invoke(this);
+    }
+
+    public void OnDrop(PointerEventData eventData)
+    {
+        onItemDroppedOn?.Invoke(this);
+    }
+
+    public void OnDrag(PointerEventData eventData)
+    {
+
     }
 }
