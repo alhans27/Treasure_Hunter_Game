@@ -72,7 +72,7 @@ public class PlayerController : MonoBehaviour
 
     private void Falling()
     {
-        if (rb.velocity.y < -0.1f)
+        if (rb.velocity.y < -0.1f && !isGrounded())
         {
             animator.SetBool("Fall", true);
             animator.SetBool("Jump", false);
