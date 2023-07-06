@@ -12,7 +12,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Trap
   - Water
   - UI
   - Ground
@@ -44,6 +44,9 @@ TagManager:
   m_SortingLayers:
   - name: Background
     uniqueID: 392725097
+    locked: 0
+  - name: Trap
+    uniqueID: 1992821509
     locked: 0
   - name: Tilemap Fill
     uniqueID: 3837065773
