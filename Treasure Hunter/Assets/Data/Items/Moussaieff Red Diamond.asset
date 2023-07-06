@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Moussaieff Red Diamond
   m_EditorClassIdentifier: 
   <IsStackable>k__BackingField: 0
-  <MaxStackSize>k__BackingField: 1
+  <MaxStackSize>k__BackingField: 99
   <Name>k__BackingField: Moussaieff Red Diamond
   <ItemValue>k__BackingField: 
   <ItemWeight>k__BackingField: 
