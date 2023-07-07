@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd1f14f6a333c0a4e811d6c15316366b, type: 3}
   m_Name: Allnatt Diamond
   m_EditorClassIdentifier: 
-  <IsStackable>k__BackingField: 0
+  <IsStackable>k__BackingField: 1
   <MaxStackSize>k__BackingField: 99
   <Name>k__BackingField: Allnatt Diamond
   <ItemValue>k__BackingField: 
