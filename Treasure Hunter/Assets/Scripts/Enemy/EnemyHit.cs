@@ -8,8 +8,11 @@ public class EnemyHit : MonoBehaviour
 {
     [SerializeField] private float damagePoint;
     [SerializeField] private float hitTime;
+    [SerializeField] private float health;
     [SerializeField] private Animator anim;
     [SerializeField] private EnemyPatrol patrol;
+    [SerializeField] private FireBullet playerDamage;
+
     private float _hitTimer = 0;
     private bool _canHit = true;
     public Health player;
@@ -29,18 +32,35 @@ public class EnemyHit : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D Collide)
     {
-        if(Collide.name == "Player")
+        if(Collide.name == "Player" && _canHit == true)
         {
-            if (_canHit == true)
+            if (!gameObject.CompareTag("Enemy Bats"))
             {
-                if (anim)
-                {
-                    patrol.Behaviour("Attack");
-                }
-                Debug.Log ("You got Hit");
-                player.TakeDamage(damagePoint);
-                _hitTimer = 0;
+                patrol.Behaviour("Attack");
             }
+            Debug.Log ("You got Hit");
+            player.TakeDamage(damagePoint);
+            _hitTimer = 0;
+        }
+
+        if(Collide.name == "Fire Bullet")
+        {
+            TakeDamage(playerDamage.damagePoint);
+        }
+    }
+
+
+
+    public void TakeDamage(float dp)
+    {
+        health -= dp;
+        Debug.Log(health);
+        if (health > 0)
+        {
+            anim.SetTrigger("Hit");
+        } else {
+            Destroy(gameObject, 0.5f);
+            anim.SetTrigger("Dead");
         }
     }
 }
