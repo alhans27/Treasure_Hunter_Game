@@ -1,28 +1,81 @@
+using System;
+using Inventory.Model;
+using Inventory.UI;
 using UnityEngine;
 
-public class BackpackController : MonoBehaviour
+namespace Inventory
 {
-    [SerializeField]
-    private BackpackInventory inventoryUI;
-
-    [SerializeField]
-    private int inventorySize = 5;
-
-    public void Start()
+    public class BackpackController : MonoBehaviour
     {
-        inventoryUI.InitializeInventoryUI(inventorySize);
-    }
-    public void Update()
-    {
-        if (Input.GetButtonDown("Backpack"))
+        [SerializeField]
+        private BackpackInventory inventoryUI;
+
+        [SerializeField]
+        private InventorySO inventoryData;
+
+        public void Start()
         {
-            if (inventoryUI.isActiveAndEnabled == false)
+            PrepareUI();
+            // inventoryData.Initialize(); --> Disable because the data was Updated
+        }
+
+        private void PrepareUI()
+        {
+            inventoryUI.InitializeInventoryUI(inventoryData.Size);
+            this.inventoryUI.OnDescRequested += HandleDescRequest;
+            this.inventoryUI.OnStartDragging += HandleDragging;
+            this.inventoryUI.OnSwapItems += HandleSwapItems;
+            this.inventoryUI.OnItemActionRequested += HandleItemActionRequest;
+
+        }
+
+        private void HandleItemActionRequest(int itemIndex)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void HandleSwapItems(int itemIndex_1, int itemIndex_2)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void HandleDragging(int itemIndex)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void HandleDescRequest(int itemIndex)
+        {
+            ItemInventory inventoryItem = inventoryData.GetItemAt(itemIndex);
+            if (inventoryItem.IsEmpty)
             {
-                inventoryUI.Show();
+                inventoryUI.ResetSelection();
+                return;
             }
-            else
+            ItemSO item = inventoryItem.item;
+            this.inventoryUI.UpdateDesc(itemIndex, item.ItemImage, item.name, item.Description);
             {
-                inventoryUI.Hide();
+
+            }
+
+        }
+
+        public void Update()
+        {
+            if (Input.GetButtonDown("Backpack"))
+            {
+                if (inventoryUI.isActiveAndEnabled == false)
+                {
+                    inventoryUI.Show();
+                    foreach (var item in inventoryData.GetCurrentInventoryState())
+                    {
+                        inventoryUI.UpdateData(item.Key, item.Value.item.ItemImage, item.Value.quantity);
+                    }
+                }
+                else
+                {
+                    inventoryUI.Hide();
+                }
             }
         }
     }

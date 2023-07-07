@@ -1904,7 +1904,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 392725097
-  m_SortingLayer: -3
+  m_SortingLayer: -4
   m_SortingOrder: 2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -7516,7 +7516,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 392725097
-  m_SortingLayer: -3
+  m_SortingLayer: -4
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: a402b81038333324085f210217dbaa1a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -37152,7 +37152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 2868015706294343004}
-  inventorySize: 5
+  inventoryData: {fileID: 11400000, guid: 37b5460eabf31ac4d828f643bb9ae1b5, type: 2}
 --- !u!1 &1480696510
 GameObject:
   m_ObjectHideFlags: 0

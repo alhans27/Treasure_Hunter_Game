@@ -4,35 +4,38 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class InventoryDescItem : MonoBehaviour
+namespace Inventory.UI
 {
-    [SerializeField]
-    private Image itemImage;
-
-    [SerializeField]
-    private Text titleTxt;
-
-    [SerializeField]
-    private Text descTxt;
-
-    public void Awake()
+    public class InventoryDescItem : MonoBehaviour
     {
-        ResetDesc();
+        [SerializeField]
+        private Image itemImage;
 
-    }
+        [SerializeField]
+        private Text titleTxt;
 
-    public void ResetDesc()
-    {
-        this.itemImage.gameObject.SetActive(false);
-        this.titleTxt.text = "";
-        this.descTxt.text = "";
-    }
+        [SerializeField]
+        private Text descTxt;
 
-    public void SetDesc(Sprite sprite, string itemName, string itemDesc)
-    {
-        this.itemImage.gameObject.SetActive(true);
-        this.itemImage.sprite = sprite;
-        this.titleTxt.text = itemName;
-        this.descTxt.text = itemDesc;
+        public void Awake()
+        {
+            ResetDesc();
+
+        }
+
+        public void ResetDesc()
+        {
+            this.itemImage.gameObject.SetActive(false);
+            this.titleTxt.text = "";
+            this.descTxt.text = "";
+        }
+
+        public void SetDesc(Sprite sprite, string itemName, string itemDesc)
+        {
+            this.itemImage.gameObject.SetActive(true);
+            this.itemImage.sprite = sprite;
+            this.titleTxt.text = itemName;
+            this.descTxt.text = itemDesc;
+        }
     }
 }
