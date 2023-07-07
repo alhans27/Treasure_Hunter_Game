@@ -42302,6 +42302,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 363182325428702752, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.364
+      objectReference: {fileID: 0}
     - target: {fileID: 450683923468518810, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
       propertyPath: damagePoint
       value: 1
@@ -42333,6 +42337,10 @@ PrefabInstance:
     - target: {fileID: 2858021424527343298, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2858021424527343299, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2858021424527343302, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
       propertyPath: m_RootOrder
@@ -42390,6 +42398,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2858021424527343303, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
+      propertyPath: fireBullets.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4660927086835003212, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
       propertyPath: damagePoint
       value: 1
@@ -42409,6 +42421,10 @@ PrefabInstance:
     - target: {fileID: 8209616742146472085, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
       propertyPath: damagePoint
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8883235863186365154, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
+      propertyPath: bulletRange
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8883235863186365154, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
       propertyPath: damagePoint

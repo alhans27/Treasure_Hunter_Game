@@ -13,9 +13,8 @@ GameObject:
   - component: {fileID: 4789076380124716045}
   - component: {fileID: 4789076380124716044}
   - component: {fileID: 4789076380124716047}
-  - component: {fileID: 4789076380124716043}
   - component: {fileID: 4789076380124716040}
-  - component: {fileID: 4789076380124716041}
+  - component: {fileID: 2883397859445594621}
   m_Layer: 0
   m_Name: Bats
   m_TagString: Enemy Bats
@@ -157,23 +156,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &4789076380124716043
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4789076380124716145}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99a469777979dd349b14202aac480dda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  patrolPoints:
-  - {fileID: 4789076380353209015}
-  - {fileID: 4789076381156675274}
-  moveSpeed: 3
-  patrolDestination: 0
 --- !u!114 &4789076380124716040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,12 +168,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6859f6b1401e254bbfd37152f6cfb50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damagePoint: 0.2
+  damagePoint: 0.5
   hitTime: 1
-  anim: {fileID: 0}
-  patrol: {fileID: 0}
+  health: 1
+  anim: {fileID: 4789076380124716047}
+  patrol: {fileID: 2883397859445594621}
+  playerDamage: {fileID: 0}
   player: {fileID: 0}
---- !u!114 &4789076380124716041
+--- !u!114 &2883397859445594621
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -200,9 +184,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 4789076380124716145}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df6f063b7bfc7ba46ae557f4e0d0d71f, type: 3}
+  m_Script: {fileID: 11500000, guid: 93208bc64a491be46b13977cb7e1a7d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  patrolPoints:
+  - {fileID: 4789076380353209015}
+  - {fileID: 4789076381156675274}
+  moveSpeed: 3
+  patrolBehaviour: 1
+  anim: {fileID: 4789076380124716047}
 --- !u!1 &4789076380353209014
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,7 +217,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4789076380353209014}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.57, y: 0, z: 0}
+  m_LocalPosition: {x: -5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -258,7 +248,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4789076380867396438}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.35, y: -0.09, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -292,7 +282,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4789076381156675277}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.13, y: 0, z: 0}
+  m_LocalPosition: {x: 5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

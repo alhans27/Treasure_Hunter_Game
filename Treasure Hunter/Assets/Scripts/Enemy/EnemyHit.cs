@@ -38,7 +38,6 @@ public class EnemyHit : MonoBehaviour
             {
                 patrol.Behaviour("Attack");
             }
-            Debug.Log ("You got Hit");
             player.TakeDamage(damagePoint);
             _hitTimer = 0;
         }
@@ -54,7 +53,6 @@ public class EnemyHit : MonoBehaviour
     public void TakeDamage(float dp)
     {
         health -= dp;
-        Debug.Log(health);
         if (health > 0)
         {
             anim.SetTrigger("Hit");

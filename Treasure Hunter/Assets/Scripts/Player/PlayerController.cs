@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     private float horizontal;
     private bool isFacingRight = true;
     private float cooldownTimer = Mathf.Infinity;
+    private Vector3 position;
 
     [Header("Required Player Components")]
     [SerializeField] private Rigidbody2D rb;
@@ -50,6 +51,7 @@ public class PlayerController : MonoBehaviour
         Falling();
 
         // Player Attack
+        position = firePoint.position;
         if (Input.GetButtonDown("Fire1") && cooldownTimer > attackCooldown)
         {
             animator.SetTrigger("Fire");
@@ -88,6 +90,7 @@ public class PlayerController : MonoBehaviour
         {
             sprite.flipX = isFacingRight;
             isFacingRight = !isFacingRight;
+
             // Vector3 localScale = transform.localScale;
             // localScale.x *= -1f;
             // transform.localScale = localScale;
@@ -98,9 +101,16 @@ public class PlayerController : MonoBehaviour
     {
         cooldownTimer = 0;
 
+        //FirePoint Position
+        if (!isFacingRight)
+        {
+            position.x -= 1;
+        }
+
         // Pooling Firebullet
-        fireBullets[FindFireball()].transform.position = firePoint.position;
-        fireBullets[FindFireball()].GetComponent<FireBullet>().SetDirection(isFacingRight, Mathf.Sign(transform.localScale.x));
+        fireBullets[FindFireball()].GetComponent<FireBullet>().Position(firePoint.position.x);
+        fireBullets[FindFireball()].transform.position = position;
+        fireBullets[FindFireball()].GetComponent<FireBullet>().SetDirection(isFacingRight, Mathf.Sign(isFacingRight? 1 : -1));
     }
 
     private int FindFireball()
