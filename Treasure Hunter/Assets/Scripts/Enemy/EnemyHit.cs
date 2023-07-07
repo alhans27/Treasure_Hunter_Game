@@ -56,6 +56,7 @@ public class EnemyHit : MonoBehaviour
         if (health > 0)
         {
             anim.SetTrigger("Hit");
+            anim.SetBool("Walk", true);
         } else {
             Destroy(gameObject, 0.5f);
             anim.SetTrigger("Dead");
