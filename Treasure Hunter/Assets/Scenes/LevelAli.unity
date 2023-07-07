@@ -3612,7 +3612,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1001534616}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.42, y: -3.66, z: 0}
+  m_LocalPosition: {x: -0.35, y: -0.09, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5793,8 +5793,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1584813413
-  m_SortingLayer: 2
+  m_SortingLayerID: -1602499613
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -24172,8 +24172,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1690369385
-  m_SortingLayer: 1
+  m_SortingLayerID: -457901523
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -43690,6 +43690,26 @@ PrefabInstance:
     - target: {fileID: 4902879343142803413, guid: b425ba4f374b47044849e3ac1a41601a, type: 3}
       propertyPath: m_Name
       value: Skeletons
+      objectReference: {fileID: 0}
+    - target: {fileID: 4902879343506909900, guid: b425ba4f374b47044849e3ac1a41601a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4902879343506909900, guid: b425ba4f374b47044849e3ac1a41601a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4902879343506909900, guid: b425ba4f374b47044849e3ac1a41601a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4902879343506909900, guid: b425ba4f374b47044849e3ac1a41601a, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4902879343506909901, guid: b425ba4f374b47044849e3ac1a41601a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b425ba4f374b47044849e3ac1a41601a, type: 3}
