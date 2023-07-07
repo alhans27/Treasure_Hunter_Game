@@ -31,7 +31,7 @@ public class MouseFollower : MonoBehaviour
 
     public void Toggle(bool val)
     {
-        Debug.Log($"Item toggled {val}");
+        // Debug.Log($"Item toggled {val}");
         gameObject.SetActive(val);
     }
 }

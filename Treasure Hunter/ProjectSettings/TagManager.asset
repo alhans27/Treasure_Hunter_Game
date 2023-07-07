@@ -8,6 +8,7 @@ TagManager:
   - Diamond
   - Coin
   - Enemy Bats
+  - Guardian
   layers:
   - Default
   - TransparentFX
