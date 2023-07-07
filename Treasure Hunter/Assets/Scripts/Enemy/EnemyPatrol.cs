@@ -14,62 +14,89 @@ public class EnemyPatrol : MonoBehaviour
     [SerializeField] private Animator anim;
 
     private void Start() {
-        anim.SetBool("Walk", true);
+        if (!gameObject.CompareTag("Enemy Bats")){
+            anim.SetBool("Walk", true);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(patrolBehaviour == 0)
+        if (gameObject.CompareTag("Enemy Bats"))
         {
-            if(Vector2.Distance(transform.position, patrolPoints[0].position) < 0.2f)
+            if(patrolBehaviour == 0)
             {
-                if (idleTimer < 3){
-                    anim.SetBool("Walk", false);
-                    idleTimer += Time.deltaTime;
-                } else {
-                    idleTimer = 0;
+                transform.position = Vector2.MoveTowards(transform.position, patrolPoints[0].position, moveSpeed * Time.deltaTime);
+                if(Vector2.Distance(transform.position, patrolPoints[0].position) < 0.2f)
+                {
                     transform.localScale = new Vector3(1, 1, 1);
                     patrolBehaviour = 1;
-                    anim.SetBool("Walk", true);
                 }
-            } else {
-                transform.position = Vector2.MoveTowards(transform.position, patrolPoints[0].position, moveSpeed * Time.deltaTime);
             }
-        }
 
-        else if(patrolBehaviour == 1)
-        {
-            if(Vector2.Distance(transform.position, patrolPoints[1].position)< 0.2f)
+            else if(patrolBehaviour == 1)
             {
-                if (idleTimer < 3)
+                transform.position = Vector2.MoveTowards(transform.position, patrolPoints[1].position, moveSpeed * Time.deltaTime);
+                if(Vector2.Distance(transform.position, patrolPoints[1].position)< 0.2f)
                 {
-                    anim.SetBool("Walk", false);
-                    idleTimer += Time.deltaTime;
-                } else {
-                    idleTimer = 0;
                     transform.localScale = new Vector3(-1, 1, 1);
                     patrolBehaviour = 0;
-                    anim.SetBool("Walk", true);
                 }
-            } else {
-                transform.position = Vector2.MoveTowards(transform.position, patrolPoints[1].position, moveSpeed * Time.deltaTime);
             }
         }
 
-        else if (patrolBehaviour == 2)
-        {
-            idleTimer += Time.deltaTime;
-            if (idleTimer < 1)
+        else 
+        {           
+            if(patrolBehaviour == 0)
             {
-                Debug.Log(action);
-                anim.SetBool("Attack", true);
-            } else if (idleTimer < 1.5f)
+                if(Vector2.Distance(transform.position, patrolPoints[0].position) < 0.2f)
+                {
+                    if (idleTimer < 3){
+                        anim.SetBool("Walk", false);
+                        idleTimer += Time.deltaTime;
+                    } else {
+                        idleTimer = 0;
+                        transform.localScale = new Vector3(1, 1, 1);
+                        patrolBehaviour = 1;
+                        anim.SetBool("Walk", true);
+                    }
+                } else {
+                    transform.position = Vector2.MoveTowards(transform.position, patrolPoints[0].position, moveSpeed * Time.deltaTime);
+                }
+            }
+
+            else if(patrolBehaviour == 1)
             {
-                anim.SetBool("Walk", false);
-            } else if (idleTimer > 1.5f){
-                anim.SetBool("Walk", true);
-                patrolBehaviour = patrolBehaviourBefore;
+                if(Vector2.Distance(transform.position, patrolPoints[1].position)< 0.2f)
+                {
+                    if (idleTimer < 3)
+                    {
+                        anim.SetBool("Walk", false);
+                        idleTimer += Time.deltaTime;
+                    } else {
+                        idleTimer = 0;
+                        transform.localScale = new Vector3(-1, 1, 1);
+                        patrolBehaviour = 0;
+                        anim.SetBool("Walk", true);
+                    }
+                } else {
+                    transform.position = Vector2.MoveTowards(transform.position, patrolPoints[1].position, moveSpeed * Time.deltaTime);
+                }
+            }
+
+            else if (patrolBehaviour == 2)
+            {
+                idleTimer += Time.deltaTime;
+                if (idleTimer < 0.6f)
+                {
+                    anim.SetTrigger(action);
+                } else if (idleTimer < 1.3f)
+                {
+                    anim.SetBool("Walk", false);
+                } else if (idleTimer > 1.5f){
+                    anim.SetBool("Walk", true);
+                    patrolBehaviour = patrolBehaviourBefore;
+                }
             }
         }
     }

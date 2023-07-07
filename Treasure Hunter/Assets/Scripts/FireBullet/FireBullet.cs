@@ -5,9 +5,9 @@ using UnityEngine;
 public class FireBullet : MonoBehaviour
 {
     [SerializeField] private float bulletSpeed;
+    [SerializeField] public float damagePoint;
     private float direction;
     private bool hit;
-
     private CircleCollider2D coll;
     private Animator anim;
 
@@ -26,9 +26,12 @@ public class FireBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collison)
     {
-        hit = true;
-        coll.enabled = false;
-        anim.SetTrigger("Explode");
+        if (collison.gameObject.CompareTag("Enemy") || collison.gameObject.CompareTag("Enemy Bats"))
+        {
+            hit = true;
+            coll.enabled = false;
+            anim.SetTrigger("Explode");
+        }
     }
 
     public void SetDirection(bool _isFlip, float _direction)
