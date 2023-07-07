@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 namespace Inventory.UI
 {
-    public class InventoryItem : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IEndDragHandler, IDropHandler, IDragHandler
+    public class UIInventoryItem : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IEndDragHandler, IDropHandler, IDragHandler
     {
         [SerializeField]
         private Image itemImage;
@@ -16,7 +16,7 @@ namespace Inventory.UI
         [SerializeField]
         private Text quantityTxt;
 
-        public event Action<InventoryItem> onItemClicked, onItemRightMouseClicked, onItemDroppedOn, onItemBeginDrag, onItemEndDrag;
+        public event Action<UIInventoryItem> onItemClicked, onItemRightMouseClicked, onItemDroppedOn, onItemBeginDrag, onItemEndDrag;
 
         private bool empty = true;
 

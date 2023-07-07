@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Inventory.Model;
 using Inventory.UI;
 using UnityEngine;
@@ -8,15 +9,37 @@ namespace Inventory
     public class BackpackController : MonoBehaviour
     {
         [SerializeField]
-        private BackpackInventory inventoryUI;
+        private UIInventoryBackpack inventoryUI;
 
         [SerializeField]
         private InventorySO inventoryData;
 
+        public List<ItemInventory> intialItems = new List<ItemInventory>();
+
         public void Start()
         {
             PrepareUI();
-            // inventoryData.Initialize(); --> Disable because the data was Updated
+            PrepareInventoryData();
+        }
+        private void PrepareInventoryData()
+        {
+            inventoryData.Initialize();
+            inventoryData.OnInventoryUpdated += UpdateInventoryUI;
+            foreach (ItemInventory item in intialItems)
+            {
+                if (item.IsEmpty)
+                    continue;
+                this.inventoryData.AddItem(item);
+            }
+        }
+
+        private void UpdateInventoryUI(Dictionary<int, ItemInventory> inventoryState)
+        {
+            this.inventoryUI.ResetAllItems();
+            foreach (var item in inventoryState)
+            {
+                this.inventoryUI.UpdateData(item.Key, item.Value.item.ItemImage, item.Value.quantity);
+            }
         }
 
         private void PrepareUI()
@@ -36,12 +59,15 @@ namespace Inventory
 
         private void HandleSwapItems(int itemIndex_1, int itemIndex_2)
         {
-            throw new NotImplementedException();
+            inventoryData.SwapItems(itemIndex_1, itemIndex_2);
         }
 
         private void HandleDragging(int itemIndex)
         {
-            throw new NotImplementedException();
+            ItemInventory inventoryItem = inventoryData.GetItemAt(itemIndex);
+            if (inventoryItem.IsEmpty)
+                return;
+            this.inventoryUI.CreateDraggedItem(inventoryItem.item.ItemImage, inventoryItem.quantity);
         }
 
         private void HandleDescRequest(int itemIndex)

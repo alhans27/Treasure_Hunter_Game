@@ -10,51 +10,72 @@ namespace Inventory.Model
     public class InventorySO : ScriptableObject
     {
         [SerializeField]
-        private List<ItemInventory> inventoryItems;
+        private List<ItemInventory> listInventoryItems;
 
         [field: SerializeField]
         public int Size { get; set; } = 5;
 
+        public event Action<Dictionary<int, ItemInventory>> OnInventoryUpdated;
+
         public void Initialize()
         {
-            inventoryItems = new List<ItemInventory>();
+            listInventoryItems = new List<ItemInventory>();
             for (int i = 0; i < Size; i++)
             {
-                inventoryItems.Add(ItemInventory.GetEmptyItem());
+                listInventoryItems.Add(ItemInventory.GetEmptyItem());
             }
         }
 
         public void AddItem(ItemSO item, int quantity)
         {
-            for (int i = 0; i < inventoryItems.Count; i++)
+            for (int i = 0; i < listInventoryItems.Count; i++)
             {
-                if (inventoryItems[i].IsEmpty)
+                if (listInventoryItems[i].IsEmpty)
                 {
-                    inventoryItems[i] = new ItemInventory
+                    listInventoryItems[i] = new ItemInventory
                     {
                         item = item,
                         quantity = quantity,
                     };
+                    return;
                 }
             }
+        }
+        public void AddItem(ItemInventory item)
+        {
+            AddItem(item.item, item.quantity);
         }
 
         public Dictionary<int, ItemInventory> GetCurrentInventoryState()
         {
             Dictionary<int, ItemInventory> returnValue = new Dictionary<int, ItemInventory>();
 
-            for (int i = 0; i < inventoryItems.Count; i++)
+            for (int i = 0; i < listInventoryItems.Count; i++)
             {
-                if (inventoryItems[i].IsEmpty)
+                if (listInventoryItems[i].IsEmpty)
                     continue;
-                returnValue[i] = inventoryItems[i];
+                returnValue[i] = listInventoryItems[i];
             }
             return returnValue;
         }
 
         public ItemInventory GetItemAt(int itemIndex)
         {
-            return inventoryItems[itemIndex];
+            return listInventoryItems[itemIndex];
+        }
+
+        public void SwapItems(int itemIndex_1, int itemIndex_2)
+        {
+            ItemInventory item1 = listInventoryItems[itemIndex_1];
+            listInventoryItems[itemIndex_1] = listInventoryItems[itemIndex_2];
+            listInventoryItems[itemIndex_2] = item1;
+            InformAboutChange();
+
+        }
+
+        private void InformAboutChange()
+        {
+            OnInventoryUpdated?.Invoke(GetCurrentInventoryState());
         }
     }
 

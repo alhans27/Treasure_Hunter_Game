@@ -4,13 +4,13 @@ using UnityEngine;
 
 namespace Inventory.UI
 {
-    public class BackpackInventory : MonoBehaviour
+    public class UIInventoryBackpack : MonoBehaviour
     {
         [SerializeField]
-        private InventoryItem itemPrefab;
+        private UIInventoryItem itemPrefab;
 
         [SerializeField]
-        private InventoryDescItem itemDesc;
+        private UIInventoryDescItem itemDesc;
 
         [SerializeField]
         private RectTransform contentPanel;
@@ -18,7 +18,7 @@ namespace Inventory.UI
         [SerializeField]
         private MouseFollower mouseFollower;
 
-        List<InventoryItem> listItems = new List<InventoryItem>();
+        List<UIInventoryItem> listItems = new List<UIInventoryItem>();
         private int currentlyDraggedItemIndex = -1;
 
         public event Action<int> OnDescRequested, OnItemActionRequested, OnStartDragging;
@@ -34,7 +34,7 @@ namespace Inventory.UI
         {
             for (int i = 0; i < inventorysize; i++)
             {
-                InventoryItem item = Instantiate(itemPrefab, Vector3.zero, Quaternion.identity);
+                UIInventoryItem item = Instantiate(itemPrefab, Vector3.zero, Quaternion.identity);
                 item.transform.SetParent(contentPanel);
                 listItems.Add(item);
                 item.onItemClicked += HandleItemSelection;
@@ -53,7 +53,7 @@ namespace Inventory.UI
             }
         }
 
-        private void HandleSwap(InventoryItem item)
+        private void HandleSwap(UIInventoryItem item)
         {
             int index = listItems.IndexOf(item);
             if (index == -1)
@@ -62,6 +62,7 @@ namespace Inventory.UI
             }
 
             OnSwapItems?.Invoke(currentlyDraggedItemIndex, index);
+            HandleItemSelection(item);
         }
 
         private void ResetDraggedItem()
@@ -70,12 +71,12 @@ namespace Inventory.UI
             currentlyDraggedItemIndex = -1;
         }
 
-        private void HandleEndDrag(InventoryItem item)
+        private void HandleEndDrag(UIInventoryItem item)
         {
             ResetDraggedItem();
         }
 
-        private void HandleBeginDrag(InventoryItem item)
+        private void HandleBeginDrag(UIInventoryItem item)
         {
             int index = listItems.IndexOf(item);
             if (index == -1)
@@ -91,7 +92,7 @@ namespace Inventory.UI
             mouseFollower.SetData(sprite, quantity);
         }
 
-        private void HandleShowItemActions(InventoryItem item)
+        private void HandleShowItemActions(UIInventoryItem item)
         {
             int index = listItems.IndexOf(item);
             if (index == -1)
@@ -99,7 +100,7 @@ namespace Inventory.UI
             OnItemActionRequested?.Invoke(index);
         }
 
-        private void HandleItemSelection(InventoryItem item)
+        private void HandleItemSelection(UIInventoryItem item)
         {
             int index = listItems.IndexOf(item);
             if (index == -1)
@@ -121,7 +122,7 @@ namespace Inventory.UI
 
         private void DeselectAllItems()
         {
-            foreach (InventoryItem item in listItems)
+            foreach (UIInventoryItem item in listItems)
             {
                 item.Deselect();
             }
@@ -138,6 +139,15 @@ namespace Inventory.UI
             itemDesc.SetDesc(itemImage, name, description);
             DeselectAllItems();
             listItems[itemIndex].Select();
+        }
+
+        internal void ResetAllItems()
+        {
+            foreach (var item in listItems)
+            {
+                item.ResetData();
+                item.Deselect();
+            }
         }
     }
 }
