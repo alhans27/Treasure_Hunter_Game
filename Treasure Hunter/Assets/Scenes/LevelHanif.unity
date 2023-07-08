@@ -135467,5 +135467,21 @@ PrefabInstance:
       propertyPath: startingHealth
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 6486005473878595190, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
+      propertyPath: bulletRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6486005473878595190, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
+      propertyPath: damagePoint
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8883235863186365154, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
+      propertyPath: bulletRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8883235863186365154, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
+      propertyPath: damagePoint
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}

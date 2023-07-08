@@ -5,9 +5,12 @@ using UnityEngine;
 public class FireBullet : MonoBehaviour
 {
     [SerializeField] private float bulletSpeed;
+    [SerializeField] private float bulletRange;
     [SerializeField] public float damagePoint;
+    private float pos;
     private float direction;
     private bool hit;
+    private bool flip = true;
     private CircleCollider2D coll;
     private Animator anim;
 
@@ -22,6 +25,12 @@ public class FireBullet : MonoBehaviour
         if (hit) return;
         float movementSpeed = bulletSpeed * Time.deltaTime * direction;
         transform.Translate(movementSpeed, 0, 0);
+        if ((transform.position.x > (pos + bulletRange) && direction == 1) || (transform.position.x < (pos - bulletRange) && direction == -1))
+        {
+            hit = true;
+            coll.enabled = false;
+            anim.SetTrigger("Explode");
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collison)
@@ -33,6 +42,11 @@ public class FireBullet : MonoBehaviour
             anim.SetTrigger("Explode");
         }
     }
+    
+    public void Position(float p)
+    {
+        pos = p;
+    }
 
     public void SetDirection(bool _isFlip, float _direction)
     {
@@ -43,9 +57,10 @@ public class FireBullet : MonoBehaviour
         float localScaleX = transform.localScale.x;
         direction = _direction;
 
-        if (!_isFlip)
+        if (_isFlip != flip)
         {
             localScaleX = -localScaleX;
+            flip = _isFlip;
         }
 
         transform.localScale = new Vector3(localScaleX, transform.localScale.y, transform.localScale.z);
