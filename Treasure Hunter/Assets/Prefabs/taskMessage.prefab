@@ -216,7 +216,7 @@ GameObject:
   - component: {fileID: 1865760750616917606}
   - component: {fileID: 5143843766914618291}
   m_Layer: 5
-  m_Name: MessageDialogue
+  m_Name: taskMessage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

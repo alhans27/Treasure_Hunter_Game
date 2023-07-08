@@ -1,7 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using ChestInventory;
+using ChestInventory.Model;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GuardianController : MonoBehaviour
 {
@@ -9,24 +12,62 @@ public class GuardianController : MonoBehaviour
     private BoxCollider2D boxCollider;
 
     [SerializeField]
-    private PopUpMessage message;
+    private PopUpMessage taskMessage;
+
+    [SerializeField]
+    private PopUpMessage questionMessage;
+
+    [SerializeField]
+    private Text btnResetTxt;
+    [SerializeField]
+    private Text btnSubmitTxt;
 
     [SerializeField]
     private ChestController chest;
 
+    [SerializeField]
+    private ChestInventorySO chestData;
+
     void OnTriggerEnter2D(Collider2D coll)
     {
-        if (coll.gameObject.CompareTag("Player"))
+        if (coll.gameObject.CompareTag("Player") && IsChestInventoryFull())
+        {
+            btnResetTxt.text = "No, I Don't";
+            btnSubmitTxt.text = "Yes, I'm Sure!";
+            questionMessage.ShowMessage();
+        }
+        else
         {
             chest.Show();
-            message.ShowMessage();
+            taskMessage.ShowMessage();
         }
     }
+
+    private bool IsChestInventoryFull()
+    {
+        if (chestData.GetDataLength() == chestData.Size)
+            return true;
+        return false;
+    }
+
     void OnTriggerExit2D(Collider2D coll)
     {
         if (coll.gameObject.CompareTag("Player"))
         {
-            message.HideMessage();
+            questionMessage.HideMessage();
+            taskMessage.HideMessage();
+        }
+    }
+
+    public void IsTrueAnswer()
+    {
+        if (chestData.totalValue >= chestData.minValue && chestData.totalWeight <= chestData.maxWeight)
+        {
+            Debug.Log("Jawaban Benar");
+        }
+        else
+        {
+            Debug.Log("Jawaban Salah");
         }
     }
 }
