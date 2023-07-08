@@ -2068,7 +2068,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chestInventoryUI: {fileID: 827071527}
   chestInventoryData: {fileID: 11400000, guid: 00a0e1cdc62550047a2beb4c6e1504a4, type: 2}
-  initialItems: []
+  bc: {fileID: 1468319790}
 --- !u!95 &750239223
 Animator:
   serializedVersion: 5
@@ -2980,6 +2980,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5201948474460751717, guid: 01de391eea708fe4daf2b0917a493ddc, type: 3}
+      propertyPath: itemPrefab
+      value: 
+      objectReference: {fileID: -2731686722227869403, guid: 66a0193c5d7570c4ba7178faf8544633, type: 3}
     - target: {fileID: 5339686377503737492, guid: 01de391eea708fe4daf2b0917a493ddc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -9166,7 +9170,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!212 &1291337678
 SpriteRenderer:
   m_ObjectHideFlags: 0

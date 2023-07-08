@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using ChestInventory.Model;
 using ChestInventory.UI;
+using Inventory;
+using Inventory.Model;
+using Inventory.UI;
 using UnityEngine;
 
 namespace ChestInventory
@@ -15,46 +18,45 @@ namespace ChestInventory
         [SerializeField]
         private ChestInventorySO chestInventoryData;
 
-        public List<InventoryItem> initialItems = new List<InventoryItem>();
+        [SerializeField]
+        private BackpackController bc;
 
         private void Awake()
         {
-            Hide();
+            HideChest();
             PrepareUI();
+            PrepareInventoryData();
         }
 
         private void PrepareUI()
         {
-            this.chestInventoryUI.InitializeInventoryUI(chestInventoryData.Size);
+            this.chestInventoryUI.InitializeInventoryUI(chestInventoryData.Size, chestInventoryData.minValue, chestInventoryData.maxWeight);
+            this.chestInventoryUI.OnDropItems += HandleDropItem;
         }
 
         private void PrepareInventoryData()
         {
             this.chestInventoryData.Initialize();
-            // this.chestInventoryData.OnInventoryUpdated += UpdateInventoryUI;
-            foreach (InventoryItem item in initialItems)
-            {
-                if (item.IsEmpty)
-                    continue;
-                this.chestInventoryData.AddItem(item);
-            }
+            this.chestInventoryData.UpdateDataUI += UpdateUI;
         }
 
-        // private void UpdateInventoryUI(Dictionary<int, InventoryItem> dictionary)
-        // {
-        //     this.chestInventoryUI.ResetAllItems();
-        //     foreach (var item in dictionary)
-        //     {
+        private void UpdateUI(int index, ItemInventory inventory)
+        {
+            this.chestInventoryUI.UpdateData(index, inventory.item.ItemImage, inventory.quantity);
+        }
 
-        //     }
-        // }
+        private void HandleDropItem(int index)
+        {
+            ItemInventory item = bc.selectedItem;
+            this.chestInventoryData.AddItem(index, item);
+        }
 
         public void Show()
         {
             gameObject.SetActive(true);
         }
 
-        public void Hide()
+        public void HideChest()
         {
             gameObject.SetActive(false);
         }

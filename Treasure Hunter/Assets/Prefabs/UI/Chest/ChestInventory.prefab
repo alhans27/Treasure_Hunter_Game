@@ -602,7 +602,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19bc85e3600b9194b9c7763e51fb1d9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemPrefab: {fileID: 5617225855395417521, guid: 66a0193c5d7570c4ba7178faf8544633, type: 3}
+  itemPrefab: {fileID: -2731686722227869403, guid: 66a0193c5d7570c4ba7178faf8544633, type: 3}
+  description: {fileID: 1226499873596185188}
   contentPanel: {fileID: 3058129273451322729}
 --- !u!1 &2964165670402191781
 GameObject:

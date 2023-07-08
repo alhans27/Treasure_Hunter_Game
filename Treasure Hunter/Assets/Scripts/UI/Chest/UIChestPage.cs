@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Inventory.UI;
 using UnityEngine;
 
 namespace ChestInventory.UI
@@ -9,62 +10,55 @@ namespace ChestInventory.UI
         [SerializeField]
         private UIChestItem itemPrefab;
 
-        // [SerializeField]
-        // private UIInventoryDescItem itemDesc;
+        [SerializeField]
+        private UIChestDesc description;
 
         [SerializeField]
         private RectTransform contentPanel;
 
-        List<UIChestItem> listItems = new List<UIChestItem>();
-        private int currentlyDraggedItemIndex = -1;
+        List<UIChestItem> listItemsUI = new List<UIChestItem>();
+        public event Action<int> OnDropItems;
 
+        // Dijalankan pertama kali sebelum Start
         private void Awake()
         {
+            // Menyembunyikan UI Chest Inventory
             Hide();
-            // itemDesc.ResetDesc();
         }
-        public void InitializeInventoryUI(int inventorysize)
+
+        // Membuat Slot Item Kosong untuk Pertama Kali dan Mengatur Deskripsi dari Chest Inventory
+        public void InitializeInventoryUI(int inventorysize, int minValue, int maxWeight)
         {
             for (int i = 0; i < inventorysize; i++)
             {
                 UIChestItem item = Instantiate(itemPrefab, Vector3.zero, Quaternion.identity);
                 item.transform.SetParent(contentPanel);
-                listItems.Add(item);
-                // item.onItemEndDrag += HandleEndDrag;
-                // item.onItemDroppedOn += HandleSwap;
+                listItemsUI.Add(item);
+
+                // Even Handling
+                item.onItemDroppedOn += HandleDrop;
+            }
+            description.SetDesc(minValue, 0, maxWeight, 0);
+
+        }
+
+        private void HandleDrop(UIChestItem item)
+        {
+            int dest_index = listItemsUI.IndexOf(item);
+            if (dest_index == -1)
+                return;
+
+            OnDropItems?.Invoke(dest_index);
+        }
+
+        public void UpdateData(int itemIndex, Sprite itemImage, int itemQuantity)
+        {
+            if (listItemsUI.Count > itemIndex)
+            {
+                listItemsUI[itemIndex].SetItemUI(itemImage, itemQuantity);
             }
         }
 
-        // public void UpdateData(int itemIndex, Sprite itemImage, int itemQuantity)
-        // {
-        //     if (listItems.Count > itemIndex)
-        //     {
-        //         listItems[itemIndex].SetData(itemImage, itemQuantity);
-        //     }
-        // }
-
-        // private void HandleSwap(UIChestItem item)
-        // {
-        //     int index = listItems.IndexOf(item);
-        //     if (index == -1)
-        //     {
-        //         return;
-        //     }
-
-        //     OnSwapItems?.Invoke(currentlyDraggedItemIndex, index);
-        //     HandleItemSelection(item);
-        // }
-
-        // private void ResetDraggedItem()
-        // {
-        //     mouseFollower.Toggle(false);
-        //     currentlyDraggedItemIndex = -1;
-        // }
-
-        // private void HandleEndDrag(UIChestItem item)
-        // {
-        //     ResetDraggedItem();
-        // }
         public void Show()
         {
             gameObject.SetActive(true);
@@ -72,21 +66,13 @@ namespace ChestInventory.UI
         public void Hide()
         {
             gameObject.SetActive(false);
-            // ResetDraggedItem();
         }
-
-        // internal void UpdateDesc(int itemIndex, Sprite itemImage, string name, string description)
-        // {
-        //     itemDesc.SetDesc(itemImage, name, description);
-        //     DeselectAllItems();
-        //     listItems[itemIndex].Select();
-        // }
 
         internal void ResetAllItems()
         {
-            foreach (var item in listItems)
+            foreach (var item in listItemsUI)
             {
-                item.ResetData();
+                item.ResetItemUI();
             }
         }
     }

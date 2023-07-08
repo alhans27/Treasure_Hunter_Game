@@ -10,43 +10,37 @@ namespace ChestInventory.Model
     public class ChestInventorySO : ScriptableObject
     {
         [SerializeField]
-        private List<InventoryItem> listInventoryItems;
+        private List<ItemInventory> listItemInventory;
 
         [field: SerializeField]
         public int Size { get; set; } = 3;
 
-        public event Action<Dictionary<int, InventoryItem>> OnInventoryUpdated;
+        [field: SerializeField]
+        public int minValue { get; set; } = 300;
+
+        [field: SerializeField]
+        public int maxWeight { get; set; } = 10;
+
+        public event Action<int, ItemInventory> UpdateDataUI;
 
         public void Initialize()
         {
-            listInventoryItems = new List<InventoryItem>();
+            listItemInventory = new List<ItemInventory>();
             for (int i = 0; i < Size; i++)
             {
-                listInventoryItems.Add(InventoryItem.GetEmptyItem());
+                listItemInventory.Add(ItemInventory.GetEmptyItem());
             }
         }
 
-        public void AddItem(InventoryItem item)
+        public void AddItem(int index, ItemInventory item)
         {
-            // AddItem(item.item, item.quantity);
-            Debug.Log("Item ditambahkan");
+            ItemInventory newItem = new ItemInventory
+            {
+                item = item.item,
+                quantity = 1
+            };
+            listItemInventory[index] = newItem;
+            UpdateDataUI?.Invoke(index, newItem);
         }
     }
-
-    [Serializable]
-    public struct InventoryItem
-    {
-        public int quantity;
-        public ItemSO item;
-
-        public bool IsEmpty => item == null;
-
-        public static InventoryItem GetEmptyItem()
-            => new InventoryItem
-            {
-                item = null,
-                quantity = 0,
-            };
-    }
-
 }

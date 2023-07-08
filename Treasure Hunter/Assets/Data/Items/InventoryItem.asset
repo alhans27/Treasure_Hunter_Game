@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: InventoryItem
   m_EditorClassIdentifier: 
   listInventoryItems:
+  - quantity: 0
+    item: {fileID: 0}
+  - quantity: 0
+    item: {fileID: 0}
   - quantity: 3
-    item: {fileID: 11400000, guid: 899e57bc05c78534f958ae7abafeecbf, type: 2}
-  - quantity: 0
-    item: {fileID: 0}
-  - quantity: 0
-    item: {fileID: 0}
+    item: {fileID: 11400000, guid: 18b76a6defdd7334ba847d0b96ec74f2, type: 2}
   <Size>k__BackingField: 3

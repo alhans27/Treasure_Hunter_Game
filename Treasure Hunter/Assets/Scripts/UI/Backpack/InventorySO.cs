@@ -103,33 +103,42 @@ namespace Inventory.Model
             return quantity;
         }
 
+        // Array Assosiation dengan Key berupa Integer dan Value berupa struck Class ItemInventory
         public Dictionary<int, ItemInventory> GetCurrentInventoryState()
         {
+            // Mendefinisikan sebuah Dictionary bernama returnValue
             Dictionary<int, ItemInventory> returnValue = new Dictionary<int, ItemInventory>();
 
             for (int i = 0; i < listInventoryItems.Count; i++)
             {
+                // Jika Item dalam List Item pada Model Inventory Kosong, maka tidak terjadi apa-apa
                 if (listInventoryItems[i].IsEmpty)
                     continue;
+
+                // Jika ada Slot Item Bergambar pada Model Inventory, maka dimasukkan ke dalam Dictionary returnValue
                 returnValue[i] = listInventoryItems[i];
             }
             return returnValue;
         }
 
+        // Mengambil Item tertentu dari List Inventory berdasarkan index
         public ItemInventory GetItemAt(int itemIndex)
         {
             return listInventoryItems[itemIndex];
         }
 
+        // Menukar Index dari Item yang di Swap
         public void SwapItems(int itemIndex_1, int itemIndex_2)
         {
             ItemInventory item1 = listInventoryItems[itemIndex_1];
             listInventoryItems[itemIndex_1] = listInventoryItems[itemIndex_2];
             listInventoryItems[itemIndex_2] = item1;
-            InformAboutChange();
 
+            // Update Tampilan UI Backpack Inventory
+            InformAboutChange();
         }
 
+        // Mengupdate Tampilan UI Backpack Inventory
         private void InformAboutChange()
         {
             OnInventoryUpdated?.Invoke(GetCurrentInventoryState());
@@ -141,6 +150,8 @@ namespace Inventory.Model
     {
         public int quantity;
         public ItemSO item;
+
+        // Jika item bernilai NULL maka nilai dari property IsEmpty adalah TRUE
         public bool IsEmpty => item == null;
 
         public ItemInventory ChangeQuantity(int newQuantity)
