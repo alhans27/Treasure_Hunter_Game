@@ -16,10 +16,10 @@ namespace ChestInventory.Model
         public int Size { get; set; } = 3;
 
         [field: SerializeField]
-        public int minValue { get; set; } = 300;
+        public int minValue { get; set; } = 1000;
 
         [field: SerializeField]
-        public int maxWeight { get; set; } = 10;
+        public int maxWeight { get; set; } = 20;
 
         public int totalValue { get; set; }
         public int totalWeight { get; set; }
@@ -72,6 +72,18 @@ namespace ChestInventory.Model
         private void UpdateInformData()
         {
             OnCurrentValueUpdated?.Invoke(GetTotalValueWeightItem());
+        }
+
+        public int GetDataLength()
+        {
+            int totalItem = 0;
+            for (int i = 0; i < listItemInventory.Count; i++)
+            {
+                if (listItemInventory[i].IsEmpty)
+                    continue;
+                totalItem++;
+            }
+            return totalItem;
         }
     }
 }

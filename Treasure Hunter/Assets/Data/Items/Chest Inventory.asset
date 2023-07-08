@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b7079af0bf85e045b60d5bb21e972cf, type: 3}
   m_Name: Chest Inventory
   m_EditorClassIdentifier: 
-  listInventoryItems:
-  - quantity: 1
-    item: {fileID: 11400000, guid: 3f2b95f06b806a449b1c2ea64a6ddeed, type: 2}
+  listItemInventory:
   - quantity: 1
     item: {fileID: 11400000, guid: 18b76a6defdd7334ba847d0b96ec74f2, type: 2}
-  <Size>k__BackingField: 2
-  <minValue>k__BackingField: 300
-  <maxWeight>k__BackingField: 10
+  - quantity: 1
+    item: {fileID: 11400000, guid: 899e57bc05c78534f958ae7abafeecbf, type: 2}
+  - quantity: 1
+    item: {fileID: 11400000, guid: 18b76a6defdd7334ba847d0b96ec74f2, type: 2}
+  <Size>k__BackingField: 3
+  <minValue>k__BackingField: 10000
+  <maxWeight>k__BackingField: 25
