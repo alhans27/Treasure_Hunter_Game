@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd1f14f6a333c0a4e811d6c15316366b, type: 3}
   m_Name: Heart of Eternity
   m_EditorClassIdentifier: 
-  <IsStackable>k__BackingField: 0
+  <IsStackable>k__BackingField: 1
   <MaxStackSize>k__BackingField: 99
   <Name>k__BackingField: Heart of Eternity
-  <ItemValue>k__BackingField: 
-  <ItemWeight>k__BackingField: 
-  <Description>k__BackingField: 
+  <ItemValue>k__BackingField: 1600
+  <ItemWeight>k__BackingField: 10
+  <Description>k__BackingField: Berlian yang berasal dari Afrika Selatan ini dipercaya
+    memiliki kekuatan supranatural keabadian atau immortal.
   <ItemImage>k__BackingField: {fileID: 21300000, guid: 19fba07bdc868e54389fe3c0f5a5cce3, type: 3}

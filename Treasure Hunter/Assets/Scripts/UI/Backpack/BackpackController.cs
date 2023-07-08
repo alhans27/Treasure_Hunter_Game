@@ -127,7 +127,7 @@ namespace Inventory
             ItemSO item = inventoryItem.item;
 
             // Menjalankan perintah untuk Update UI Deskripsi Item sesuai dengan Item yang dipilih
-            this.inventoryUI.UpdateDesc(itemIndex, item.ItemImage, item.name, item.Description);
+            this.inventoryUI.UpdateDesc(itemIndex, item.ItemImage, item.name, item.Description, item.ItemValue, item.ItemWeight);
         }
     }
 }

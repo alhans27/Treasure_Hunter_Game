@@ -19,10 +19,10 @@ namespace Inventory.Model
         public string Name { get; set; }
 
         [field: SerializeField]
-        public string ItemValue { get; set; }
+        public int ItemValue { get; set; }
 
         [field: SerializeField]
-        public string ItemWeight { get; set; }
+        public int ItemWeight { get; set; }
 
         [field: SerializeField]
         [field: TextArea]
