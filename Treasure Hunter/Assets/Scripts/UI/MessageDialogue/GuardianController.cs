@@ -9,10 +9,15 @@ public class GuardianController : MonoBehaviour
 
     [SerializeField]
     private PopUpMessage message;
+
+    [SerializeField]
+    private ChestController chest;
+
     void OnTriggerEnter2D(Collider2D coll)
     {
         if (coll.gameObject.CompareTag("Player"))
         {
+            chest.Show();
             message.ShowMessage();
         }
     }
