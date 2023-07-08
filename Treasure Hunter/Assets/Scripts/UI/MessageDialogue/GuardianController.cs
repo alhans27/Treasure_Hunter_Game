@@ -1,5 +1,8 @@
+using System;
+using System.Collections.Generic;
 using ChestInventory;
 using ChestInventory.Model;
+using Inventory.Model;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -25,6 +28,20 @@ public class GuardianController : MonoBehaviour
 
     [SerializeField]
     private ChestInventorySO chestData;
+
+    private Animator anim;
+
+    // private bool IsAttack = false;
+
+    [SerializeField]
+    private float damageForce = 1;
+
+    [SerializeField]
+    private Health playerHealth;
+    private void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
 
     void OnTriggerEnter2D(Collider2D coll)
     {
@@ -57,22 +74,52 @@ public class GuardianController : MonoBehaviour
         }
     }
 
-    public void IsTrueAnswer()
+    public void CheckTheAnswer()
     {
         if (chestData.totalValue >= chestData.minValue && chestData.totalWeight <= chestData.maxWeight)
         {
-            Debug.Log("Jawaban Benar");
+            if (gameObject.GetComponent<KnapsackAlgoritm>().resultmaxValue == chestData.totalValue)             //&& IsCorrectItem(chestData.GetCurrentInventoryState())
+            {
+                anim.SetTrigger("Gone");
+            }
         }
         else
         {
-            Debug.Log("Jawaban Salah");
             chest.ResetData();
+            anim.SetTrigger("Attack");
+            playerHealth.TakeDamage(damageForce);
+            questionMessage.HideMessage();
         }
     }
+
+    // private bool IsCorrectItem(Dictionary<int, ItemInventory> listItem)
+    // {
+    //     bool result = false;
+    //     Debug.Log(gameObject.GetComponent<KnapsackAlgoritm>().GetResultItem());
+    //     // foreach (var item in listItem)
+    //     // {
+    //     //     for (int i = 0; i < items.Count; i++)
+    //     //     {
+    //     //         if (item.Value.item.ID == items[i])
+    //     //         {
+    //     //             result = true;
+    //     //         }
+    //     //         result = false;
+    //     //     }
+    //     // }
+    //     return result;
+    // }
 
     public void ResetInventory()
     {
         chest.ResetData();
         questionMessage.HideMessage();
+    }
+
+    private void DestroyObj()
+    {
+        chest.DisableColl();
+        questionMessage.HideMessage();
+        this.gameObject.SetActive(false);
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,10 @@ public class KnapsackAlgoritm : MonoBehaviour
 
     private int minValue;
     private int maxWeight;
+
+    public int resultmaxValue { get; private set; }
+
+    private List<int> resultItems;
 
     private int[,] dpTable;
 
@@ -56,20 +61,19 @@ public class KnapsackAlgoritm : MonoBehaviour
 
         // Menampilkan hasil
         int maxValue = dpTable[items.Count, maxWeight];
-        Debug.Log("Max Value: " + maxValue);
-        Debug.Log(dpTable);
+        resultmaxValue = maxValue;
+        List<int> resultItems = new List<int>();
 
         if (maxValue >= minValue)
         {
-            Debug.Log("Solution meets the minimum value requirement.");
-
             // Mencari item yang dipilih
             int remainingCapacity = maxWeight;
             for (int i = items.Count, j = maxWeight; i > 0 && maxValue > 0; i--)
             {
                 if (maxValue != dpTable[i - 1, j])
                 {
-                    Debug.Log("Selected Item: " + items[i - 1].item.Name);
+                    resultItems.Add(items[i - 1].item.ID);
+                    int itemID = items[i - 1].item.ID;
                     maxValue -= items[i - 1].item.ItemValue;
                     j -= items[i - 1].item.ItemWeight;
                 }
@@ -77,7 +81,11 @@ public class KnapsackAlgoritm : MonoBehaviour
         }
         else
         {
-            Debug.Log("Solution does not meet the minimum value requirement.");
         }
+    }
+
+    public List<int> GetResultItem()
+    {
+        return resultItems;
     }
 }

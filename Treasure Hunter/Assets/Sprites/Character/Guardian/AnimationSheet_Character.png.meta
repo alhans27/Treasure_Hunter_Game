@@ -882,13 +882,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AnimationSheet_Character_37
+      name: Guardian_Attack_1
       rect:
         serializedVersion: 2
         x: 134
         y: 0
         width: 28
-        height: 49
+        height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -966,7 +966,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AnimationSheet_Character_41
+      name: Guardian_Attack_0
       rect:
         serializedVersion: 2
         x: 7
@@ -1029,7 +1029,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AnimationSheet_Character_44
+      name: Guardian_Attack_2
       rect:
         serializedVersion: 2
         x: 166
@@ -1050,7 +1050,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AnimationSheet_Character_45
+      name: Guardian_Attack_3
       rect:
         serializedVersion: 2
         x: 194
@@ -1071,7 +1071,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AnimationSheet_Character_46
+      name: Guardian_Attack_4
       rect:
         serializedVersion: 2
         x: 225
@@ -1087,27 +1087,6 @@ TextureImporter:
       bones: []
       spriteID: 0df934e5fe1e44d47bd89fee14ada0dc
       internalID: -964734923
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AnimationSheet_Character_47
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 3
-        width: 256
-        height: 245
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 533c3dcfe2840d5459e255818c998da4
-      internalID: 1549709062
       vertices: []
       indices: 
       edges: []
@@ -1128,9 +1107,7 @@ TextureImporter:
       AnimationSheet_Character_34: -1776150810
       AnimationSheet_Character_16: 534482345
       Guardian_Gone_2: 1049816481
-      AnimationSheet_Character_45: 249585060
       Guardian_Idle_0: -1915590358
-      AnimationSheet_Character_41: -1747275308
       AnimationSheet_Character_36: 416964333
       AnimationSheet_Character_22: 747040331
       Guardian_Idle_1: 2081630720
@@ -1141,23 +1118,23 @@ TextureImporter:
       AnimationSheet_Character_12: 133202758
       AnimationSheet_Character_23: 164688445
       AnimationSheet_Character_29: -519372927
-      AnimationSheet_Character_46: -964734923
+      Guardian_Attack_0: -1747275308
       AnimationSheet_Character_9: 640101530
       AnimationSheet_Character_15: -644380259
       AnimationSheet_Character_28: 1081886171
       AnimationSheet_Character_2: 2133112439
       AnimationSheet_Character_4: 1023843185
       AnimationSheet_Character_6: 757469879
-      AnimationSheet_Character_37: 1837269641
       AnimationSheet_Character_3: -2005075693
       AnimationSheet_Character_14: -1672938175
       AnimationSheet_Character_25: 724864114
       AnimationSheet_Character_8: 1540400826
       AnimationSheet_Character_5: -900042080
       AnimationSheet_Character_47: 1549709062
+      Guardian_Attack_2: 2008262951
       Guardian_Gone_0: 310984266
+      Guardian_Attack_4: -964734923
       AnimationSheet_Character_38: 719504444
-      AnimationSheet_Character_44: 2008262951
       AnimationSheet_Character_18: 740023537
       AnimationSheet_Character_26: -1984521093
       AnimationSheet_Character_10: 1514212403
@@ -1165,9 +1142,11 @@ TextureImporter:
       AnimationSheet_Character_35: -495619019
       AnimationSheet_Character_13: 893959478
       AnimationSheet_Character_24: 2090665070
+      Guardian_Attack_3: 249585060
       Guardian_Idle_2: -1301654974
       AnimationSheet_Character_39: -832670706
       AnimationSheet_Character_19: 501851839
+      Guardian_Attack_1: 1837269641
       AnimationSheet_Character_21: 1059691396
       AnimationSheet_Character_43: 1753583804
       Guardian_Gone_1: -1870916617

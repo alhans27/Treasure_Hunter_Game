@@ -49,6 +49,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 10
+  bulletRange: 0
+  damagePoint: 0
 --- !u!212 &6688253717757620899
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -207,6 +209,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 10
+  bulletRange: 0
+  damagePoint: 0
 --- !u!212 &5572794962678780771
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -396,6 +400,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 10
+  bulletRange: 0
+  damagePoint: 0
 --- !u!212 &1658011354795362317
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -554,6 +560,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 10
+  bulletRange: 0
+  damagePoint: 0
 --- !u!212 &7559314970200833946
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -750,7 +758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7e6bc333f6ec2547a0b79ed41955fe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 4
+  <startingHealth>k__BackingField: 4
 --- !u!212 &2858021424527343297
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -950,6 +958,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 10
+  bulletRange: 0
+  damagePoint: 0
 --- !u!212 &6243586821546878697
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1108,6 +1118,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 10
+  bulletRange: 0
+  damagePoint: 0
 --- !u!212 &5276598074778229434
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1266,6 +1278,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 10
+  bulletRange: 0
+  damagePoint: 0
 --- !u!212 &8318643367192794985
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1424,6 +1438,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 10
+  bulletRange: 0
+  damagePoint: 0
 --- !u!212 &1831566458962919638
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1623,6 +1639,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 10
+  bulletRange: 0
+  damagePoint: 0
 --- !u!212 &5029777202779381134
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1781,6 +1799,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 10
+  bulletRange: 0
+  damagePoint: 0
 --- !u!212 &2499108599205822595
 SpriteRenderer:
   m_ObjectHideFlags: 0

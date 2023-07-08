@@ -21,11 +21,14 @@ namespace ChestInventory
         [SerializeField]
         private BackpackController backpack;
 
+        private BoxCollider2D coll;
+
         private void Awake()
         {
             HideChest();
             PrepareUI();
             PrepareInventoryData();
+            coll = GetComponent<BoxCollider2D>();
         }
 
         private void PrepareUI()
@@ -87,6 +90,19 @@ namespace ChestInventory
             {
                 chestInventoryUI.Show();
             }
+        }
+
+        private void OnTriggerExit2D(Collider2D coll)
+        {
+            if (coll.gameObject.CompareTag("Player"))
+            {
+                chestInventoryUI.Hide();
+            }
+        }
+
+        internal void DisableColl()
+        {
+            coll.enabled = false;
         }
     }
 
