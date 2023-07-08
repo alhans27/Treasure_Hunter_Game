@@ -62,26 +62,27 @@ public class KnapsackAlgoritm : MonoBehaviour
         // Menampilkan hasil
         int maxValue = dpTable[items.Count, maxWeight];
         resultmaxValue = maxValue;
-        List<int> resultItems = new List<int>();
+        // List<int> resultItems = new List<int>();
 
-        if (maxValue >= minValue)
-        {
-            // Mencari item yang dipilih
-            int remainingCapacity = maxWeight;
-            for (int i = items.Count, j = maxWeight; i > 0 && maxValue > 0; i--)
-            {
-                if (maxValue != dpTable[i - 1, j])
-                {
-                    resultItems.Add(items[i - 1].item.ID);
-                    int itemID = items[i - 1].item.ID;
-                    maxValue -= items[i - 1].item.ItemValue;
-                    j -= items[i - 1].item.ItemWeight;
-                }
-            }
-        }
-        else
-        {
-        }
+        // if (maxValue >= minValue)
+        // {
+        //     // Mencari item yang dipilih
+        //     int remainingCapacity = maxWeight;
+        //     for (int i = items.Count, j = maxWeight; i > 0 && maxValue > 0; i--)
+        //     {
+        //         if (maxValue != dpTable[i - 1, j])
+        //         {
+        //             resultItems.Add(items[i - 1].item.ID);
+        //             int itemID = items[i - 1].item.ID;
+        //             maxValue -= items[i - 1].item.ItemValue;
+        //             j -= items[i - 1].item.ItemWeight;
+        //         }
+        //     }
+        // }
+        // else
+        // {
+        // }
+        Debug.Log(resultmaxValue);
     }
 
     public List<int> GetResultItem()
