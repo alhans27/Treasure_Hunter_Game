@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using ChestInventory;
 using UnityEngine;
 
 public class GuardianController : MonoBehaviour

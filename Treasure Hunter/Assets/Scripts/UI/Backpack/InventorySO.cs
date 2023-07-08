@@ -26,26 +26,6 @@ namespace Inventory.Model
                 listInventoryItems.Add(ItemInventory.GetEmptyItem());
             }
         }
-
-        public int AddItem(ItemSO item, int quantity)
-        {
-            if (item.IsStackable == false)
-            {
-                for (int i = 0; i < listInventoryItems.Count; i++)
-                {
-                    while (quantity > 0 && IsInventoryFull() == false)
-                    {
-                        quantity -= AddItemToFirstFreeSlot(item, 1);
-                    }
-                    InformAboutChange();
-                    return quantity;
-                }
-            }
-            quantity = AddStackableItem(item, quantity);
-            InformAboutChange();
-            return quantity;
-        }
-
         private int AddItemToFirstFreeSlot(ItemSO item, int quantity)
         {
             ItemInventory newItem = new ItemInventory
@@ -102,6 +82,25 @@ namespace Inventory.Model
         public void AddItem(ItemInventory item)
         {
             AddItem(item.item, item.quantity);
+        }
+
+        public int AddItem(ItemSO item, int quantity)
+        {
+            if (item.IsStackable == false)
+            {
+                for (int i = 0; i < listInventoryItems.Count; i++)
+                {
+                    while (quantity > 0 && IsInventoryFull() == false)
+                    {
+                        quantity -= AddItemToFirstFreeSlot(item, 1);
+                    }
+                    InformAboutChange();
+                    return quantity;
+                }
+            }
+            quantity = AddStackableItem(item, quantity);
+            InformAboutChange();
+            return quantity;
         }
 
         public Dictionary<int, ItemInventory> GetCurrentInventoryState()

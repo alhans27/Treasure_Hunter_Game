@@ -1,42 +1,42 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-// namespace Inventory.UI
-// {
-public class UIChestDesc : MonoBehaviour
+namespace ChestInventory.UI
 {
-    [SerializeField]
-    private Text currentValue;
-
-    [SerializeField]
-    private Text minValue;
-
-    [SerializeField]
-    private Text currentWeight;
-
-    [SerializeField]
-    private Text maxWeight;
-
-    public void Awake()
+    public class UIChestDesc : MonoBehaviour
     {
-        ResetDesc();
+        [SerializeField]
+        private Text currentValue;
 
-    }
+        [SerializeField]
+        private Text minValue;
 
-    public void ResetDesc()
-    {
-        this.currentValue.text = "";
-        this.minValue.text = "";
-        this.currentWeight.text = "";
-        this.maxWeight.text = "";
-    }
+        [SerializeField]
+        private Text currentWeight;
 
-    public void SetDesc(string minValue, string currentValue, string maxWeight, string currentWeight)
-    {
-        this.minValue.text = minValue;
-        this.currentValue.text = currentValue;
-        this.maxWeight.text = maxWeight;
-        this.currentWeight.text = currentWeight;
+        [SerializeField]
+        private Text maxWeight;
+
+        public void Awake()
+        {
+            ResetDesc();
+
+        }
+
+        public void ResetDesc()
+        {
+            this.currentValue.text = "";
+            this.minValue.text = "";
+            this.currentWeight.text = "";
+            this.maxWeight.text = "";
+        }
+
+        public void SetDesc(string minValue, string currentValue, string maxWeight, string currentWeight)
+        {
+            this.minValue.text = minValue;
+            this.currentValue.text = currentValue;
+            this.maxWeight.text = maxWeight;
+            this.currentWeight.text = currentWeight;
+        }
     }
 }
-// }

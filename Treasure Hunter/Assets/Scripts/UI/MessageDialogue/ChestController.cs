@@ -1,33 +1,72 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using ChestInventory.Model;
+using ChestInventory.UI;
 using UnityEngine;
 
-public class ChestController : MonoBehaviour
+namespace ChestInventory
 {
-    [SerializeField]
-    private UIChestPage chestInventoryUI;
-
-    private void Awake()
+    public class ChestController : MonoBehaviour
     {
-        Hide();
-    }
+        [SerializeField]
+        private UIChestPage chestInventoryUI;
 
-    public void Show()
-    {
-        gameObject.SetActive(true);
-    }
+        [SerializeField]
+        private ChestInventorySO chestInventoryData;
 
-    public void Hide()
-    {
-        gameObject.SetActive(false);
-    }
+        public List<InventoryItem> initialItems = new List<InventoryItem>();
 
-    private void OnTriggerEnter2D(Collider2D coll)
-    {
-        if (coll.gameObject.CompareTag("Player"))
+        private void Awake()
         {
-            Debug.Log("Player Mengenai Collider");
-            chestInventoryUI.Show();
+            Hide();
+            PrepareUI();
+        }
+
+        private void PrepareUI()
+        {
+            this.chestInventoryUI.InitializeInventoryUI(chestInventoryData.Size);
+        }
+
+        private void PrepareInventoryData()
+        {
+            this.chestInventoryData.Initialize();
+            // this.chestInventoryData.OnInventoryUpdated += UpdateInventoryUI;
+            foreach (InventoryItem item in initialItems)
+            {
+                if (item.IsEmpty)
+                    continue;
+                this.chestInventoryData.AddItem(item);
+            }
+        }
+
+        // private void UpdateInventoryUI(Dictionary<int, InventoryItem> dictionary)
+        // {
+        //     this.chestInventoryUI.ResetAllItems();
+        //     foreach (var item in dictionary)
+        //     {
+
+        //     }
+        // }
+
+        public void Show()
+        {
+            gameObject.SetActive(true);
+        }
+
+        public void Hide()
+        {
+            gameObject.SetActive(false);
+        }
+
+        private void OnTriggerEnter2D(Collider2D coll)
+        {
+            if (coll.gameObject.CompareTag("Player"))
+            {
+                Debug.Log("Player Mengenai Collider");
+                chestInventoryUI.Show();
+            }
         }
     }
+
 }
