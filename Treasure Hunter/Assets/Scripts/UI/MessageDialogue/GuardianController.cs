@@ -1,8 +1,6 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using ChestInventory;
 using ChestInventory.Model;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,9 +16,9 @@ public class GuardianController : MonoBehaviour
     private PopUpMessage questionMessage;
 
     [SerializeField]
-    private Text btnResetTxt;
+    private TextMeshProUGUI btnResetTxt;
     [SerializeField]
-    private Text btnSubmitTxt;
+    private TextMeshProUGUI btnSubmitTxt;
 
     [SerializeField]
     private ChestController chest;
