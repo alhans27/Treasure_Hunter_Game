@@ -2068,7 +2068,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chestInventoryUI: {fileID: 827071527}
   chestInventoryData: {fileID: 11400000, guid: 00a0e1cdc62550047a2beb4c6e1504a4, type: 2}
-  bc: {fileID: 1468319790}
+  backpack: {fileID: 1468319790}
 --- !u!95 &750239223
 Animator:
   serializedVersion: 5

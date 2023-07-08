@@ -21,6 +21,11 @@ namespace ChestInventory.Model
         [field: SerializeField]
         public int maxWeight { get; set; } = 10;
 
+        public int totalValue { get; set; }
+        public int totalWeight { get; set; }
+
+        public event Action<Dictionary<string, int>> OnCurrentValueUpdated;
+
         public event Action<int, ItemInventory> UpdateDataUI;
 
         public void Initialize()
@@ -40,7 +45,33 @@ namespace ChestInventory.Model
                 quantity = 1
             };
             listItemInventory[index] = newItem;
+            UpdateInformData();
             UpdateDataUI?.Invoke(index, newItem);
+        }
+
+        public Dictionary<string, int> GetTotalValueWeightItem()
+        {
+            Dictionary<string, int> returnValue = new Dictionary<string, int>();
+
+            // resetTotalValue and TotalWeight
+            totalValue = 0;
+            totalWeight = 0;
+
+            for (int i = 0; i < listItemInventory.Count; i++)
+            {
+                if (listItemInventory[i].IsEmpty)
+                    continue;
+                totalValue += listItemInventory[i].item.ItemValue;
+                totalWeight += listItemInventory[i].item.ItemWeight;
+            }
+            returnValue["value"] = totalValue;
+            returnValue["weight"] = totalWeight;
+            return returnValue;
+        }
+
+        private void UpdateInformData()
+        {
+            OnCurrentValueUpdated?.Invoke(GetTotalValueWeightItem());
         }
     }
 }
