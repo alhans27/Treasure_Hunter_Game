@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Inventory.Model;
 using Inventory.UI;
 using UnityEngine;
 
@@ -74,6 +75,11 @@ namespace ChestInventory.UI
             {
                 item.ResetItemUI();
             }
+        }
+
+        internal void UpdateChestDesc(Dictionary<string, int> dictionary)
+        {
+            description.UpdateDesc(dictionary["value"], dictionary["weight"]);
         }
     }
 }

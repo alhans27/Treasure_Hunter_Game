@@ -19,7 +19,7 @@ namespace ChestInventory
         private ChestInventorySO chestInventoryData;
 
         [SerializeField]
-        private BackpackController bc;
+        private BackpackController backpack;
 
         private void Awake()
         {
@@ -38,6 +38,7 @@ namespace ChestInventory
         {
             this.chestInventoryData.Initialize();
             this.chestInventoryData.UpdateDataUI += UpdateUI;
+            this.chestInventoryData.OnCurrentValueUpdated += UpdateCurrentValueWeight;
         }
 
         private void UpdateUI(int index, ItemInventory inventory)
@@ -45,9 +46,14 @@ namespace ChestInventory
             this.chestInventoryUI.UpdateData(index, inventory.item.ItemImage, inventory.quantity);
         }
 
+        private void UpdateCurrentValueWeight(Dictionary<string, int> dictionary)
+        {
+            this.chestInventoryUI.UpdateChestDesc(dictionary);
+        }
+
         private void HandleDropItem(int index)
         {
-            ItemInventory item = bc.selectedItem;
+            ItemInventory item = backpack.selectedItem;
             this.chestInventoryData.AddItem(index, item);
         }
 

@@ -15,7 +15,8 @@ MonoBehaviour:
   <IsStackable>k__BackingField: 1
   <MaxStackSize>k__BackingField: 99
   <Name>k__BackingField: Allnatt Diamond
-  <ItemValue>k__BackingField: 
-  <ItemWeight>k__BackingField: 
-  <Description>k__BackingField: 
+  <ItemValue>k__BackingField: 3000
+  <ItemWeight>k__BackingField: 20
+  <Description>k__BackingField: Berlian ini dipercaya mampu menyembuhkan penyakit
+    serta luka saat menelannya.
   <ItemImage>k__BackingField: {fileID: 21300000, guid: 36aec4dba553d6947a966e462faea040, type: 3}

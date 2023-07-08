@@ -162,9 +162,9 @@ namespace Inventory.UI
             ResetDraggedItem();
         }
 
-        internal void UpdateDesc(int itemIndex, Sprite itemImage, string name, string description)
+        internal void UpdateDesc(int itemIndex, Sprite itemImage, string name, string description, int valueItem, int weightItem)
         {
-            itemDesc.SetDesc(itemImage, name, description);
+            itemDesc.SetDesc(itemImage, name, description, valueItem, weightItem);
             DeselectAllItems();
             listItems[itemIndex].Select();
         }

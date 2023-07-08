@@ -398,7 +398,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '"Put some items in the sack to get to the next level!"'
+  m_Text: '"Put some items in the chest to get to the next level!"'
 --- !u!1 &7133637698037693211
 GameObject:
   m_ObjectHideFlags: 0
