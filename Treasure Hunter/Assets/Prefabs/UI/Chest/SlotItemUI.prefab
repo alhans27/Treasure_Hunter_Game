@@ -191,6 +191,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2561784046097366541}
   - component: {fileID: 4947755846217290146}
+  - component: {fileID: 7284949770368596389}
   - component: {fileID: 8097550882243467408}
   m_Layer: 5
   m_Name: Border
@@ -228,6 +229,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2452098643608300713}
   m_CullTransparentMesh: 1
+--- !u!114 &7284949770368596389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2452098643608300713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 2058036756, guid: 4e1272687616c4148979d6c3641b62a3, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 0.4
 --- !u!114 &8097550882243467408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -345,7 +376,7 @@ GameObject:
   - component: {fileID: 4601793099180744742}
   - component: {fileID: 4601793099180744740}
   - component: {fileID: 4601793099180744743}
-  - component: {fileID: 5617225855395417521}
+  - component: {fileID: -2731686722227869403}
   m_Layer: 5
   m_Name: SlotItemUI
   m_TagString: Untagged
@@ -412,7 +443,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5617225855395417521
+--- !u!114 &-2731686722227869403
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -425,4 +456,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemImage: {fileID: 2759431333361939245}
+  borderImage: {fileID: 7284949770368596389}
   quantityTxt: {fileID: 9006379701130944634}

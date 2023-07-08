@@ -1,54 +1,52 @@
-using UnityEngine;
-using UnityEngine.UI;
 using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 namespace ChestInventory.UI
 {
-    public class UIChestItem : MonoBehaviour, IEndDragHandler, IDropHandler, IDragHandler
+    public class UIChestItem : MonoBehaviour, IDropHandler
     {
         [SerializeField]
         private Image itemImage;
 
         [SerializeField]
+        private Image borderImage;
+
+        [SerializeField]
         private Text quantityTxt;
 
-        public event Action<UIChestItem> onItemDroppedOn, onItemEndDrag;
-
-        private bool empty = true;
-
+        public event Action<UIChestItem> onItemDroppedOn;
 
         public void Awake()
         {
-            ResetData();
-        }
-
-        public void ResetData()
-        {
-            this.itemImage.gameObject.SetActive(false);
-            empty = true;
-
-        }
-        public void SetData(Sprite sprite, int quantity)
-        {
-            this.itemImage.gameObject.SetActive(true);
-            this.itemImage.sprite = sprite;
-            this.quantityTxt.text = quantity + "";
-            empty = false;
-        }
-        public void OnEndDrag(PointerEventData eventData)
-        {
-            onItemEndDrag?.Invoke(this);
+            ResetItemUI();
+            Deselect();
         }
 
         public void OnDrop(PointerEventData eventData)
         {
+            // Menjalankan sebuah Action
             onItemDroppedOn?.Invoke(this);
         }
 
-        public void OnDrag(PointerEventData eventData)
+        internal void ResetItemUI()
         {
+            this.itemImage.gameObject.SetActive(false);
+        }
+        internal void Deselect()
+        {
+            borderImage.enabled = false;
+        }
 
+
+        internal void SetItemUI(Sprite sprite, int quantity)
+        {
+            this.itemImage.gameObject.SetActive(true);
+            this.itemImage.sprite = sprite;
+            this.quantityTxt.text = quantity + "";
         }
     }
 }

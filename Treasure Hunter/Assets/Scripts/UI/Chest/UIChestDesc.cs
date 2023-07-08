@@ -31,12 +31,17 @@ namespace ChestInventory.UI
             this.maxWeight.text = "";
         }
 
-        public void SetDesc(string minValue, string currentValue, string maxWeight, string currentWeight)
+        public void SetDesc(int minValue, int currentValue, int maxWeight, int currentWeight)
         {
-            this.minValue.text = minValue;
-            this.currentValue.text = currentValue;
-            this.maxWeight.text = maxWeight;
-            this.currentWeight.text = currentWeight;
+            this.minValue.text = minValue + "";
+            this.currentValue.text = currentValue + "";
+            this.maxWeight.text = maxWeight + "";
+            this.currentWeight.text = currentWeight + "";
+        }
+        public void UpdateDesc(int currentValue, int currentWeight)
+        {
+            this.currentValue.text = currentValue + "";
+            this.currentWeight.text = currentWeight + "";
         }
     }
 }
