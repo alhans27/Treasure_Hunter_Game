@@ -1938,7 +1938,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1391775179106949058, guid: 2effa1fa914d25e448c41d2c23f1d1ae, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1391775179106949058, guid: 2effa1fa914d25e448c41d2c23f1d1ae, type: 3}
       propertyPath: m_AnchorMax.x
@@ -9035,7 +9035,7 @@ RectTransform:
   - {fileID: 1590024118}
   - {fileID: 1723459425}
   m_Father: {fileID: 1480696514}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -39172,8 +39172,8 @@ RectTransform:
   - {fileID: 1339053632}
   - {fileID: 487993029}
   - {fileID: 1993331067}
-  - {fileID: 1252130542}
   - {fileID: 1034569495}
+  - {fileID: 1252130542}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -39264,6 +39264,22 @@ PrefabInstance:
     - target: {fileID: 895864841078612288, guid: 7c3ce91777c72874189b637b55e8370b, type: 3}
       propertyPath: m_Name
       value: taskMessage
+      objectReference: {fileID: 0}
+    - target: {fileID: 1865760750616917606, guid: 7c3ce91777c72874189b637b55e8370b, type: 3}
+      propertyPath: m_Padding.m_Top
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1865760750616917606, guid: 7c3ce91777c72874189b637b55e8370b, type: 3}
+      propertyPath: m_Padding.m_Left
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1865760750616917606, guid: 7c3ce91777c72874189b637b55e8370b, type: 3}
+      propertyPath: m_Padding.m_Right
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1865760750616917606, guid: 7c3ce91777c72874189b637b55e8370b, type: 3}
+      propertyPath: m_Padding.m_Bottom
+      value: 650
       objectReference: {fileID: 0}
     - target: {fileID: 3194691094196318374, guid: 7c3ce91777c72874189b637b55e8370b, type: 3}
       propertyPath: m_Pivot.x
@@ -40004,6 +40020,22 @@ PrefabInstance:
     - target: {fileID: 1217418778606205336, guid: de64e89ccb5e1d347a82e9fafde3bef0, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1865760750616917606, guid: de64e89ccb5e1d347a82e9fafde3bef0, type: 3}
+      propertyPath: m_Padding.m_Top
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1865760750616917606, guid: de64e89ccb5e1d347a82e9fafde3bef0, type: 3}
+      propertyPath: m_Padding.m_Left
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1865760750616917606, guid: de64e89ccb5e1d347a82e9fafde3bef0, type: 3}
+      propertyPath: m_Padding.m_Right
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1865760750616917606, guid: de64e89ccb5e1d347a82e9fafde3bef0, type: 3}
+      propertyPath: m_Padding.m_Bottom
+      value: 650
       objectReference: {fileID: 0}
     - target: {fileID: 2285154051176951575, guid: de64e89ccb5e1d347a82e9fafde3bef0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
