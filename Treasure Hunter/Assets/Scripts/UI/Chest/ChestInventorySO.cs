@@ -26,7 +26,7 @@ namespace ChestInventory.Model
 
         public event Action<Dictionary<string, int>> OnCurrentValueUpdated;
 
-        public event Action<int, ItemInventory> UpdateDataUI;
+        public event Action<Dictionary<int, ItemInventory>> UpdateDataUI;
 
         public void Initialize()
         {
@@ -44,10 +44,65 @@ namespace ChestInventory.Model
                 item = item.item,
                 quantity = 1
             };
+
+            for (int i = 0; i < listItemInventory.Count; i++)
+            {
+                if (listItemInventory[i].IsEmpty)
+                    continue;
+                if (listItemInventory[i].item.ID == newItem.item.ID)
+                {
+                    Debug.Log("Sama nih");
+                    ItemInventory blankItem = new ItemInventory()
+                    {
+                        item = null,
+                        quantity = 0,
+                    };
+                    listItemInventory[i] = blankItem;
+                }
+                else
+                {
+                    Debug.Log("Gak ada yang sama");
+                }
+            }
             listItemInventory[index] = newItem;
             UpdateInformData();
-            UpdateDataUI?.Invoke(index, newItem);
+            UpdateDataUI?.Invoke(GetCurrentInventoryState());
         }
+
+        public Dictionary<int, ItemInventory> GetCurrentInventoryState()
+        {
+            // Mendefinisikan sebuah Dictionary bernama returnValue
+            Dictionary<int, ItemInventory> returnValue = new Dictionary<int, ItemInventory>();
+
+            for (int i = 0; i < listItemInventory.Count; i++)
+            {
+                // Jika Item dalam List Item pada Model Inventory Kosong, maka tidak terjadi apa-apa
+                if (listItemInventory[i].IsEmpty)
+                    continue;
+
+                // Jika ada Slot Item Bergambar pada Model Inventory, maka dimasukkan ke dalam Dictionary returnValue
+                returnValue[i] = listItemInventory[i];
+            }
+            return returnValue;
+        }
+
+        // private bool IsOnList(int index, ItemInventory newItem)
+        // {
+        //     for (int i = 0; i < listItemInventory.Count; i++)
+        //     {
+        //         if (listItemInventory[i].item.ID == newItem.item.ID)
+        //         {
+        //             ItemInventory item = new ItemInventory()
+        //             {
+        //                 item = null,
+        //                 quantity = 0,
+        //             };
+        //             listItemInventory[i] = item;
+        //             return true;
+        //         }
+        //     }
+        //     return false;
+        // }
 
         public Dictionary<string, int> GetTotalValueWeightItem()
         {

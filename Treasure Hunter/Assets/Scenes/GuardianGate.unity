@@ -2063,7 +2063,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 750239218}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 417d10f1a393ea04c86da89fa4403254, type: 3}
+  m_Script: {fileID: 11500000, guid: ddd461f8e985cfa489e19c6d41d69364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   chestInventoryUI: {fileID: 827071527}
@@ -2089,17 +2089,36 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!1 &774579743 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2625967086232942627, guid: 756702c62d4ad3240b68f744036129aa, type: 3}
+  m_PrefabInstance: {fileID: 2625967086308921785}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &774579748 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2608194113264410784, guid: 756702c62d4ad3240b68f744036129aa, type: 3}
   m_PrefabInstance: {fileID: 2625967086308921785}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 774579743}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 28f6374772b31034fbc14bf1dbdf523a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &774579750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774579743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97a85ec64b7111348bbfaf1a07b9ceb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryData: {fileID: 11400000, guid: 37b5460eabf31ac4d828f643bb9ae1b5, type: 2}
+  chestInventoryData: {fileID: 11400000, guid: 00a0e1cdc62550047a2beb4c6e1504a4, type: 2}
 --- !u!1001 &827071525
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -127,6 +127,18 @@ namespace Inventory.Model
             return listInventoryItems[itemIndex];
         }
 
+        public List<ItemInventory> GetAllItems()
+        {
+            List<ItemInventory> items = new List<ItemInventory>();
+            for (int i = 0; i < listInventoryItems.Count; i++)
+            {
+                if (listInventoryItems[i].IsEmpty)
+                    continue;
+                items.Add(listInventoryItems[i]);
+            }
+            return items;
+        }
+
         // Menukar Index dari Item yang di Swap
         public void SwapItems(int itemIndex_1, int itemIndex_2)
         {

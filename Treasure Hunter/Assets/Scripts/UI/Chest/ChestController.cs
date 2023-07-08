@@ -41,9 +41,16 @@ namespace ChestInventory
             this.chestInventoryData.OnCurrentValueUpdated += UpdateCurrentValueWeight;
         }
 
-        private void UpdateUI(int index, ItemInventory inventory)
+        private void UpdateUI(Dictionary<int, ItemInventory> inventoryState)
         {
-            this.chestInventoryUI.UpdateData(index, inventory.item.ItemImage, inventory.quantity);
+            // Menjadikan Slot Item yang sebelumnya dipindah menjadi Slot Item Kosong
+            this.chestInventoryUI.ResetAllItems();
+
+            // Memperbaharui UI Backpack Inventory
+            foreach (var item in inventoryState)
+            {
+                this.chestInventoryUI.UpdateData(item.Key, item.Value.item.ItemImage, item.Value.quantity);
+            }
         }
 
         private void UpdateCurrentValueWeight(Dictionary<string, int> dictionary)
