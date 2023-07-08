@@ -51,17 +51,12 @@ namespace ChestInventory.Model
                     continue;
                 if (listItemInventory[i].item.ID == newItem.item.ID)
                 {
-                    Debug.Log("Sama nih");
                     ItemInventory blankItem = new ItemInventory()
                     {
                         item = null,
                         quantity = 0,
                     };
                     listItemInventory[i] = blankItem;
-                }
-                else
-                {
-                    Debug.Log("Gak ada yang sama");
                 }
             }
             listItemInventory[index] = newItem;
@@ -85,24 +80,6 @@ namespace ChestInventory.Model
             }
             return returnValue;
         }
-
-        // private bool IsOnList(int index, ItemInventory newItem)
-        // {
-        //     for (int i = 0; i < listItemInventory.Count; i++)
-        //     {
-        //         if (listItemInventory[i].item.ID == newItem.item.ID)
-        //         {
-        //             ItemInventory item = new ItemInventory()
-        //             {
-        //                 item = null,
-        //                 quantity = 0,
-        //             };
-        //             listItemInventory[i] = item;
-        //             return true;
-        //         }
-        //     }
-        //     return false;
-        // }
 
         public Dictionary<string, int> GetTotalValueWeightItem()
         {
@@ -139,6 +116,13 @@ namespace ChestInventory.Model
                 totalItem++;
             }
             return totalItem;
+        }
+
+        internal void ResetData()
+        {
+            this.Initialize();
+            UpdateDataUI?.Invoke(GetCurrentInventoryState());
+            UpdateInformData();
         }
     }
 }

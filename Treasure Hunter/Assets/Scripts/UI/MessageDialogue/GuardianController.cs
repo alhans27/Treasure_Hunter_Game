@@ -28,7 +28,7 @@ public class GuardianController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D coll)
     {
-        if (coll.gameObject.CompareTag("Player") && IsChestInventoryFull())
+        if (coll.gameObject.CompareTag("Player") && IsChestInventoryFilled())
         {
             btnResetTxt.text = "No, I Don't";
             btnSubmitTxt.text = "Yes, I'm Sure!";
@@ -41,9 +41,9 @@ public class GuardianController : MonoBehaviour
         }
     }
 
-    private bool IsChestInventoryFull()
+    private bool IsChestInventoryFilled()
     {
-        if (chestData.GetDataLength() == chestData.Size)
+        if (chestData.GetDataLength() > 0 && chestData.GetDataLength() <= chestData.Size)
             return true;
         return false;
     }
@@ -66,6 +66,13 @@ public class GuardianController : MonoBehaviour
         else
         {
             Debug.Log("Jawaban Salah");
+            chest.ResetData();
         }
+    }
+
+    public void ResetInventory()
+    {
+        chest.ResetData();
+        questionMessage.HideMessage();
     }
 }

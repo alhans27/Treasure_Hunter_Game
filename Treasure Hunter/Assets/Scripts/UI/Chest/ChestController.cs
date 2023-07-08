@@ -31,6 +31,8 @@ namespace ChestInventory
         private void PrepareUI()
         {
             this.chestInventoryUI.InitializeInventoryUI(chestInventoryData.Size, chestInventoryData.minValue, chestInventoryData.maxWeight);
+
+
             this.chestInventoryUI.OnDropItems += HandleDropItem;
         }
 
@@ -64,6 +66,11 @@ namespace ChestInventory
             this.chestInventoryData.AddItem(index, item);
         }
 
+        public void ResetData()
+        {
+            this.chestInventoryData.ResetData();
+        }
+
         public void Show()
         {
             gameObject.SetActive(true);
@@ -78,7 +85,6 @@ namespace ChestInventory
         {
             if (coll.gameObject.CompareTag("Player"))
             {
-                Debug.Log("Player Mengenai Collider");
                 chestInventoryUI.Show();
             }
         }
