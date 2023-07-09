@@ -35,7 +35,6 @@ public class Checkpoint : MonoBehaviour
             }
             
         }
-        Debug.Log(goName.Count);
     }
 
     private void OnTriggerEnter2D(Collider2D Collide)
