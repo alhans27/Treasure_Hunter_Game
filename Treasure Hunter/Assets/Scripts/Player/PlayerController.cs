@@ -27,7 +27,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject[] fireBullets;
 
-    private void Start() {
+    private void Start()
+    {
         cm = GameObject.FindGameObjectWithTag("CM").GetComponent<CheckpointMaster>();
         transform.position = cm.lastCheckpointPos;
     }
@@ -115,7 +116,7 @@ public class PlayerController : MonoBehaviour
         // Pooling Firebullet
         fireBullets[FindFireball()].GetComponent<FireBullet>().Position(firePoint.position.x);
         fireBullets[FindFireball()].transform.position = position;
-        fireBullets[FindFireball()].GetComponent<FireBullet>().SetDirection(isFacingRight, Mathf.Sign(isFacingRight? 1 : -1));
+        fireBullets[FindFireball()].GetComponent<FireBullet>().SetDirection(isFacingRight, Mathf.Sign(isFacingRight ? 1 : -1));
     }
 
     private int FindFireball()
