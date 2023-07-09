@@ -8,6 +8,7 @@ public class PlayerLife : MonoBehaviour
     private Animator anim;
     private Rigidbody2D rb;
     [SerializeField] private Health healthPlayer;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();

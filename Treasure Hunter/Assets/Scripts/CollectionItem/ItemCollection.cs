@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class ItemCollection : MonoBehaviour
 {
+
     public GameManager GM;
 
     private void Awake()

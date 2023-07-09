@@ -120,9 +120,9 @@ TextureImporter:
       name: Wooden Pixel Art GUI 32x32_0
       rect:
         serializedVersion: 2
-        x: 417
+        x: 418
         y: 97
-        width: 94
+        width: 92
         height: 95
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -158,6 +158,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Wooden Pixel Art GUI 32x32_2
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 0
+        width: 237
+        height: 1103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 824da953433646445b866793846eeb72
+      internalID: -120471891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -171,6 +192,7 @@ TextureImporter:
     nameFileIdTable:
       Wooden Pixel Art GUI 32x32_0: 1597953017
       Wooden Pixel Art GUI 32x32_1: 1068127437
+      Wooden Pixel Art GUI 32x32_2: -120471891
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
