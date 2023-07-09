@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public int DiamondCollected = 0;
-    public int CoinCollected { get; private set; }
+    public int CoinCollected { get; set; }
     public Text DiamondOutput;
     public Text CoinOutput;
     private void Awake()
