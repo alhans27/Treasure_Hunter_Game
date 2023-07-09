@@ -6,18 +6,19 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public int DiamondCollected = 0;
-    public int CoinCollected = 0;
+    public int CoinCollected { get; private set; }
     public Text DiamondOutput;
     public Text CoinOutput;
-    void Update()
+    private void Awake()
     {
         DiamondOutput.text = "Diamonds: " + DiamondCollected;
-        CoinOutput.text = "Coins: " + CoinCollected;
+        CoinOutput.text = CoinCollected.ToString();
     }
 
     public void CoinCollection()
     {
         CoinCollected++;
+        CoinOutput.text = CoinCollected.ToString();
     }
     public void DiamondCollection()
     {
