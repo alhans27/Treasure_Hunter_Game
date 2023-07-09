@@ -12,6 +12,7 @@ TagManager:
   - Enemy
   - CM
   - Dead Zone
+  - Checkpoint
   layers:
   - Default
   - TransparentFX

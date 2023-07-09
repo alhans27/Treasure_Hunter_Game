@@ -58,6 +58,6 @@ public class ClickyButton : MonoBehaviour, IPointerUpHandler, IPointerDownHandle
 
     public void IWasClicked()
     {
-        Debug.Log("Clicked");
+        // Debug.Log("Clicked");
     }
 }
