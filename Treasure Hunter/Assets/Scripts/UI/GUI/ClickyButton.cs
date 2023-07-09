@@ -4,27 +4,46 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ClickyButton : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
+public class ClickyButton : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
 {
     [SerializeField] private Image _img;
     [SerializeField] private Sprite _default, _pressed;
     [SerializeField] private AudioClip _compressClip, _uncompressClip;
     [SerializeField] private AudioSource _source;
+    public AudioManager audioManager;
+
+    private void Start() {
+        audioManager = GameObject.Find("Audio Manager").GetComponent<AudioManager>();
+    }
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        _img.sprite = _pressed;
-        _source.PlayOneShot(_compressClip);
+        if (audioManager.audioMute == false)
+        {
+            Debug.Log("cek");
+            _source.PlayOneShot(_compressClip);
+        }
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        _img.sprite = _default;
-        _source.PlayOneShot(_uncompressClip);
+        if (GameObject.Find("Audio"))
+        {
+            if (GameObject.Find("Audio").GetComponent<ClickyButton>()._img.sprite == _pressed){
+                _img.sprite = _default;
+                _source.mute = !_source.mute;
+                audioManager.SetAudio(_source.mute);
+            } else if (GameObject.Find("Audio").GetComponent<ClickyButton>()._img.sprite == _default){
+                _img.sprite = _pressed;
+                _source.mute = !_source.mute;
+                audioManager.SetAudio(_source.mute);
+            }
+        }
     }
 
     public void IWasClicked()
     {
+        _source.PlayOneShot(_compressClip);
         Debug.Log("Clicked");
     }
 }
