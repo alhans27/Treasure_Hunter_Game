@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     private bool isFacingRight = true;
     private float cooldownTimer = Mathf.Infinity;
     private Vector3 position;
+    private CheckpointMaster cm;
 
     [Header("Required Player Components")]
     [SerializeField] private Rigidbody2D rb;
@@ -26,6 +27,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject[] fireBullets;
 
+    private void Start() {
+        cm = GameObject.FindGameObjectWithTag("CM").GetComponent<CheckpointMaster>();
+        transform.position = cm.lastCheckpointPos;
+    }
 
     // Update is called once per frame
     void Update()

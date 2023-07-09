@@ -39,8 +39,8 @@ public class PlayerLife : MonoBehaviour
     private void Die()
     {
         //rb.bodyType = RigidbodyType2D.Static;
+        Invoke("RestartLevel", 1.5f);
         anim.SetTrigger("Dead");
-        RestartLevel();
     }
 
     private void Hurt()

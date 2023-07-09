@@ -58,8 +58,14 @@ public class EnemyHit : MonoBehaviour
             anim.SetTrigger("Hit");
             anim.SetBool("Walk", true);
         } else {
-            Destroy(gameObject, 0.5f);
+            Invoke("Deactivate", 0.5f);
             anim.SetTrigger("Dead");
         }
+    }
+
+    private void Deactivate()
+    {
+        Checkpoint.goName.Add(gameObject.name);
+        gameObject.SetActive(false);
     }
 }

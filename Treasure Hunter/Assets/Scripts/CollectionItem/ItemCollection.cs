@@ -6,20 +6,26 @@ using UnityEngine.UI;
 public class ItemCollection : MonoBehaviour
 {
     public GameManager GM;
+
+    private void Awake()
+    {
+        GM = GameObject.Find("Game Manager").GetComponent<GameManager>();
+    }
+
     private void OnTriggerEnter2D(Collider2D TheThingThatWalkedIntoMe)
     {
 
         if (TheThingThatWalkedIntoMe.CompareTag("Player") && gameObject.CompareTag("Coin"))
         {
-
             GM.CoinCollection();
-            Destroy(gameObject);
-
+            Checkpoint.goName.Add(gameObject.name);
+            gameObject.SetActive(false);
         }
         else if (TheThingThatWalkedIntoMe.CompareTag("Player") && gameObject.CompareTag("Diamond"))
         {
             GM.DiamondCollection();
-            Destroy(gameObject);
+            Checkpoint.goName.Add(gameObject.name);
+            gameObject.SetActive(false);
         }
     }
 
