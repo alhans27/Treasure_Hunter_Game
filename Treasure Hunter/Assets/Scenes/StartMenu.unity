@@ -500,6 +500,7 @@ GameObject:
   - component: {fileID: 724118697}
   - component: {fileID: 724118696}
   - component: {fileID: 724118695}
+  - component: {fileID: 724118700}
   m_Layer: 5
   m_Name: Level Button (Legacy) (1)
   m_TagString: Untagged
@@ -698,6 +699,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 724118700}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: GoToLevelSelection
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &724118698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -736,6 +749,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 724118693}
   m_CullTransparentMesh: 1
+--- !u!114 &724118700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724118693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a3b2fc3e100c494b91d8b26021999ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuScreen: {fileID: 0}
 --- !u!1 &786222955
 GameObject:
   m_ObjectHideFlags: 0
@@ -1528,6 +1554,7 @@ GameObject:
   - component: {fileID: 1565679269}
   - component: {fileID: 1565679272}
   - component: {fileID: 1565679273}
+  - component: {fileID: 1565679274}
   m_Layer: 5
   m_Name: Play Button (Legacy)
   m_TagString: Untagged
@@ -1603,6 +1630,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1565679272}
         m_TargetAssemblyTypeName: ClickyButton, Assembly-CSharp
         m_MethodName: IWasClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1565679274}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1764,6 +1803,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1565679274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565679267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a3b2fc3e100c494b91d8b26021999ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuScreen: {fileID: 0}
 --- !u!1 &1569114149
 GameObject:
   m_ObjectHideFlags: 0
@@ -1914,6 +1966,7 @@ GameObject:
   - component: {fileID: 1744609417}
   - component: {fileID: 1744609416}
   - component: {fileID: 1744609415}
+  - component: {fileID: 1744609420}
   m_Layer: 5
   m_Name: Exit Button (Legacy) (1)
   m_TagString: Untagged
@@ -2112,6 +2165,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1744609420}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: Quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1744609418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2150,6 +2215,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1744609413}
   m_CullTransparentMesh: 1
+--- !u!114 &1744609420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744609413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a3b2fc3e100c494b91d8b26021999ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuScreen: {fileID: 0}
 --- !u!1 &1775599585
 GameObject:
   m_ObjectHideFlags: 0
@@ -2244,8 +2322,9 @@ GameObject:
   - component: {fileID: 1889728264}
   - component: {fileID: 1889728263}
   - component: {fileID: 1889728262}
+  - component: {fileID: 1889728267}
   m_Layer: 5
-  m_Name: Level Button (Legacy) (2)
+  m_Name: Credits Button (Legacy) (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2442,6 +2521,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1889728267}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: GoToCredits
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1889728265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2480,6 +2571,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1889728260}
   m_CullTransparentMesh: 1
+--- !u!114 &1889728267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889728260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a3b2fc3e100c494b91d8b26021999ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuScreen: {fileID: 0}
 --- !u!1 &1976803201
 GameObject:
   m_ObjectHideFlags: 0

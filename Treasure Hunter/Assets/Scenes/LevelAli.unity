@@ -771,6 +771,10 @@ PrefabInstance:
       value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 3188562891897583102, guid: 4920b8d3055f45b46b665ef19f103962, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 8194c06fe94518d4fb4bc6867d9f9ef2, type: 3}
+    - target: {fileID: 3188562891897583102, guid: 4920b8d3055f45b46b665ef19f103962, type: 3}
       propertyPath: m_FontData.m_FontSize
       value: 32
       objectReference: {fileID: 0}
@@ -4377,6 +4381,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7447581011289271654, guid: 8188911b3c646cf47a6d32fd80c40eec, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 8194c06fe94518d4fb4bc6867d9f9ef2, type: 3}
     - target: {fileID: 7447581011849937104, guid: 8188911b3c646cf47a6d32fd80c40eec, type: 3}
       propertyPath: m_Name
       value: Coin Panel
