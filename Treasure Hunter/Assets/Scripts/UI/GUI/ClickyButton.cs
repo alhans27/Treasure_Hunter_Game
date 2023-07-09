@@ -12,15 +12,30 @@ public class ClickyButton : MonoBehaviour, IPointerUpHandler, IPointerDownHandle
     [SerializeField] private AudioSource _source;
     public AudioManager audioManager;
 
+    private void Awake() {
+    }
+
     private void Start() {
         audioManager = GameObject.Find("Audio Manager").GetComponent<AudioManager>();
+
+        if (gameObject.name == "Audio")
+        {
+            Debug.Log(gameObject.name);
+            if (audioManager.audioMute == true){
+                _img.sprite = _pressed;
+               _source.mute = true;
+            } else {
+                _img.sprite = _default;
+               _source.mute = false;
+            }
+        }
+        
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
         if (audioManager.audioMute == false)
         {
-            Debug.Log("cek");
             _source.PlayOneShot(_compressClip);
         }
     }
@@ -28,7 +43,7 @@ public class ClickyButton : MonoBehaviour, IPointerUpHandler, IPointerDownHandle
     public void OnPointerUp(PointerEventData eventData)
     {
         if (GameObject.Find("Audio"))
-        {
+        {        
             if (GameObject.Find("Audio").GetComponent<ClickyButton>()._img.sprite == _pressed){
                 _img.sprite = _default;
                 _source.mute = !_source.mute;
@@ -43,7 +58,6 @@ public class ClickyButton : MonoBehaviour, IPointerUpHandler, IPointerDownHandle
 
     public void IWasClicked()
     {
-        _source.PlayOneShot(_compressClip);
         Debug.Log("Clicked");
     }
 }

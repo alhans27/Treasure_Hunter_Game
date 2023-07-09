@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5615879605809552168
+--- !u!1 &85766646831487862
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,43 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5615879605809552214}
-  - component: {fileID: 5615879605809552169}
+  - component: {fileID: 85766646831487848}
+  - component: {fileID: 85766646831487849}
   m_Layer: 0
-  m_Name: Game Manager
+  m_Name: Audio Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5615879605809552214
+--- !u!4 &85766646831487848
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5615879605809552168}
+  m_GameObject: {fileID: 85766646831487862}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.92, y: 3.34, z: -1.3543589}
+  m_LocalPosition: {x: 938.90564, y: 542.87006, z: 7.071133}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5615879605809552169
+--- !u!114 &85766646831487849
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5615879605809552168}
+  m_GameObject: {fileID: 85766646831487862}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d903fe77349fff345a9fcaad1ce9c196, type: 3}
+  m_Script: {fileID: 11500000, guid: 870b71a4da693cb4c964d6c706d7d681, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DiamondCollected: 0
-  CoinCollected: 0
-  DiamondOutput: {fileID: 3188562891897583102, guid: 4920b8d3055f45b46b665ef19f103962, type: 3}
-  CoinOutput: {fileID: 6157254317573851633, guid: 793949fe2c96b4a49b56c900cf443d71, type: 3}
+  audioMute: 0
