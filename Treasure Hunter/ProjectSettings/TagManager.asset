@@ -9,8 +9,8 @@ TagManager:
   - Coin
   - Enemy Bats
   - Guardian
-  - Undefined
   - Enemy
+  - CM
   layers:
   - Default
   - TransparentFX

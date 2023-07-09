@@ -7,30 +7,40 @@ public class Checkpoint : MonoBehaviour
 {
     [SerializeField] private Animator anim;
     private bool once;
+    private GameManager gm;
+    private CheckpointMaster cm;
+    public static List<string> goName = new List<string>();
 
     // Start is called before the first frame update
     void Start()
     {
         once = false;
-    }
+        cm = GameObject.FindGameObjectWithTag("CM").GetComponent<CheckpointMaster>();
+        gm = GameObject.Find("Game Manager").GetComponent<GameManager>();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (cm.collect != null)
+        {
+            gm.DiamondCollected = cm.collect[0];
+            gm.CoinCollected = cm.collect[1];
+
+            foreach (var i in cm.obj)
+            {
+                GameObject.Find(i).SetActive(false);
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D Collide)
     {
-        if(Collide.name == "Player")
+        if(Collide.name == "Player" && once == false)
         {
-            if (once == false)
-            {
-                anim.SetBool("expand", true);
-                anim.SetTrigger("fluttering");
-                once = true;
-            }
+            anim.SetBool("expand", true);
+            anim.SetTrigger("fluttering");
+            once = true;
+            cm.lastCheckpointPos = transform.position;
+            cm.SaveCollect(gm.DiamondCollected, gm.CoinCollected);
+            cm.SaveObj();
         }
-
     }
+    
 }
