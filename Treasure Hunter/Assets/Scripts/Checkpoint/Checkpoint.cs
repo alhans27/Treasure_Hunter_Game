@@ -32,7 +32,7 @@ public class Checkpoint : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D Collide)
     {
-        if (Collide.name == "Player" && once == false)
+        if (Collide.CompareTag("Player") && once == false)
         {
             anim.SetBool("expand", true);
             anim.SetTrigger("fluttering");
