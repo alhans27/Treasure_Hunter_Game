@@ -29,6 +29,5 @@ public class GameManager : MonoBehaviour
     {
         DiamondCollected--;
     }
-
 }
 
