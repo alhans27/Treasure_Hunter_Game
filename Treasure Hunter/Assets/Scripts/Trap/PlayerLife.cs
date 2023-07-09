@@ -17,9 +17,9 @@ public class PlayerLife : MonoBehaviour
     void Update()
     {
         if (healthPlayer.currentHealth <= 0)
-            {
-                Die();
-            }   
+        {
+            Die();
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -31,8 +31,12 @@ public class PlayerLife : MonoBehaviour
             if (healthPlayer.currentHealth > 0)
             {
                 Hurt();
-            } 
+            }
 
+        }
+        if (collision.gameObject.CompareTag("Dead Zone"))
+        {
+            healthPlayer.TakeDamage(healthPlayer.currentHealth);
         }
     }
 

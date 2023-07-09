@@ -11,6 +11,7 @@ TagManager:
   - Guardian
   - Enemy
   - CM
+  - Dead Zone
   layers:
   - Default
   - TransparentFX
