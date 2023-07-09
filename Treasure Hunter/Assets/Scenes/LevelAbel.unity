@@ -12475,6 +12475,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Diamond Text
       objectReference: {fileID: 0}
+    - target: {fileID: 3188562891897583102, guid: 4920b8d3055f45b46b665ef19f103962, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 8194c06fe94518d4fb4bc6867d9f9ef2, type: 3}
     - target: {fileID: 3188562891897583103, guid: 4920b8d3055f45b46b665ef19f103962, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -12740,11 +12744,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2858021424527343302, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.63
+      value: -17.4
       objectReference: {fileID: 0}
     - target: {fileID: 2858021424527343302, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.81
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 2858021424527343302, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13252,6 +13256,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7447581011289271654, guid: 8188911b3c646cf47a6d32fd80c40eec, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 8194c06fe94518d4fb4bc6867d9f9ef2, type: 3}
     - target: {fileID: 7447581011849937104, guid: 8188911b3c646cf47a6d32fd80c40eec, type: 3}
       propertyPath: m_Name
       value: Coin Panel
