@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public int CoinCollected = 0;
     public Text DiamondOutput;
     public Text CoinOutput;
-    private void Awake()
+    private void Update()
     {
         DiamondOutput.text = "Diamonds: " + DiamondCollected;
         CoinOutput.text = CoinCollected.ToString();
@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     public void CoinCollection()
     {
         CoinCollected++;
-        CoinOutput.text = CoinCollected.ToString();
+        // CoinOutput.text = CoinCollected.ToString();
     }
     public void DiamondCollection()
     {

@@ -18,7 +18,7 @@ public class Checkpoint : MonoBehaviour
         cm = GameObject.FindGameObjectWithTag("CM").GetComponent<CheckpointMaster>();
         gm = GameObject.Find("Game Manager").GetComponent<GameManager>();
 
-        // goName = null;
+        goName.Clear();
         if (cm.collect.Count != 0)
         {
             gm.DiamondCollected = cm.collect[0];

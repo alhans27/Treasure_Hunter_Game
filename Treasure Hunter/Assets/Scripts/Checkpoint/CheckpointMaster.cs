@@ -26,6 +26,7 @@ public class CheckpointMaster : MonoBehaviour
 
     public void SaveCollect(int diamond, int coin)
     {
+        collect.Clear();
         collect.Insert(0, diamond);
         collect.Insert(1, coin);
     }
