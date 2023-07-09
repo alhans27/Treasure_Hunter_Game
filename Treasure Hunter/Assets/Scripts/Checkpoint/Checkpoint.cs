@@ -18,16 +18,24 @@ public class Checkpoint : MonoBehaviour
         cm = GameObject.FindGameObjectWithTag("CM").GetComponent<CheckpointMaster>();
         gm = GameObject.Find("Game Manager").GetComponent<GameManager>();
 
-        if (cm.collect != null)
+        // goName = null;
+        if (cm.collect.Count != 0)
         {
             gm.DiamondCollected = cm.collect[0];
             gm.CoinCollected = cm.collect[1];
 
+        }
+
+        if (cm.obj.Count != 0)
+        {
+            goName = new List<string>(cm.obj);
             foreach (var i in cm.obj)
             {
                 GameObject.Find(i).SetActive(false);
             }
+            
         }
+        Debug.Log(goName.Count);
     }
 
     private void OnTriggerEnter2D(Collider2D Collide)
