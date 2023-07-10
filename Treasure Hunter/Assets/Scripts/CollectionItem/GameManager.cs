@@ -6,28 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public int DiamondCollected = 0;
     public int CoinCollected = 0;
-    public Text DiamondOutput;
     public Text CoinOutput;
     private void Update()
     {
-        DiamondOutput.text = "Diamonds: " + DiamondCollected;
         CoinOutput.text = CoinCollected.ToString();
     }
 
     public void CoinCollection()
     {
         CoinCollected++;
-        // CoinOutput.text = CoinCollected.ToString();
-    }
-    public void DiamondCollection()
-    {
-        DiamondCollected++;
-    }
-    public void UsePotion()
-    {
-        DiamondCollected--;
     }
 }
 

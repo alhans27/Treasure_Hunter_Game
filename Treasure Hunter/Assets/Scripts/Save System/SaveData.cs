@@ -16,8 +16,6 @@ public class SaveData
     public SaveData(GameObject player, GameManager gm, List<string> c)
     {
         Health h = player.GetComponent<Health>();
-
-        diamond = gm.DiamondCollected;
         coin = gm.CoinCollected;
         gameObjectName = new List<string>(c);
         position = new float[3];

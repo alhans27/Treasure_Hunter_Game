@@ -16,26 +16,29 @@ public class CheckpointMaster : MonoBehaviour
 
 
     // Start is called before the first frame update
-    private void Awake() {
-        if(instance == null){
+    private void Awake()
+    {
+        if (instance == null)
+        {
             instance = this;
-            if (collect.Count == 0){
-                collect.Add(0);
+            if (collect.Count == 0)
+            {
                 collect.Add(0);
             }
             gm = GameObject.Find("Game Manager").GetComponent<GameManager>();
             DontDestroyOnLoad(instance);
-        } else {
+        }
+        else
+        {
             Destroy(gameObject);
         }
 
     }
 
-    public void SaveCollect(int diamond, int coin)
+    public void SaveCollect(int coin)
     {
         collect.Clear();
-        collect.Insert(0, diamond);
-        collect.Insert(1, coin);
+        collect.Insert(0, coin);
     }
 
     public void SaveObj()
@@ -43,13 +46,12 @@ public class CheckpointMaster : MonoBehaviour
         obj = new List<string>(Checkpoint.goName);
     }
 
-    public void Load(List<string> Ob, int diamond, int coin, Vector3 pos) 
+    public void Load(List<string> Ob, int diamond, int coin, Vector3 pos)
     {
         obj_load.Clear();
         obj_load = new List<string>(Ob);
         collect_load.Clear();
-        collect_load.Insert(0, diamond);
-        collect_load.Insert(1, coin);
+        collect_load.Insert(0, coin);
         loadCheckpointPos = pos;
         isLoaded = true;
     }
