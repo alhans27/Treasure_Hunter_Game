@@ -8,6 +8,7 @@ public class CheckpointMaster : MonoBehaviour
     public List<int> collect = new List<int>(){0,0};
     public List<string> obj;
     public Vector2 lastCheckpointPos;
+    public GameManager gm;
 
 
     // Start is called before the first frame update
@@ -18,6 +19,7 @@ public class CheckpointMaster : MonoBehaviour
                 collect.Add(0);
                 collect.Add(0);
             }
+            gm = GameObject.Find("Game Manager").GetComponent<GameManager>();
             DontDestroyOnLoad(instance);
         } else {
             Destroy(gameObject);
@@ -34,5 +36,17 @@ public class CheckpointMaster : MonoBehaviour
     public void SaveObj()
     {
         obj = new List<string>(Checkpoint.goName);
+    }
+
+    public void LoadObject(List<string> Ob) 
+    {
+        obj = new List<string>(Ob);
+    }
+
+    public void LoadItems (int diamond, int coin)
+    {
+        gm.DiamondCollected = diamond;
+        gm.CoinCollected = coin;
+        Debug.Log(coin);
     }
 }

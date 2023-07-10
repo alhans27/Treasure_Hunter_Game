@@ -45,4 +45,9 @@ public class Health : MonoBehaviour
             TakeDamage(1);
         }
     }
+
+    public void LoadHealth(float health)
+    {
+        currentHealth = health;
+    }
 }

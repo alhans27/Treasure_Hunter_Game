@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
+    #nullable disable
     public GameObject pauseMenuScreen;
     
     //buat tombol Play di StartMenu
@@ -12,6 +13,18 @@ public class UIManager : MonoBehaviour
     {
         SceneManager.LoadScene("LevelHasna");
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    //buat tombol Save di PauseMenu
+    public void SaveGame()
+    {
+        SaveSystem.SaveGame();
+    }
+
+    //buat tombol Load di StartMenu
+    public void LoadGame()
+    {
+        SaveSystem.LoadGame();
     }
 
     // buat tombol Level di StartMenu
@@ -43,7 +56,25 @@ public class UIManager : MonoBehaviour
     //buat tombol bentuk Home
     public void GoToMenu()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("StartMenu");
+    }
+
+    // pilih level
+    public void Level_1 (){
+        SceneManager.LoadScene("LevelHasna");
+    }
+
+    public void Level_2 (){
+        SceneManager.LoadScene("LevelAli");
+    }
+
+    public void Level_3 (){
+        SceneManager.LoadScene("LevelAbel");
+    }
+    
+    public void Level_4 (){
+        SceneManager.LoadScene("LevelHanif");
     }
 
     // buat tombol quit yg ada dimana aja

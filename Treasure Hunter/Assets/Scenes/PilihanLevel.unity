@@ -1730,134 +1730,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1018115115}
   m_CullTransparentMesh: 1
---- !u!1 &1248411400
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1248411402}
-  - component: {fileID: 1248411401}
-  m_Layer: 0
-  m_Name: BGM
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!82 &1248411401
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1248411400}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: dffa0be76f4e86b44896193e8baa734c, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.3
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!4 &1248411402
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1248411400}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1015.4602, y: 607.9112, z: 3.496015}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1281822810
 GameObject:
   m_ObjectHideFlags: 0
@@ -1916,6 +1788,7 @@ GameObject:
   - component: {fileID: 1311947586}
   - component: {fileID: 1311947585}
   - component: {fileID: 1311947584}
+  - component: {fileID: 1311947588}
   - component: {fileID: 1311947583}
   m_Layer: 5
   m_Name: Level 1 Button (Legacy) (4)
@@ -2116,6 +1989,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1311947588}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: Level_1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1311947586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2154,6 +2039,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1311947581}
   m_CullTransparentMesh: 1
+--- !u!114 &1311947588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311947581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a3b2fc3e100c494b91d8b26021999ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuScreen: {fileID: 0}
 --- !u!1 &1391769789
 GameObject:
   m_ObjectHideFlags: 0
@@ -2168,6 +2066,7 @@ GameObject:
   - component: {fileID: 1391769793}
   - component: {fileID: 1391769792}
   - component: {fileID: 1391769791}
+  - component: {fileID: 1391769796}
   m_Layer: 5
   m_Name: Level 4 Button (Legacy) (7)
   m_TagString: Untagged
@@ -2367,6 +2266,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1391769796}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: Level_4
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1391769794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2405,6 +2316,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1391769789}
   m_CullTransparentMesh: 1
+--- !u!114 &1391769796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391769789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a3b2fc3e100c494b91d8b26021999ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuScreen: {fileID: 0}
 --- !u!1 &1428474447
 GameObject:
   m_ObjectHideFlags: 0
@@ -2634,6 +2558,7 @@ GameObject:
   - component: {fileID: 1635389902}
   - component: {fileID: 1635389901}
   - component: {fileID: 1635389900}
+  - component: {fileID: 1635389905}
   m_Layer: 5
   m_Name: Level 2 Button (Legacy) (5)
   m_TagString: Untagged
@@ -2833,6 +2758,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1635389905}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: Level_2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1635389903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2871,6 +2808,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1635389898}
   m_CullTransparentMesh: 1
+--- !u!114 &1635389905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635389898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a3b2fc3e100c494b91d8b26021999ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuScreen: {fileID: 0}
 --- !u!1 &1684460705
 GameObject:
   m_ObjectHideFlags: 0
@@ -2885,6 +2835,7 @@ GameObject:
   - component: {fileID: 1684460709}
   - component: {fileID: 1684460708}
   - component: {fileID: 1684460707}
+  - component: {fileID: 1684460712}
   m_Layer: 5
   m_Name: Level 3 Button (Legacy) (6)
   m_TagString: Untagged
@@ -3084,6 +3035,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1684460712}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: Level_3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1684460710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3122,6 +3085,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1684460705}
   m_CullTransparentMesh: 1
+--- !u!114 &1684460712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684460705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a3b2fc3e100c494b91d8b26021999ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuScreen: {fileID: 0}
 --- !u!1 &1973070510
 GameObject:
   m_ObjectHideFlags: 0
@@ -3190,3 +3166,60 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1822128165488605404
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1822128166664636372, guid: 0beec5e95accdb5458b6f8c45f746a09, type: 3}
+      propertyPath: m_Name
+      value: BGM
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822128166664636374, guid: 0beec5e95accdb5458b6f8c45f746a09, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822128166664636374, guid: 0beec5e95accdb5458b6f8c45f746a09, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1015.4602
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822128166664636374, guid: 0beec5e95accdb5458b6f8c45f746a09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 607.9112
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822128166664636374, guid: 0beec5e95accdb5458b6f8c45f746a09, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.496015
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822128166664636374, guid: 0beec5e95accdb5458b6f8c45f746a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822128166664636374, guid: 0beec5e95accdb5458b6f8c45f746a09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822128166664636374, guid: 0beec5e95accdb5458b6f8c45f746a09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822128166664636374, guid: 0beec5e95accdb5458b6f8c45f746a09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822128166664636374, guid: 0beec5e95accdb5458b6f8c45f746a09, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822128166664636374, guid: 0beec5e95accdb5458b6f8c45f746a09, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822128166664636374, guid: 0beec5e95accdb5458b6f8c45f746a09, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0beec5e95accdb5458b6f8c45f746a09, type: 3}

@@ -26,10 +26,10 @@ public class Checkpoint : MonoBehaviour
 
         }
 
-        if (cm.obj.Count != 0)
+        if (cm.obj.Count > 0)
         {
             goName = new List<string>(cm.obj);
-            foreach (var i in cm.obj)
+            foreach (var i in goName)
             {
                 GameObject.Find(i).SetActive(false);
             }
@@ -49,5 +49,4 @@ public class Checkpoint : MonoBehaviour
             cm.SaveObj();
         }
     }
-
 }
