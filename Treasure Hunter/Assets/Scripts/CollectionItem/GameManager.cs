@@ -19,7 +19,6 @@ public class GameManager : MonoBehaviour
     public void CoinCollection()
     {
         CoinCollected++;
-        // CoinOutput.text = CoinCollected.ToString();
     }
     public void DiamondCollection()
     {
