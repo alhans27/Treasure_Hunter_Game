@@ -124,3 +124,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0409e8d097825ee4f83090b616b0e475, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  backpackData: {fileID: 11400000, guid: 37b5460eabf31ac4d828f643bb9ae1b5, type: 2}

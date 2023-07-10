@@ -30,11 +30,9 @@ namespace Inventory.UI
         // Menonaktifkan UI Slot Item Bergambar dan Hanya Menampilkan UI Slot Item Kosong
         public void ResetItemUI()
         {
-            if (empty != true)
-            {
-                this.itemImage.gameObject.SetActive(false);
-                empty = true;
-            }
+            this.itemImage.gameObject.SetActive(false);
+            empty = true;
+
         }
 
         // Menghilangkan Border Item yang sebelumnya diklik oleh User melalui mouse

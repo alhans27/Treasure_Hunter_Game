@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Inventory.Model;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Item : MonoBehaviour
 {
@@ -26,6 +27,7 @@ public class Item : MonoBehaviour
         // audioSource.Play();
         // Destroy(gameObject);
         this.gameObject.SetActive(false);
+        // this.gameObject.GetComponent<Image>().enabled = false;
     }
 
 }

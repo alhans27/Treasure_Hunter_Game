@@ -20,8 +20,12 @@ namespace Inventory
 
         public void Start()
         {
+            // intialItems = GameManager.Instance.GetBackpack();
+            // if (intialItems.)
+            // intialItems = new List<ItemInventory>();
             PrepareUI();
             PrepareInventoryData();
+            // Debug.Log(intialItems);
         }
 
         public void Update()
@@ -78,8 +82,11 @@ namespace Inventory
 
         private void UpdateInventoryUI(Dictionary<int, ItemInventory> inventoryState)
         {
-            // Menjadikan Slot Item yang sebelumnya dipindah menjadi Slot Item Kosong
-            this.inventoryUI.ResetAllItems();
+            if (inventoryState != null)
+            {
+                // Menjadikan Slot Item yang sebelumnya dipindah menjadi Slot Item Kosong
+                this.inventoryUI.ResetAllItems();
+            }
 
             // Memperbaharui UI Backpack Inventory
             foreach (var item in inventoryState)
