@@ -44360,7 +44360,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2873583163401003964, guid: 66a42770a4dce0844bba39aa22037e2e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2873583163401003965, guid: 66a42770a4dce0844bba39aa22037e2e, type: 3}
       propertyPath: m_Color.a

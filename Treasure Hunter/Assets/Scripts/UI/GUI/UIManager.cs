@@ -62,6 +62,9 @@ public class UIManager : MonoBehaviour
     //buat tombol bentuk Home
     public void GoToMenu()
     {
+        if(GameObject.Find("Checkpoint Master")){
+            Destroy(GameObject.Find("Checkpoint Master"));
+        }
         Time.timeScale = 1;
         SceneManager.LoadScene("StartMenu");
     }
