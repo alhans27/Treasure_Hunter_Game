@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Help.unity
     guid: 84f8c120222d10e4e8015d3cfaf1db27
+  - enabled: 1
+    path: Assets/Scenes/GuardianGate.unity
+    guid: a5f284748856923448bc8501912efd5b
   m_configObjects: {}

@@ -13,6 +13,8 @@ TagManager:
   - CM
   - Dead Zone
   - Checkpoint
+  - NextLevel
+  - QuestionGate
   layers:
   - Default
   - TransparentFX
