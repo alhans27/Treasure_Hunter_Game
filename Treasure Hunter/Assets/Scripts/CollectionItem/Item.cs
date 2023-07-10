@@ -24,7 +24,8 @@ public class Item : MonoBehaviour
     {
         GetComponent<Collider2D>().enabled = false;
         // audioSource.Play();
-        Destroy(gameObject);
+        // Destroy(gameObject);
+        this.gameObject.SetActive(false);
     }
 
 }
