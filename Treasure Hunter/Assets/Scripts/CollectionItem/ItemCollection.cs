@@ -22,12 +22,11 @@ public class ItemCollection : MonoBehaviour
             Checkpoint.goName.Add(gameObject.name);
             gameObject.SetActive(false);
         }
-        else if (TheThingThatWalkedIntoMe.CompareTag("Player") && gameObject.CompareTag("Diamond"))
-        {
-            GM.DiamondCollection();
-            Checkpoint.goName.Add(gameObject.name);
-            gameObject.SetActive(false);
-        }
+        // else if (TheThingThatWalkedIntoMe.CompareTag("Player") && gameObject.CompareTag("Diamond"))
+        // {
+        //     Checkpoint.goName.Add(gameObject.name);
+        //     gameObject.SetActive(false);
+        // }
     }
 
 

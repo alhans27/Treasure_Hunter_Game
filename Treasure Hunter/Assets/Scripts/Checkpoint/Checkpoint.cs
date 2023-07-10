@@ -17,7 +17,7 @@ public class Checkpoint : MonoBehaviour
     {
         cm = GameObject.FindGameObjectWithTag("CM").GetComponent<CheckpointMaster>();
         gm = GameObject.Find("Game Manager").GetComponent<GameManager>();
-        
+
         once = false;
         if (cm.checkpos.Contains(gameObject.name))
         {
@@ -28,8 +28,7 @@ public class Checkpoint : MonoBehaviour
 
         if (cm.collect.Count != 0)
         {
-            gm.DiamondCollected = cm.collect[0];
-            gm.CoinCollected = cm.collect[1];
+            gm.CoinCollected = cm.collect[0];
         }
 
 
@@ -39,7 +38,8 @@ public class Checkpoint : MonoBehaviour
             goName = new List<string>(cm.obj);
             foreach (string i in goName)
             {
-                if(GameObject.Find(i)){
+                if (GameObject.Find(i))
+                {
                     GameObject.Find(i).SetActive(false);
                 }
             }
@@ -55,7 +55,7 @@ public class Checkpoint : MonoBehaviour
             anim.SetTrigger("fluttering");
             cm.checkpos.Add(gameObject.name);
             cm.lastCheckpointPos = transform.position;
-            cm.SaveCollect(gm.DiamondCollected, gm.CoinCollected);
+            cm.SaveCollect(gm.CoinCollected);
             cm.SaveObj();
         }
     }
@@ -68,7 +68,6 @@ public class Checkpoint : MonoBehaviour
             {
                 if (cm.collect_load.Count != 0)
                 {
-                    gm.DiamondCollected = cm.collect_load[0];
                     gm.CoinCollected = cm.collect_load[1];
                 }
 
@@ -79,7 +78,8 @@ public class Checkpoint : MonoBehaviour
                     foreach (string i in goName)
                     {
                         print(i);
-                        if (GameObject.Find(i)){
+                        if (GameObject.Find(i))
+                        {
                             GameObject.Find(i).SetActive(false);
                         }
                     }

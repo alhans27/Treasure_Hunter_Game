@@ -17,26 +17,29 @@ public class CheckpointMaster : MonoBehaviour
 
 
     // Start is called before the first frame update
-    private void Awake() {
-        if(instance == null){
+    private void Awake()
+    {
+        if (instance == null)
+        {
             instance = this;
-            if (collect.Count == 0){
-                collect.Add(0);
+            if (collect.Count == 0)
+            {
                 collect.Add(0);
             }
             gm = GameObject.Find("Game Manager").GetComponent<GameManager>();
             DontDestroyOnLoad(instance);
-        } else {
+        }
+        else
+        {
             Destroy(gameObject);
         }
 
     }
 
-    public void SaveCollect(int diamond, int coin)
+    public void SaveCollect(int coin)
     {
         collect.Clear();
-        collect.Insert(0, diamond);
-        collect.Insert(1, coin);
+        collect.Insert(0, coin);
     }
 
     public void SaveObj()
@@ -44,7 +47,7 @@ public class CheckpointMaster : MonoBehaviour
         obj = new List<string>(Checkpoint.goName);
     }
 
-    public void Load(SaveData data) 
+    public void Load(SaveData data)
     {
         obj.Clear();
         obj_load.Clear();

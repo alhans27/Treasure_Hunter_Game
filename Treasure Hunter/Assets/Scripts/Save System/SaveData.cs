@@ -20,8 +20,6 @@ public class SaveData
     public SaveData(GameObject player, GameManager gm, CheckpointMaster cm, List<string> c)
     {
         Health h = player.GetComponent<Health>();
-
-        diamond = gm.DiamondCollected;
         coin = gm.CoinCollected;
         collectCheckpoint = new List<int>(cm.collect);
         gameObjectName = new List<string>(c);
