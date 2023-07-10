@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: de49e580b28618f4ca64bcf1e0282054
+guid: 740a2474b4860b5428c66cb686003d6e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Wooden Pixel Art GUI 32x32_0
+      name: GUI_2
       rect:
         serializedVersion: 2
-        x: 514
-        y: 32
-        width: 28
-        height: 31
+        x: 49
+        y: 177
+        width: 30
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e000fb11371b504d8313589f77212e7
-      internalID: 1597953017
+      spriteID: fcb19963083d5444297331df6e7237a6
+      internalID: 1153306199
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wooden Pixel Art GUI 32x32_2
+      name: GUI_3
       rect:
         serializedVersion: 2
-        x: 594
-        y: 0
-        width: 237
-        height: 1103
+        x: 70
+        y: 214
+        width: 4
+        height: 7
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,8 +152,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 824da953433646445b866793846eeb72
-      internalID: -120471891
+      spriteID: 9051420fcbd23d24ba70b36f2f46a04c
+      internalID: -1951376140
       vertices: []
       indices: 
       edges: []
@@ -169,9 +169,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Wooden Pixel Art GUI 32x32_0: 1597953017
-      Wooden Pixel Art GUI 32x32_1: 1068127437
-      Wooden Pixel Art GUI 32x32_2: -120471891
+      GUI_0: -1168530338
+      GUI_3: -1951376140
+      GUI_2: 1153306199
+      GUI_1: -1410219399
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

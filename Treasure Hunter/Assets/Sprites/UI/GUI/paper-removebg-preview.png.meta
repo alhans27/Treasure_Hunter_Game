@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: de49e580b28618f4ca64bcf1e0282054
+guid: 6696ff79c16c32c4f9dd0a6a1277bb0e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -115,49 +115,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Wooden Pixel Art GUI 32x32_0
-      rect:
-        serializedVersion: 2
-        x: 514
-        y: 32
-        width: 28
-        height: 31
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6e000fb11371b504d8313589f77212e7
-      internalID: 1597953017
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wooden Pixel Art GUI 32x32_2
-      rect:
-        serializedVersion: 2
-        x: 594
-        y: 0
-        width: 237
-        height: 1103
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 824da953433646445b866793846eeb72
-      internalID: -120471891
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -168,10 +126,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Wooden Pixel Art GUI 32x32_0: 1597953017
-      Wooden Pixel Art GUI 32x32_1: 1068127437
-      Wooden Pixel Art GUI 32x32_2: -120471891
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

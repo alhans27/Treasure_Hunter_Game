@@ -39,6 +39,12 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene("Credits");
     }
 
+    // buat tombol tanda tanya di startmenu
+    public void GoToHelp()
+    {
+        SceneManager.LoadScene("Help");
+    }
+
     // buat tombol Pause di Layar Level
     public void PauseGame()
     {
