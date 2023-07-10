@@ -5,9 +5,13 @@ using UnityEngine;
 public class CheckpointMaster : MonoBehaviour
 {
     private static CheckpointMaster instance;
-    public List<int> collect = new List<int>(){0,0};
+    public static bool isLoaded = false;
+    public List<int> collect = new List<int>();
+    public List<int> collect_load = new List<int>();
     public List<string> obj;
+    public List<string> obj_load;
     public Vector2 lastCheckpointPos;
+    public Vector3 loadCheckpointPos;
     public GameManager gm;
 
 
@@ -24,6 +28,7 @@ public class CheckpointMaster : MonoBehaviour
         } else {
             Destroy(gameObject);
         }
+
     }
 
     public void SaveCollect(int diamond, int coin)
@@ -38,15 +43,14 @@ public class CheckpointMaster : MonoBehaviour
         obj = new List<string>(Checkpoint.goName);
     }
 
-    public void LoadObject(List<string> Ob) 
+    public void Load(List<string> Ob, int diamond, int coin, Vector3 pos) 
     {
-        obj = new List<string>(Ob);
-    }
-
-    public void LoadItems (int diamond, int coin)
-    {
-        gm.DiamondCollected = diamond;
-        gm.CoinCollected = coin;
-        Debug.Log(coin);
+        obj_load.Clear();
+        obj_load = new List<string>(Ob);
+        collect_load.Clear();
+        collect_load.Insert(0, diamond);
+        collect_load.Insert(1, coin);
+        loadCheckpointPos = pos;
+        isLoaded = true;
     }
 }

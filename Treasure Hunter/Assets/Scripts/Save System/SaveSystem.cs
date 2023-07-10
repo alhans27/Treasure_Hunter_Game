@@ -40,8 +40,8 @@ public class SaveSystem : MonoBehaviour
 
             var op = SceneManager.LoadSceneAsync(data.activeScene);
             op.completed += (x) => {
-                GameObject player = GameObject.Find("Player");
-                Health health = player.GetComponent<Health>();
+                // PlayerController player = GameObject.Find("Player").GetComponent<PlayerController>();
+                Health health = GameObject.Find("Player").GetComponent<Health>();
                 // Checkpoint c = GameObject.Find("Checkpoint").GetComponent<Checkpoint>();
                 CheckpointMaster cm = GameObject.FindGameObjectWithTag("CM").GetComponent<CheckpointMaster>();
 
@@ -49,11 +49,10 @@ public class SaveSystem : MonoBehaviour
                 position.x = data.position[0];
                 position.y = data.position[1];
                 position.z = data.position[2];
-                player.transform.position = position;
+                // player.LoadPos(position);
                 health.LoadHealth(data.health);
-                cm.LoadItems(data.diamond, data.coin);
-                cm.LoadObject(data.gameObjectName);
-                // Debug.Log(gm.DiamondCollected);
+                cm.Load(data.gameObjectName, data.diamond, data.coin, position);
+                // cm.LoadObject();
             };
 
         }

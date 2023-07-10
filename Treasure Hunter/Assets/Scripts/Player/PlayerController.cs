@@ -32,6 +32,11 @@ public class PlayerController : MonoBehaviour
     {
         cm = GameObject.FindGameObjectWithTag("CM").GetComponent<CheckpointMaster>();
         transform.position = cm.lastCheckpointPos;
+
+        if (cm.loadCheckpointPos != null && CheckpointMaster.isLoaded == true)
+        {
+            transform.position = cm.loadCheckpointPos;
+        }
     }
 
     // Update is called once per frame
@@ -131,7 +136,5 @@ public class PlayerController : MonoBehaviour
             }
         }
         return 0;
-    }
-
-    
+    }    
 }
