@@ -7,6 +7,7 @@ public class PlayerLife : MonoBehaviour
 {
     private Animator anim;
     private Rigidbody2D rb;
+    private float hit;
     [SerializeField] private Health healthPlayer;
 
     void Start()
@@ -21,17 +22,22 @@ public class PlayerLife : MonoBehaviour
         {
             Die();
         }
+        hit += Time.deltaTime;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Trap"))
         {
-            healthPlayer.TakeDamage(1);
-
-            if (healthPlayer.currentHealth > 0)
+            if (hit > 0.7f)
             {
-                Hurt();
+                healthPlayer.TakeDamage(1);
+
+                if (healthPlayer.currentHealth > 0)
+                {
+                    Hurt();
+                }
+                hit = 0;
             }
 
         }
