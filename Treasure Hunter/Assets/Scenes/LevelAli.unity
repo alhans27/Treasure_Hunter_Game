@@ -44362,6 +44362,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2873583163401003965, guid: 66a42770a4dce0844bba39aa22037e2e, type: 3}
+      propertyPath: m_Color.a
+      value: 0.6784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 2873583163401003965, guid: 66a42770a4dce0844bba39aa22037e2e, type: 3}
+      propertyPath: m_Color.b
+      value: 0.007843138
+      objectReference: {fileID: 0}
+    - target: {fileID: 2873583163401003965, guid: 66a42770a4dce0844bba39aa22037e2e, type: 3}
+      propertyPath: m_Color.g
+      value: 0.007843138
+      objectReference: {fileID: 0}
+    - target: {fileID: 2873583163401003965, guid: 66a42770a4dce0844bba39aa22037e2e, type: 3}
+      propertyPath: m_Color.r
+      value: 0.007843138
+      objectReference: {fileID: 0}
     - target: {fileID: 2873583164998585301, guid: 66a42770a4dce0844bba39aa22037e2e, type: 3}
       propertyPath: m_Name
       value: UI Manager
