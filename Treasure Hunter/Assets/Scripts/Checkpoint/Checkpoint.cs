@@ -15,9 +15,16 @@ public class Checkpoint : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        once = false;
         cm = GameObject.FindGameObjectWithTag("CM").GetComponent<CheckpointMaster>();
         gm = GameObject.Find("Game Manager").GetComponent<GameManager>();
+
+        once = false;
+        if (cm.checkpos.Contains(gameObject.name))
+        {
+            once = true;
+            anim.SetBool("expand", true);
+            anim.SetTrigger("fluttering");
+        }
 
         if (cm.collect.Count != 0)
         {
@@ -31,10 +38,12 @@ public class Checkpoint : MonoBehaviour
             goName = new List<string>(cm.obj);
             foreach (string i in goName)
             {
-                GameObject.Find(i).SetActive(false);
+                if (GameObject.Find(i))
+                {
+                    GameObject.Find(i).SetActive(false);
+                }
             }
         }
-        Debug.Log(CheckpointMaster.isLoaded);
         StartCoroutine(Load());
     }
 
@@ -44,7 +53,7 @@ public class Checkpoint : MonoBehaviour
         {
             anim.SetBool("expand", true);
             anim.SetTrigger("fluttering");
-            once = true;
+            cm.checkpos.Add(gameObject.name);
             cm.lastCheckpointPos = transform.position;
             cm.SaveCollect(gm.CoinCollected);
             cm.SaveObj();
@@ -57,7 +66,6 @@ public class Checkpoint : MonoBehaviour
         {
             if (CheckpointMaster.isLoaded == true)
             {
-                // Debug.Log(CheckpointMaster.isLoaded);
                 if (cm.collect_load.Count != 0)
                 {
                     gm.CoinCollected = cm.collect_load[1];

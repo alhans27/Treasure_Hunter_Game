@@ -10,6 +10,7 @@ public class CheckpointMaster : MonoBehaviour
     public List<int> collect_load = new List<int>();
     public List<string> obj;
     public List<string> obj_load;
+    public List<string> checkpos;
     public Vector2 lastCheckpointPos;
     public Vector3 loadCheckpointPos;
     public GameManager gm;
@@ -46,13 +47,30 @@ public class CheckpointMaster : MonoBehaviour
         obj = new List<string>(Checkpoint.goName);
     }
 
-    public void Load(List<string> Ob, int diamond, int coin, Vector3 pos)
+    public void Load(SaveData data)
     {
+        obj.Clear();
         obj_load.Clear();
-        obj_load = new List<string>(Ob);
         collect_load.Clear();
-        collect_load.Insert(0, coin);
-        loadCheckpointPos = pos;
+        collect = new List<int>(data.collectCheckpoint);
+        obj = new List<string>(data.objectCheckpoint);
+        obj_load = new List<string>(data.gameObjectName);
+        checkpos = new List<string>(data.checkpointName);
+
+        collect_load.Insert(0, data.diamond);
+        collect_load.Insert(1, data.coin);
+
+        Vector3 position;
+        position.x = data.position[0];
+        position.y = data.position[1];
+        position.z = data.position[2];
+        loadCheckpointPos = position;
+
+        Vector2 pos;
+        pos.x = data.positionCheckpoint[0];
+        pos.y = data.positionCheckpoint[1];
+        lastCheckpointPos = pos;
+
         isLoaded = true;
     }
 }
