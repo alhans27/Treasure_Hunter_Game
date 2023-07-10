@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Health : MonoBehaviour
@@ -40,14 +41,20 @@ public class Health : MonoBehaviour
     // For Debuging Enemy
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            TakeDamage(1);
-        }
+        // if (Input.GetKeyDown(KeyCode.E))
+        // {
+        //     TakeDamage(1);
+        // }
     }
 
     public void LoadHealth(float health)
     {
+        StartCoroutine(Load(health));
+    }
+
+    private IEnumerator Load(float health)
+    {
+        yield return null;
         currentHealth = health;
     }
 }
