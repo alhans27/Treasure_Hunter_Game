@@ -5,7 +5,7 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     private static AudioManager instance;
-    public bool audioMute;
+    public static bool audioMute;
     // Start is called before the first frame update
     private void Awake() {
         if(instance == null){

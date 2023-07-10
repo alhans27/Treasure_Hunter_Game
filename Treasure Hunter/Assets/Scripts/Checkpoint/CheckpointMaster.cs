@@ -6,8 +6,8 @@ public class CheckpointMaster : MonoBehaviour
 {
     private static CheckpointMaster instance;
     public static bool isLoaded = false;
-    public List<int> collect = new List<int>();
-    public List<int> collect_load = new List<int>();
+    public int coin;
+    public int coin_load;
     public List<string> obj;
     public List<string> obj_load;
     public List<string> checkpos;
@@ -22,10 +22,6 @@ public class CheckpointMaster : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            if (collect.Count == 0)
-            {
-                collect.Add(0);
-            }
             gm = GameObject.Find("Game Manager").GetComponent<GameManager>();
             DontDestroyOnLoad(instance);
         }
@@ -36,10 +32,9 @@ public class CheckpointMaster : MonoBehaviour
 
     }
 
-    public void SaveCollect(int coin)
+    public void SaveCoin(int coins)
     {
-        collect.Clear();
-        collect.Insert(0, coin);
+        coin = coins;
     }
 
     public void SaveObj()
@@ -51,14 +46,13 @@ public class CheckpointMaster : MonoBehaviour
     {
         obj.Clear();
         obj_load.Clear();
-        collect_load.Clear();
-        collect = new List<int>(data.collectCheckpoint);
+
         obj = new List<string>(data.objectCheckpoint);
         obj_load = new List<string>(data.gameObjectName);
         checkpos = new List<string>(data.checkpointName);
 
-        collect_load.Insert(0, data.diamond);
-        collect_load.Insert(1, data.coin);
+        coin = data.coinCheckpoint;
+        coin_load = data.coin;
 
         Vector3 position;
         position.x = data.position[0];

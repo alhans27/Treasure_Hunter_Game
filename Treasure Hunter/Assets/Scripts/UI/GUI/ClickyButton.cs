@@ -16,12 +16,11 @@ public class ClickyButton : MonoBehaviour, IPointerUpHandler, IPointerDownHandle
     }
 
     private void Start() {
-        audioManager = GameObject.Find("Audio Manager").GetComponent<AudioManager>();
 
         if (gameObject.name == "Audio")
         {
             Debug.Log(gameObject.name);
-            if (audioManager.audioMute == true){
+            if (AudioManager.audioMute == true){
                 _img.sprite = _pressed;
                _source.mute = true;
             } else {
@@ -34,7 +33,7 @@ public class ClickyButton : MonoBehaviour, IPointerUpHandler, IPointerDownHandle
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        if (audioManager.audioMute == false)
+        if (AudioManager.audioMute == false)
         {
             _source.PlayOneShot(_compressClip);
         }
