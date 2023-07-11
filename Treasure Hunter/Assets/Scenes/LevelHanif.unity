@@ -138040,6 +138040,54 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 450683923468518810, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
+      propertyPath: bulletRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 450683923468518810, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
+      propertyPath: damagePoint
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 580034196900150989, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
+      propertyPath: bulletRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 580034196900150989, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
+      propertyPath: damagePoint
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1587921574881637997, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
+      propertyPath: bulletRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1587921574881637997, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
+      propertyPath: damagePoint
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709372215107591421, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
+      propertyPath: bulletRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709372215107591421, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
+      propertyPath: damagePoint
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1798420265904703790, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
+      propertyPath: bulletRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1798420265904703790, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
+      propertyPath: damagePoint
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084331845532080863, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
+      propertyPath: bulletRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084331845532080863, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
+      propertyPath: damagePoint
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2858021424527343298, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
       propertyPath: m_Name
       value: Player
@@ -138136,6 +138184,14 @@ PrefabInstance:
       propertyPath: jumpSoundEffect
       value: 
       objectReference: {fileID: 1158471650}
+    - target: {fileID: 4660927086835003212, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
+      propertyPath: bulletRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4660927086835003212, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
+      propertyPath: damagePoint
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5724886037242452581, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
       propertyPath: startingHealth
       value: 4
@@ -138153,6 +138209,14 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6486005473878595190, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
+      propertyPath: damagePoint
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8209616742146472085, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
+      propertyPath: bulletRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8209616742146472085, guid: 298cfb718696c0c439d0f8dc70b9d976, type: 3}
       propertyPath: damagePoint
       value: 1
       objectReference: {fileID: 0}
