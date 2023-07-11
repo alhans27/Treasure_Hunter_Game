@@ -32,12 +32,12 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         cm = GameObject.FindGameObjectWithTag("CM").GetComponent<CheckpointMaster>();
-        // transform.position = cm.lastCheckpointPos;
+        transform.position = cm.lastCheckpointPos;
 
-        // if (cm.loadCheckpointPos != null && CheckpointMaster.isLoaded == true)
-        // {
-        //     transform.position = cm.loadCheckpointPos;
-        // }
+        if (cm.loadCheckpointPos != null && CheckpointMaster.isLoaded == true)
+        {
+            transform.position = cm.loadCheckpointPos;
+        }
     }
 
     // Update is called once per frame

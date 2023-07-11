@@ -15,6 +15,10 @@ public class FinishPoint : MonoBehaviour
             GameManager.Instance.SetLevelIndex(SceneManager.GetActiveScene().buildIndex);
             // Debug.Log(backpackData.GetAllItems());
             GameManager.Instance.SetBackpack(backpackData.GetAllItems());
+            if (GameObject.FindGameObjectWithTag("CM"))
+            {
+                Destroy(GameObject.FindGameObjectWithTag("CM"));
+            }
             SceneManager.LoadScene("GuardianGate");
             // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
@@ -24,6 +28,10 @@ public class FinishPoint : MonoBehaviour
             Debug.Log(GameManager.Instance.GetLevelIndex());
             // SceneManager.LoadScene("GuardianGate");
             GameManager.Instance.ResetBackpack();
+            if (GameObject.FindGameObjectWithTag("CM"))
+            {
+                Destroy(GameObject.FindGameObjectWithTag("CM"));
+            }
             SceneManager.LoadScene(GameManager.Instance.GetLevelIndex() + 1);
         }
     }
