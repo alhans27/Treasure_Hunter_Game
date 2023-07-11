@@ -9,10 +9,9 @@ public class SaveData
     public float[] position;
     public float[] positionCheckpoint;
     public float health;
-    public int diamond;
     public int coin;
     public int activeScene;
-    public List<int> collectCheckpoint;
+    public int coinCheckpoint;
     public List<string> gameObjectName;
     public List<string> checkpointName;
     public List<string> objectCheckpoint;
@@ -21,7 +20,7 @@ public class SaveData
     {
         Health h = player.GetComponent<Health>();
         coin = gm.CoinCollected;
-        collectCheckpoint = new List<int>(cm.collect);
+        coinCheckpoint = cm.coin;
         gameObjectName = new List<string>(c);
         checkpointName = new List<string>(cm.checkpos);
         objectCheckpoint = new List<string>(cm.obj);

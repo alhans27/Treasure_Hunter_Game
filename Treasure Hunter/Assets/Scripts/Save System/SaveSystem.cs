@@ -40,7 +40,6 @@ public class SaveSystem : MonoBehaviour
             var op = SceneManager.LoadSceneAsync(data.activeScene);
             op.completed += (x) => {
                 Health health = GameObject.Find("Player").GetComponent<Health>();
-                // Checkpoint c = GameObject.Find("Checkpoint").GetComponent<Checkpoint>();
                 CheckpointMaster cm = GameObject.FindGameObjectWithTag("CM").GetComponent<CheckpointMaster>();
 
                 health.LoadHealth(data.health);

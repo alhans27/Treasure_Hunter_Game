@@ -26,9 +26,9 @@ public class Checkpoint : MonoBehaviour
             anim.SetTrigger("fluttering");
         }
 
-        if (cm.collect.Count != 0)
+        if (cm.coin > 0)
         {
-            gm.CoinCollected = cm.collect[0];
+            gm.CoinCollected = cm.coin;
         }
 
 
@@ -55,7 +55,7 @@ public class Checkpoint : MonoBehaviour
             anim.SetTrigger("fluttering");
             cm.checkpos.Add(gameObject.name);
             cm.lastCheckpointPos = transform.position;
-            cm.SaveCollect(gm.CoinCollected);
+            cm.SaveCoin(gm.CoinCollected);
             cm.SaveObj();
         }
     }
@@ -66,9 +66,9 @@ public class Checkpoint : MonoBehaviour
         {
             if (CheckpointMaster.isLoaded == true)
             {
-                if (cm.collect_load.Count != 0)
+                if (cm.coin_load != 0)
                 {
-                    gm.CoinCollected = cm.collect_load[1];
+                    gm.CoinCollected = cm.coin_load;
                 }
 
                 if (cm.obj_load.Count != 0)
@@ -77,7 +77,6 @@ public class Checkpoint : MonoBehaviour
                     goName = new List<string>(cm.obj_load);
                     foreach (string i in goName)
                     {
-                        print(i);
                         if (GameObject.Find(i))
                         {
                             GameObject.Find(i).SetActive(false);

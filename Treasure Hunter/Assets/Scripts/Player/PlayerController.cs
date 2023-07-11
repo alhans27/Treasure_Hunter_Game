@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private AudioSource jumpSoundEffect;
+    [SerializeField] private AudioManager audioManager;
 
     [Header("Player Move and Jump")]
     [SerializeField] private float moveSpeed = 8f;
@@ -50,7 +51,10 @@ public class PlayerController : MonoBehaviour
         // Player Jumping
         if (Input.GetButtonDown("Jump") && isGrounded())
         {
-            jumpSoundEffect.Play();
+            if (AudioManager.audioMute == false)
+            {
+                jumpSoundEffect.Play();
+            }
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             animator.SetBool("Jump", true);
         }
