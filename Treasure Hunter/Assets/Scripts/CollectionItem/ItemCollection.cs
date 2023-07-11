@@ -21,7 +21,10 @@ public class ItemCollection : MonoBehaviour
             GameManager.Instance.CoinCollection();
             CoinOutput.text = GameManager.Instance.CoinCollected.ToString();
             Checkpoint.goName.Add(gameObject.name);
-            audio.Play();
+            if (AudioManager.audioMute == false)
+            {
+                audio.Play();
+            }
             gameObject.SetActive(false);
         }
         // else if (TheThingThatWalkedIntoMe.CompareTag("Player") && gameObject.CompareTag("Diamond"))
