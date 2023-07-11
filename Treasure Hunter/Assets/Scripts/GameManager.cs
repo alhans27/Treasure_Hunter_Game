@@ -54,6 +54,10 @@ public class GameManager : MonoBehaviour
     {
         backpackData = x;
     }
+    public void ResetBackpack()
+    {
+        backpackData = new List<ItemInventory>();
+    }
 
     public int GetLevelIndex()
     {
