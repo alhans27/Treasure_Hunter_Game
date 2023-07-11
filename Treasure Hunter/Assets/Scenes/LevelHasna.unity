@@ -10243,7 +10243,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2628844568819708416, guid: 00eef29a0675f364c86c36ce78b5db37, type: 3}
       propertyPath: m_Name
-      value: Moving Platform 1 (2)
+      value: Moving Vertical
       objectReference: {fileID: 0}
     - target: {fileID: 2628844568819708416, guid: 00eef29a0675f364c86c36ce78b5db37, type: 3}
       propertyPath: m_Layer
@@ -12528,7 +12528,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2628844568819708416, guid: 00eef29a0675f364c86c36ce78b5db37, type: 3}
       propertyPath: m_Name
-      value: Moving Platform 1 (1)
+      value: Moving Vertical
       objectReference: {fileID: 0}
     - target: {fileID: 2628844568819708416, guid: 00eef29a0675f364c86c36ce78b5db37, type: 3}
       propertyPath: m_Layer
@@ -28743,7 +28743,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2628844568819708416, guid: 00eef29a0675f364c86c36ce78b5db37, type: 3}
       propertyPath: m_Name
-      value: Moving Platform 1
+      value: Moving Vertical
       objectReference: {fileID: 0}
     - target: {fileID: 2628844568819708416, guid: 00eef29a0675f364c86c36ce78b5db37, type: 3}
       propertyPath: m_Layer
