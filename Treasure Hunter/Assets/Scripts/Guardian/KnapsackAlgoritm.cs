@@ -9,14 +9,18 @@ using UnityEngine;
 public class KnapsackAlgoritm : MonoBehaviour
 {
     // public Item[] items;
+
+    private static KnapsackAlgoritm instance;
+
     [SerializeField]
     private InventorySO inventoryData;
+
     [SerializeField]
     private ChestInventorySO chestInventoryData;
 
     private List<ItemInventory> items;
 
-    private int minValue;
+    // private int minValue;
     private int maxWeight;
 
     public int resultmaxValue { get; private set; }
@@ -25,11 +29,35 @@ public class KnapsackAlgoritm : MonoBehaviour
 
     private int[,] dpTable;
 
+    public static KnapsackAlgoritm Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = FindObjectOfType<GuardianController>().GetComponent<KnapsackAlgoritm>();
+                if (instance == null)
+                {
+                    GameObject obj = new GameObject();
+                    obj.name = "KnapsackAlgoritm";
+                    instance = obj.AddComponent<KnapsackAlgoritm>();
+                    Debug.Log("Ini Jalaan yaaa");
+                    // instance.inventoryData = FindObjectOfType<InventorySO>();
+                    // Debug.Log("Inventory SO Adaaa");
+                    // instance.chestInventoryData = FindObjectOfType<ChestInventorySO>();
+                    // Debug.Log("Chest Inventory SO Adaaa");
+                    DontDestroyOnLoad(obj);
+                }
+            }
+            return instance;
+        }
+    }
     void Awake()
     {
-        items = inventoryData.GetAllItems();
-        minValue = chestInventoryData.minValue;
+        // minValue = chestInventoryData.minValue;
         maxWeight = chestInventoryData.maxWeight;
+
+        items = inventoryData.GetAllItems();
 
         dpTable = new int[items.Count + 1, maxWeight + 1];
         SolveKnapsack();
@@ -82,11 +110,6 @@ public class KnapsackAlgoritm : MonoBehaviour
         // else
         // {
         // }
-        Debug.Log(resultmaxValue);
-    }
-
-    public List<int> GetResultItem()
-    {
-        return resultItems;
+        Debug.Log("Jawaban Benar: " + resultmaxValue);
     }
 }

@@ -26,9 +26,14 @@ namespace ChestInventory
         private void Awake()
         {
             HideChest();
+            coll = GetComponent<BoxCollider2D>();
+            if (KnapsackAlgoritm.Instance.resultmaxValue > 0 && KnapsackAlgoritm.Instance.resultmaxValue > chestInventoryData.minValue)
+            {
+                chestInventoryData.minValue = KnapsackAlgoritm.Instance.resultmaxValue;
+                // Debug.Log("Ini Jalaaan loooooo, nilainya : " + chestInventoryData.minValue);
+            }
             PrepareUI();
             PrepareInventoryData();
-            coll = GetComponent<BoxCollider2D>();
         }
 
         private void PrepareUI()
