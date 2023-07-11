@@ -9,10 +9,11 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager instance;
     public int CoinCollected = 0;
-    public Text CoinOutput;
     private List<ItemInventory> backpackData;
 
     private InventorySO inventoryData { get; set; }
+
+    public int LevelIndex { get; set; }
 
     public static GameManager Instance
     {
@@ -35,7 +36,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        CoinOutput.text = CoinCollected.ToString();
+        LevelIndex = GetLevelIndex();
     }
 
     public void CoinCollection()
@@ -51,6 +52,16 @@ public class GameManager : MonoBehaviour
     public void SetBackpack(List<ItemInventory> x)
     {
         backpackData = x;
+    }
+
+    public int GetLevelIndex()
+    {
+        return LevelIndex;
+    }
+
+    public void SetLevelIndex(int index)
+    {
+        LevelIndex = index;
     }
 }
 
