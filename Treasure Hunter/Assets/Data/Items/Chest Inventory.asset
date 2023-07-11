@@ -20,5 +20,5 @@ MonoBehaviour:
   - quantity: 1
     item: {fileID: 11400000, guid: 18b76a6defdd7334ba847d0b96ec74f2, type: 2}
   <Size>k__BackingField: 3
-  <minValue>k__BackingField: 10000
+  <minValue>k__BackingField: 1000
   <maxWeight>k__BackingField: 25

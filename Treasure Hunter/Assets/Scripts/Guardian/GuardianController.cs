@@ -78,8 +78,9 @@ public class GuardianController : MonoBehaviour
     {
         if (chestData.totalValue >= chestData.minValue && chestData.totalWeight <= chestData.maxWeight)
         {
-            if (gameObject.GetComponent<KnapsackAlgoritm>().resultmaxValue == chestData.totalValue)             //&& IsCorrectItem(chestData.GetCurrentInventoryState())
+            if (KnapsackAlgoritm.Instance.resultmaxValue == chestData.totalValue)             //&& IsCorrectItem(chestData.GetCurrentInventoryState())
             {
+                // taskMessage.UpdateMessage("Congratulation !");
                 anim.SetTrigger("Gone");
             }
         }

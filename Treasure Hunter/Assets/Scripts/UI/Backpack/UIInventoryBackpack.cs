@@ -173,6 +173,10 @@ namespace Inventory.UI
         {
             foreach (var item in listItems)
             {
+                if (item == null)
+                {
+                    continue;
+                }
                 item.ResetItemUI();
                 item.Deselect();
             }
