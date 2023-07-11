@@ -6,10 +6,12 @@ using UnityEngine.UI;
 public class ItemCollection : MonoBehaviour
 {
     public Text CoinOutput;
+    private AudioSource audio;
 
     private void Start()
     {
         CoinOutput.text = GameManager.Instance.CoinCollected.ToString();
+        audio = gameObject.GetComponentInParent<AudioSource>();
     }
     private void OnTriggerEnter2D(Collider2D TheThingThatWalkedIntoMe)
     {
@@ -19,6 +21,7 @@ public class ItemCollection : MonoBehaviour
             GameManager.Instance.CoinCollection();
             CoinOutput.text = GameManager.Instance.CoinCollected.ToString();
             Checkpoint.goName.Add(gameObject.name);
+            audio.Play();
             gameObject.SetActive(false);
         }
         // else if (TheThingThatWalkedIntoMe.CompareTag("Player") && gameObject.CompareTag("Diamond"))
