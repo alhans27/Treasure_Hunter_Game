@@ -16,7 +16,7 @@ public class ClickyButton : MonoBehaviour, IPointerUpHandler, IPointerDownHandle
     }
 
     private void Start() {
-
+        audioManager = GameObject.Find("Audio Manager").GetComponent<AudioManager>();
         if (gameObject.name == "Audio")
         {
             Debug.Log(gameObject.name);
