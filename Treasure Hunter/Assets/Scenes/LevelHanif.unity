@@ -125650,6 +125650,7 @@ GameObject:
   - component: {fileID: 33540232}
   - component: {fileID: 33540231}
   - component: {fileID: 33540230}
+  - component: {fileID: 33540235}
   m_Layer: 5
   m_Name: Resume Button (Legacy) (4)
   m_TagString: Untagged
@@ -125837,7 +125838,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 33540235}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: ResumeGame
         m_Mode: 1
@@ -125887,6 +125888,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 33540228}
   m_CullTransparentMesh: 1
+--- !u!114 &33540235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33540228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a3b2fc3e100c494b91d8b26021999ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuScreen: {fileID: 1869770189}
 --- !u!1001 &45115737
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -126686,7 +126700,7 @@ PrefabInstance:
     - target: {fileID: 8412526883465418722, guid: dee0bcbe1c84e404b931c2f5e3fc6c4d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 195244719}
     - target: {fileID: 8412526883465418722, guid: dee0bcbe1c84e404b931c2f5e3fc6c4d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PauseGame
@@ -126706,6 +126720,24 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2255576540820171038, guid: dee0bcbe1c84e404b931c2f5e3fc6c4d, type: 3}
   m_PrefabInstance: {fileID: 195244716}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &195244718 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5501333969476578288, guid: dee0bcbe1c84e404b931c2f5e3fc6c4d, type: 3}
+  m_PrefabInstance: {fileID: 195244716}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &195244719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195244718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a3b2fc3e100c494b91d8b26021999ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuScreen: {fileID: 1869770189}
 --- !u!1001 &201908210
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -130440,6 +130472,7 @@ GameObject:
   - component: {fileID: 954636572}
   - component: {fileID: 954636571}
   - component: {fileID: 954636570}
+  - component: {fileID: 954636575}
   m_Layer: 5
   m_Name: Home Button (Legacy) (3)
   m_TagString: Untagged
@@ -130627,7 +130660,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 954636575}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: GoToMenu
         m_Mode: 1
@@ -130677,6 +130710,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 954636568}
   m_CullTransparentMesh: 1
+--- !u!114 &954636575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954636568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a3b2fc3e100c494b91d8b26021999ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuScreen: {fileID: 1869770189}
 --- !u!1001 &967857548
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -130977,7 +131023,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 870b71a4da693cb4c964d6c706d7d681, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioMute: 0
 --- !u!4 &1052712947
 Transform:
   m_ObjectHideFlags: 0
@@ -133980,7 +134025,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a3b2fc3e100c494b91d8b26021999ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenuScreen: {fileID: 0}
+  pauseMenuScreen: {fileID: 1869770189}
 --- !u!82 &1690685054
 AudioSource:
   m_ObjectHideFlags: 0
