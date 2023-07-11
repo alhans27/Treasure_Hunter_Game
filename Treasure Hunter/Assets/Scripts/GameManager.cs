@@ -45,6 +45,11 @@ public class GameManager : MonoBehaviour
         CoinCollected++;
     }
 
+    public void ResetCoin()
+    {
+        CoinCollected = 0;
+    }
+
     public List<ItemInventory> GetBackpack()
     {
         return backpackData;

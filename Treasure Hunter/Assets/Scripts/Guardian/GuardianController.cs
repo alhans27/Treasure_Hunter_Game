@@ -83,6 +83,7 @@ public class GuardianController : MonoBehaviour
             {
                 // taskMessage.UpdateMessage("Congratulation !");
                 anim.SetTrigger("Gone");
+                GameManager.Instance.ResetCoin();
             }
         }
         else

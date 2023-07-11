@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
-    #nullable disable
+#nullable disable
     public GameObject pauseMenuScreen;
-    
+
     //buat tombol Play di StartMenu
     public void StartGame()
     {
@@ -58,11 +58,17 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 1;
         pauseMenuScreen.SetActive(false);
     }
+    public void RestartGame()
+    {
+        int index = GameManager.Instance.GetLevelIndex();
+        SceneManager.LoadScene(index);
+    }
 
     //buat tombol bentuk Home
     public void GoToMenu()
     {
-        if(GameObject.Find("Checkpoint Master")){
+        if (GameObject.Find("Checkpoint Master"))
+        {
             Destroy(GameObject.Find("Checkpoint Master"));
         }
         Time.timeScale = 1;
@@ -70,19 +76,23 @@ public class UIManager : MonoBehaviour
     }
 
     // pilih level
-    public void Level_1 (){
+    public void Level_1()
+    {
         SceneManager.LoadScene("LevelHasna");
     }
 
-    public void Level_2 (){
+    public void Level_2()
+    {
         SceneManager.LoadScene("LevelAli");
     }
 
-    public void Level_3 (){
+    public void Level_3()
+    {
         SceneManager.LoadScene("LevelAbel");
     }
-    
-    public void Level_4 (){
+
+    public void Level_4()
+    {
         SceneManager.LoadScene("LevelHanif");
     }
 
