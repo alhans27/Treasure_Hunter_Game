@@ -5,20 +5,19 @@ using UnityEngine.UI;
 
 public class ItemCollection : MonoBehaviour
 {
+    public Text CoinOutput;
 
-    public GameManager GM;
-
-    private void Awake()
+    private void Start()
     {
-        GM = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        CoinOutput.text = GameManager.Instance.CoinCollected.ToString();
     }
-
     private void OnTriggerEnter2D(Collider2D TheThingThatWalkedIntoMe)
     {
 
         if (TheThingThatWalkedIntoMe.CompareTag("Player") && gameObject.CompareTag("Coin"))
         {
-            GM.CoinCollection();
+            GameManager.Instance.CoinCollection();
+            CoinOutput.text = GameManager.Instance.CoinCollected.ToString();
             Checkpoint.goName.Add(gameObject.name);
             gameObject.SetActive(false);
         }

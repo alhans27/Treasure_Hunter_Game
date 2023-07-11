@@ -7,7 +7,6 @@ public class Checkpoint : MonoBehaviour
 {
     [SerializeField] private Animator anim;
     private bool once;
-    private GameManager gm;
     private CheckpointMaster cm;
     public static bool _notLoad = true;
     public static List<string> goName = new List<string>();
@@ -16,7 +15,6 @@ public class Checkpoint : MonoBehaviour
     void Start()
     {
         cm = GameObject.FindGameObjectWithTag("CM").GetComponent<CheckpointMaster>();
-        gm = GameObject.Find("Game Manager").GetComponent<GameManager>();
 
         once = false;
         if (cm.checkpos.Contains(gameObject.name))
@@ -28,7 +26,7 @@ public class Checkpoint : MonoBehaviour
 
         if (cm.coin > 0)
         {
-            gm.CoinCollected = cm.coin;
+            GameManager.Instance.CoinCollected = cm.coin;
         }
 
 
@@ -55,7 +53,7 @@ public class Checkpoint : MonoBehaviour
             anim.SetTrigger("fluttering");
             cm.checkpos.Add(gameObject.name);
             cm.lastCheckpointPos = transform.position;
-            cm.SaveCoin(gm.CoinCollected);
+            cm.SaveCoin(GameManager.Instance.CoinCollected);
             cm.SaveObj();
         }
     }
@@ -68,7 +66,7 @@ public class Checkpoint : MonoBehaviour
             {
                 if (cm.coin_load != 0)
                 {
-                    gm.CoinCollected = cm.coin_load;
+                    GameManager.Instance.CoinCollected = cm.coin_load;
                 }
 
                 if (cm.obj_load.Count != 0)

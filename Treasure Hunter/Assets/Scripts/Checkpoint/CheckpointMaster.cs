@@ -22,7 +22,6 @@ public class CheckpointMaster : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            gm = GameObject.Find("Game Manager").GetComponent<GameManager>();
             DontDestroyOnLoad(instance);
         }
         else

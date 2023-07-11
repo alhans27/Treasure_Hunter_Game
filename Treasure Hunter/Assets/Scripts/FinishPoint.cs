@@ -12,6 +12,7 @@ public class FinishPoint : MonoBehaviour
     {
         if (coll.gameObject.CompareTag("Player") && this.gameObject.CompareTag("QuestionGate"))
         {
+            GameManager.Instance.SetLevelIndex(SceneManager.GetActiveScene().buildIndex);
             Debug.Log(backpackData.GetAllItems());
             GameManager.Instance.SetBackpack(backpackData.GetAllItems());
             SceneManager.LoadScene("GuardianGate");
@@ -20,8 +21,10 @@ public class FinishPoint : MonoBehaviour
 
         if (coll.gameObject.CompareTag("Player") && this.gameObject.CompareTag("NextLevel"))
         {
+            Debug.Log(GameManager.Instance.GetLevelIndex());
             // SceneManager.LoadScene("GuardianGate");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            GameManager.Instance.ResetBackpack();
+            SceneManager.LoadScene(GameManager.Instance.GetLevelIndex() + 1);
         }
     }
 }
