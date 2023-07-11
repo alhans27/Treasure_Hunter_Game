@@ -5,6 +5,7 @@ using ChestInventory.Model;
 using Inventory.Model;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GuardianController : MonoBehaviour
@@ -90,6 +91,8 @@ public class GuardianController : MonoBehaviour
             anim.SetTrigger("Attack");
             playerHealth.TakeDamage(damageForce);
             questionMessage.HideMessage();
+            if (playerHealth.currentHealth <= 0)
+                SceneManager.LoadScene("GameOver");
         }
     }
 
