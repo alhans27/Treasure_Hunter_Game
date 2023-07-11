@@ -23,6 +23,7 @@ public class FinishPoint : MonoBehaviour
         {
             Debug.Log(GameManager.Instance.GetLevelIndex());
             // SceneManager.LoadScene("GuardianGate");
+            GameManager.Instance.ResetBackpack();
             SceneManager.LoadScene(GameManager.Instance.GetLevelIndex() + 1);
         }
     }

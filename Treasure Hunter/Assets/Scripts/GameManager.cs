@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager instance;
     public int CoinCollected = 0;
-    private List<ItemInventory> backpackData;
+    private List<ItemInventory> backpackData = new List<ItemInventory>();
 
     private InventorySO inventoryData { get; set; }
 
@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         LevelIndex = GetLevelIndex();
+        backpackData = GetBackpack();
     }
 
     public void CoinCollection()
@@ -52,6 +53,10 @@ public class GameManager : MonoBehaviour
     public void SetBackpack(List<ItemInventory> x)
     {
         backpackData = x;
+    }
+    public void ResetBackpack()
+    {
+        backpackData = new List<ItemInventory>();
     }
 
     public int GetLevelIndex()
