@@ -20,12 +20,16 @@ namespace Inventory
 
         public void Start()
         {
-            // intialItems = GameManager.Instance.GetBackpack();
-            // if (intialItems.)
-            // intialItems = new List<ItemInventory>();
-            PrepareUI();
-            PrepareInventoryData();
-            // Debug.Log(intialItems);
+            intialItems = GameManager.Instance.GetBackpack();
+            if (intialItems != null)
+            {
+                PrepareUI();
+                PrepareInventoryData();
+            }
+            else
+            {
+                intialItems = new List<ItemInventory>();
+            }
         }
 
         public void Update()
