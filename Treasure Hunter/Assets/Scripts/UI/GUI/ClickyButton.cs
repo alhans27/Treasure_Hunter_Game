@@ -19,7 +19,6 @@ public class ClickyButton : MonoBehaviour, IPointerUpHandler, IPointerDownHandle
         audioManager = GameObject.Find("Audio Manager").GetComponent<AudioManager>();
         if (gameObject.name == "Audio")
         {
-            Debug.Log(gameObject.name);
             if (AudioManager.audioMute == true){
                 _img.sprite = _pressed;
                _source.mute = true;
