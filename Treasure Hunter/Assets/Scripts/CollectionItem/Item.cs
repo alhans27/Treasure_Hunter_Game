@@ -16,11 +16,15 @@ public class Item : MonoBehaviour
     // [SerializeField]
     // private AudioSource audioSource;
 
-    private void Start()
+    private void Awake()
     {
         GetComponent<SpriteRenderer>().sprite = InventoryItem.ItemImage;
     }
 
+    private void Update()
+    {
+        GetComponent<SpriteRenderer>().sprite = InventoryItem.ItemImage;
+    }
     public void DestroyItem()
     {
         GetComponent<Collider2D>().enabled = false;

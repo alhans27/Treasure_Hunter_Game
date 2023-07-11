@@ -18,6 +18,7 @@ public class PickUpSystem : MonoBehaviour
         Item item = coll.GetComponent<Item>();
         if (item != null)
         {
+            // inventoryData.AddItem(item.InventoryItem, item.Quantity);
             int reminder = inventoryData.AddItem(item.InventoryItem, item.Quantity);
             if (reminder == 0)
                 item.DestroyItem();

@@ -9567,6 +9567,10 @@ PrefabInstance:
       propertyPath: <Quantity>k__BackingField
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2982905864168289919, guid: 9ef91f48dcc90db449103855cf5eb5f2, type: 3}
+      propertyPath: <InventoryItem>k__BackingField
+      value: 
+      objectReference: {fileID: 11400000, guid: 899e57bc05c78534f958ae7abafeecbf, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ef91f48dcc90db449103855cf5eb5f2, type: 3}
 --- !u!4 &1315871598 stripped
@@ -10222,6 +10226,10 @@ PrefabInstance:
       propertyPath: <Quantity>k__BackingField
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2982905864168289919, guid: 9ef91f48dcc90db449103855cf5eb5f2, type: 3}
+      propertyPath: <InventoryItem>k__BackingField
+      value: 
+      objectReference: {fileID: 11400000, guid: 899e57bc05c78534f958ae7abafeecbf, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ef91f48dcc90db449103855cf5eb5f2, type: 3}
 --- !u!4 &1393337449 stripped
